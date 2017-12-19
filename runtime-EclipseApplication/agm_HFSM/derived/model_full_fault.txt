@@ -1,0 +1,12 @@
+Exit,Pause
+Exit,Start
+Pause,Pause
+Start,Exit,Pause
+Start,Exit,Start
+Start,Start,Pause
+Start,Start,Start
+Start,Pause,Exit,Pause
+Start,Pause,Exit,Start
+Start,Pause,Pause,Pause
+Start,Pause,Start,Pause
+Start,Pause,Start,Start

@@ -1,0 +1,7 @@
+([off],(and true))
+([on,off],(and true))
+([switch],(and true))
+([on,switch,off],true)
+([on,switch,switch],true)
+([on,switch,switch,off],(or (and true C (or C T) U) (and true T (or C T) U)))
+([on,switch,switch,switch],(or (and true C (or C T) U) (and true T (or C T) U)))

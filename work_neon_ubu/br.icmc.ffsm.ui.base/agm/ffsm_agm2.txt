@@ -1,0 +1,35 @@
+1@true -- b@(not W) / 0 -> 1@true
+1@true -- d@S / 0 -> 1@true
+1@true -- c@(or (not W) S) / 0 -> 1@true
+1@true -- c@(and W (not S)) / 1 -> 1@true
+1@true -- a@true / 1 -> 2@N
+1@true -- a@true / 1 -> 3@W
+1@true -- a@true / 1 -> 4@B
+1@true -- b@W / 1 -> 5@true
+2@N -- a@true / 0 -> 2@N
+2@N -- c@true / 1 -> 1@true
+2@N -- b@true / 1 -> 5@true
+2@N -- d@S / 1 -> 5@true
+3@W -- a@true / 0 -> 3@W
+3@W -- c@(not S) / 0 -> 3@W
+3@W -- d@S / 1 -> 6@S
+3@W -- b@true / 1 -> 5@true
+3@W -- c@S / 1 -> 5@true
+4@B -- a@true / 0 -> 4@B
+4@B -- c@true / 0 -> 4@B
+4@B -- b@true / 1 -> 5@true
+4@B -- d@S / 1 -> 5@true
+5@true -- b@true / 0 -> 5@true
+5@true -- c@true / 1 -> 1@true
+5@true -- a@true / 1 -> 2@N
+5@true -- a@true / 1 -> 3@W
+5@true -- a@true / 1 -> 4@B
+5@true -- d@B / 0 -> 6@S
+5@true -- d@N / 1 -> 6@S
+6@S -- d@true / 0 -> 6@S
+6@S -- c@true / 0 -> 6@S
+6@S -- b@(not W) / 1 -> 6@S
+6@S -- b@W / 0 -> 6@S
+6@S -- a@true / 1 -> 2@N
+6@S -- a@true / 1 -> 3@W
+6@S -- a@true / 1 -> 4@B

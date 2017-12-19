@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+ <extension-point id="org.yakindu.sct.generator.core.generator" name="%extension-point.name" schema="schema/generator.exsd"/>
+  <extension-point id="org.yakindu.sct.generator.core.featuretypes" name="%extension-point.name.0" schema="schema/featuretypes.exsd"/>
+  <extension-point id="org.yakindu.sct.generator.core.extensions" name="%extension-point.name.1" schema="schema/extensions.exsd"/>
+ <extension
+         point="org.yakindu.sct.generator.core.featuretypes">
+      <FeatureLibrary
+            library_id="org.yakindu.generator.core.features"
+            defaultProvider="org.yakindu.sct.generator.core.library.impl.CoreLibraryDefaultFeatureValueProvider"
+            uri="platform:/plugin/org.yakindu.sct.generator.core/library/CoreFeatureTypeLibrary.xmi">
+      </FeatureLibrary>
+ </extension>
+</plugin>

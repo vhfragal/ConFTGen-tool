@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.yakindu.sct.model.stext.edit;singleton:=true
+Bundle-Version: 2.9.0.qualifier
+Bundle-Vendor: %Bundle-Vendor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.yakindu.base.types.edit,
+ org.yakindu.sct.model.stext,
+ org.yakindu.sct.model.sgraph.edit,
+ org.eclipse.core.runtime,
+ org.yakindu.base.expressions.edit

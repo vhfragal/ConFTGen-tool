@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="root_R">
+				<description>
+					
+				</description>
+				<feature name="Feature_A">
+					<description>
+						
+					</description>
+				</feature>
+				<feature name="Feature_B">
+					<description>
+						
+					</description>
+				</feature>
+				<feature name="Feature_C">
+					<description>
+						
+					</description>
+				</feature>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.yakindu.sct.model.sexec/src" modelPluginID="org.yakindu.sct.model.sexec"
+    modelName="Sexec" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" usedGenPackages="../../org.yakindu.base.types/model/base.genmodel#//base ../../org.yakindu.base.expressions/model/Expressions.genmodel#//expressions ../../org.yakindu.sct.model.sgraph/model/emf/sgraph.genmodel#//sgraph ../../org.yakindu.base.types/model/types.genmodel#//types">
+  <foreignModel>sexec.ecore</foreignModel>
+  <genPackages prefix="Sexec" basePackage="org.yakindu.sct.model" disposableProviderFactory="true"
+      ecorePackage="sexec.ecore#/">
+    <genClasses ecoreClass="sexec.ecore#//MappedElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//MappedElement/sourceElement"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionFlow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/regions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/historyVector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/entryAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/exitAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionFlow/staticInitSequence"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionNode/reactions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//ExecutionNode/simpleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionNode/reactSequence"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//ExecutionState/leaf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionState/entryAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionState/exitAction"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionScope">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionScope/stateVector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionScope/subScopes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionScope/superScope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionScope/enterSequences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionScope/exitSequence"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionScope/initSequence"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionRegion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionRegion/deepEnterSequence"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionRegion/shallowEnterSequence"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionRegion/historyVector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//ExecutionRegion/nodes"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionEntry"/>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionExit"/>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionChoice"/>
+    <genClasses ecoreClass="sexec.ecore#//ExecutionSynchronization"/>
+    <genClasses ecoreClass="sexec.ecore#//Reaction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//Reaction/check"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//Reaction/effect"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//Reaction/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//StateVector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//StateVector/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//StateVector/offset"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//TimeEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//TimeEvent/periodic"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="sexec.ecore#//Step">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//Step/comment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//Step/caller"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//Sequence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//Sequence/steps"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//Check">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//Check/condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//Check/refs"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//CheckRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//CheckRef/check"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//If">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//If/check"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//If/thenStep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//If/elseStep"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//Execution">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//Execution/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//EnterState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//EnterState/state"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ExitState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//ExitState/state"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//Call">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//Call/step"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ScheduleTimeEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//ScheduleTimeEvent/timeEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//ScheduleTimeEvent/timeValue"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//UnscheduleTimeEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//UnscheduleTimeEvent/timeEvent"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//StateSwitch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//StateSwitch/cases"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//StateSwitch/stateConfigurationIdx"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//StateSwitch/historyRegion"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//StateCase">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//StateCase/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//StateCase/step"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//SaveHistory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//SaveHistory/region"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//SaveHistory/deep"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//HistoryEntry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//HistoryEntry/initialStep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sexec.ecore#//HistoryEntry/deep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//HistoryEntry/region"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sexec.ecore#//HistoryEntry/historyStep"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="sexec.ecore#//Trace"/>
+    <genClasses ecoreClass="sexec.ecore#//TraceNodeExecuted">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//TraceNodeExecuted/node"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//ReactionFired">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//ReactionFired/reaction"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//TraceReactionWillFire">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//TraceReactionWillFire/reaction"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//TraceStateEntered">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//TraceStateEntered/state"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//TraceStateExited">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sexec.ecore#//TraceStateExited/state"/>
+    </genClasses>
+    <genClasses ecoreClass="sexec.ecore#//TraceBeginRunCycle"/>
+    <genClasses ecoreClass="sexec.ecore#//TraceEndRunCycle"/>
+  </genPackages>
+</genmodel:GenModel>

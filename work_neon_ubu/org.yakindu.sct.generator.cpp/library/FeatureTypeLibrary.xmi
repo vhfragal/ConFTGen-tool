@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sgen:FeatureTypeLibrary
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sgen="http://www.yakindu.org/sct/statechart/SGen"
+    xsi:schemaLocation="http://www.yakindu.org/sct/statechart/SGen ../../org.yakindu.sct.model.sgen/model/emf/sgen.ecore"
+    name="CPP Generator">
+  <types name="IdentifierSettings"
+      optional="true">
+    <parameters
+        name="moduleName"
+        optional="true"/>
+    <parameters
+        name="statemachinePrefix"
+        optional="true"/>
+    <parameters
+        name="maxIdentifierLength"
+        optional="true"
+        parameterType="INTEGER"/>
+    <parameters
+        name="separator"
+        optional="true"/>
+  </types>
+  <types name="GeneratorOptions"
+      optional="true">
+    <parameters
+        name="innerFunctionVisibility"
+        optional="true"/>
+    <parameters
+        name="staticOperationCallback"
+        optional="true"
+        parameterType="BOOLEAN"/>
+  </types>
+</sgen:FeatureTypeLibrary>

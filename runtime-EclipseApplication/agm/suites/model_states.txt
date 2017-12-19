@@ -1,0 +1,6 @@
+([b],W)
+([a],true)
+([a,d],(and W S))
+([a,b],(or N B))
+([a,d,d],(and N S))
+([a,b,d],(and B S))

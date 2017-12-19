@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="ARCADE_GAME_MAKER_AGM">
+				<description>
+					
+				</description>
+				<and mandatory="true" name="Action_A">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Movement_M">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Colision_L">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+				<feature mandatory="true" name="Configuration_C">
+					<description>
+						
+					</description>
+				</feature>
+				<alt mandatory="true" name="Rules_R">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Brickles_B">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Pong_N">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Bowling_W">
+						<description>
+							
+						</description>
+					</feature>
+				</alt>
+				<and mandatory="true" name="Services_V">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Play_Y">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Pause_P">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="Save_S">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints><rule><conj><var>ARCADE_GAME_MAKER_AGM</var><conj><var>Action_A</var><conj><var>Movement_M</var><conj><var>Colision_L</var><conj><var>Configuration_C</var><conj><var>Rules_R</var><conj><var>Bowling_W</var><conj><var>Services_V</var><conj><var>Play_Y</var><var>Pause_P</var><conj><not><var>Brickles_B</var></not><conj><not><var>Pong_N</var></not><not><var>Save_S</var></not></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></rule></constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments>(and AGM A M L C R W V Y P (not B) (not N) (not S) )</comments>
+		<featureOrder userDefined="false"/>
+	</featureModel>

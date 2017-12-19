@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: YAKINDU Java Generator Tests
+Bundle-SymbolicName: org.yakindu.sct.generator.java.test
+Bundle-Version: 2.9.0.qualifier
+Require-Bundle: org.yakindu.sct.test.models,
+ org.yakindu.sct.generator.java,
+ org.junit,
+ org.yakindu.sct.generator.core,
+ com.google.inject,
+ org.eclipse.xtext.junit4,
+ org.yakindu.sct.generator.genmodel,
+ org.eclipse.jdt.core,
+ org.eclipse.ui,
+ org.eclipse.core.resources,
+ org.eclipse.xtext.ui.shared,
+ org.yakindu.sct.generator.builder,
+ org.yakindu.sct.domain.generic.resource
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: statecharts.org

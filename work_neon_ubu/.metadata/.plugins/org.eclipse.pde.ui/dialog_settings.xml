@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="3.5 or greater" key="targetName"/>
+	<item value="true" key="uiPlugin"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.removeUnresolved"/>
+	<item value="false" key="OrganizeManifests.RequireImport.modifyDep"/>
+	<item value="false" key="rcpPlugin"/>
+	<item value="false" key="osgiProject"/>
+	<item value="false" key="OrganizeManifests.General.cleanup.removeUselessFiles"/>
+	<item value="false" key="OrganizeManifests.RequireImport.findRemoveUnused"/>
+	<item value="false" key="OrganizeManifests.calculateUses"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.addMissing"/>
+	<item value="false" key="OrganizeManifests.General.cleanup"/>
+	<item value="false" key="OrganizeManifests.Translation.nls"/>
+	<item value="false" key="apiAnalysis"/>
+	<item value="*.internal*" key="OrganizeManifests.ExportedPackages.packageFilter"/>
+	<item value="false" key="OrganizeManifests.AddDependencies"/>
+	<item value="false" key="OrganizeManifests.Translation.unusedKeys"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.makeInternal"/>
+	<item value="false" key="generatePluginActivator"/>
+	<item value="false" key="OrganizeManifests.RequireImport.resolve:markOptional"/>
+	<list key="providers">
+		<item value="icmc"/>
+	</list>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+	<section name="RefactoringWizard.Organize Manifests">
+		<item value="640" key="width"/>
+		<item value="468" key="height"/>
+	</section>
+	<section name="exportTargetDefinitionWizard">
+	</section>
+	<section name="PDEFormActionManager">
+	</section>
+	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="627" key="DIALOG_X_ORIGIN"/>
+			<item value="209" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="PluginExportWizard">
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin5" key="destination0"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin5" key="destination1"/>
+		<item value="" key="keypass"/>
+		<item value="/home/vanderson/Dropbox/workspaces/work_neon_ubu/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination3"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin" key="destination4"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="false" key="signJAR"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin3" key="destination2"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin2" key="destination3"/>
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="true" key="exportSource"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="" key="password"/>
+		<item value="201703091939" key="qualifierName"/>
+		<item value="true" key="useWorkspaceCompiledClasses"/>
+		<item value="1" key="exportType"/>
+		<item value="false" key="qualifier"/>
+		<item value="" key="alias"/>
+		<item value="" key="keystore"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin4" key="installDestination0"/>
+		<item value="/home/vanderson/Programs/eclipse (copy)/plugins" key="installDestination2"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export_plugin4" key="installDestination1"/>
+	</section>
+	<section name="ProductExportWizard">
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export" key="destination0"/>
+		<item value="true" key="syncProduct"/>
+		<item value="/home/vanderson/Programs/eclipse_yakindu/export" key="destination1"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="/home/vanderson/Dropbox/workspaces/work_neon_ubu/br.icmc.ffsm.ui.base" key="destination2"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="/br.icmc.ffsm.ui.base/config1.product" key="productConfig1"/>
+		<item value="eclipse" key="productRoot"/>
+		<item value="/br.icmc.ffsm.ui.base/config1.product" key="productConfig0"/>
+		<item value="false" key="exportSource"/>
+		<item value="true" key="exportDirectory"/>
+		<item value="true" key="p2metadata"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+</section>

@@ -1,0 +1,26 @@
+StartGame@true -- Exit@(and W (not S))/_1() -> StartGame@true
+StartGame@true -- Exit@(or (not W) S)/_0() -> StartGame@true
+StartGame@true -- Save@S/_0() -> StartGame@true
+StartGame@true -- Pause@(not W)/_0() -> StartGame@true
+StartGame@true -- Pause@W/_1() -> PauseGame@true
+StartGame@true -- Start@true/_1() -> Brickles*Pong*Bowling@(or B N W)
+PauseGame@true -- Pause@true/_0() -> PauseGame@true
+PauseGame@true -- Exit@true/_1() -> StartGame@true
+PauseGame@true -- Save@B/_0() -> SaveGame@S
+PauseGame@true -- Save@N/_1() -> SaveGame@S
+PauseGame@true -- Start@true/_1() -> Brickles*Pong*Bowling@(or B N W)
+SaveGame@S -- Save@true/_0() -> SaveGame@S
+SaveGame@S -- Exit@true/_0() -> SaveGame@S
+SaveGame@S -- Pause@W/_0() -> SaveGame@S
+SaveGame@S -- Pause@(not W)/_1() -> SaveGame@S
+SaveGame@S -- Start@true/_1() -> Brickles*Pong*Bowling@(or B N W)
+Brickles*Pong*Bowling@(or B N W) -- Start@(and (not B) N (not W))/_0() -> Brickles*Pong*Bowling@(or B N W)
+Brickles*Pong*Bowling@(or B N W) -- Pause@true/_1() -> PauseGame@true
+Brickles*Pong*Bowling@(or B N W) -- Save@(and (or B N) S)/_1() -> PauseGame@true
+Brickles*Pong*Bowling@(or B N W) -- Exit@N/_1() -> StartGame@true
+Brickles*Pong*Bowling@(or B N W) -- Start@(and B (not N) (not W))/_0() -> Brickles*Pong*Bowling@(or B N W)
+Brickles*Pong*Bowling@(or B N W) -- Exit@(and B (not N) (not W))/_0() -> Brickles*Pong*Bowling@(or B N W)
+Brickles*Pong*Bowling@(or B N W) -- Start@(and (not B) (not N) W)/_0() -> Brickles*Pong*Bowling@(or B N W)
+Brickles*Pong*Bowling@(or B N W) -- Save@W/_1() -> SaveGame@S
+Brickles*Pong*Bowling@(or B N W) -- Exit@(and S W)/_1() -> PauseGame@true
+Brickles*Pong*Bowling@(or B N W) -- Exit@(and (not S) (and (not B) (not N) W))/_0() -> Brickles*Pong*Bowling@(or B N W)

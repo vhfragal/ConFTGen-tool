@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.yakindu.sct.ui.perspectives.ModelingPerspectiveFactory"
+            fixed="false"
+            icon="icons/modeling_perspective.png"
+            id="org.yakindu.sct.ui.ModelingPerspective"
+            name="%perspective.name">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.yakindu.sct.ui.preferences.YakinduRootPreferencePage"
+            id="org.yakindu.sct.ui.preferences.root"
+            name="%page.name">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.yakindu.sct.ui.ModelingPerspective">
+         <newWizardShortcut
+               id="org.yakindu.sct.ui.editor.StatechartDiagramWizard">
+         </newWizardShortcut>
+         <newWizardShortcut
+               id="org.yakindu.sct.generator.genmodel.ui.SGenNewFileWizard">
+         </newWizardShortcut>
+      </perspectiveExtension>
+   </extension>
+</plugin>

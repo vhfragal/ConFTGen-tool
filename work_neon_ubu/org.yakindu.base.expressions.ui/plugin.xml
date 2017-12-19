@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+    <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="org.yakindu.base.expressions.Expressions"
+            name="%page.name">
+            <keywordReference id="org.yakindu.base.expressions.ui.keyword_Expressions"/>
+        </page>
+        <page
+            category="org.yakindu.base.expressions.Expressions"
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="org.yakindu.base.expressions.Expressions.coloring"
+            name="%page.name.0">
+            <keywordReference id="org.yakindu.base.expressions.ui.keyword_Expressions"/>
+        </page>
+        <page
+            category="org.yakindu.base.expressions.Expressions"
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="org.yakindu.base.expressions.Expressions.templates"
+            name="%page.name.1">
+            <keywordReference id="org.yakindu.base.expressions.ui.keyword_Expressions"/>
+        </page>
+    </extension>
+    <extension
+        point="org.eclipse.ui.keywords">
+        <keyword
+            id="org.yakindu.base.expressions.ui.keyword_Expressions"
+            label="%keyword.label"/>
+    </extension>
+
+	<!-- marker definitions for org.yakindu.base.expressions.Expressions -->
+	<extension
+	        id="expressions.check.fast"
+	        name="%extension.name"
+	        point="org.eclipse.core.resources.markers">
+	    <super type="org.eclipse.xtext.ui.check.fast"/>
+	    <persistent value="true"/>
+	</extension>
+	<extension
+	        id="expressions.check.normal"
+	        name="%extension.name.0"
+	        point="org.eclipse.core.resources.markers">
+	    <super type="org.eclipse.xtext.ui.check.normal"/>
+	    <persistent value="true"/>
+	</extension>
+	<extension
+	        id="expressions.check.expensive"
+	        name="%extension.name.1"
+	        point="org.eclipse.core.resources.markers">
+	    <super type="org.eclipse.xtext.ui.check.expensive"/>
+	    <persistent value="true"/>
+	</extension>
+
+   <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+            category="org.yakindu.base.expressions.Expressions"
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="org.yakindu.base.expressions.Expressions.compiler.preferencePage"
+            name="%page.name.2">
+            <keywordReference id="org.yakindu.base.expressions.ui.keyword_Expressions"/>
+        </page>
+    </extension>
+
+    <!-- quickfix marker resolution generator for org.yakindu.base.expressions.Expressions -->
+    <extension
+            point="org.eclipse.ui.ide.markerResolution">
+        <markerResolutionGenerator
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.yakindu.base.expressions.ui.expressions.check.fast">
+            <attribute
+                name="FIXABLE_KEY"
+                value="true">
+            </attribute>
+        </markerResolutionGenerator>
+        <markerResolutionGenerator
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.yakindu.base.expressions.ui.expressions.check.normal">
+            <attribute
+                name="FIXABLE_KEY"
+                value="true">
+            </attribute>
+        </markerResolutionGenerator>
+        <markerResolutionGenerator
+            class="org.yakindu.base.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.yakindu.base.expressions.ui.expressions.check.expensive">
+            <attribute
+                name="FIXABLE_KEY"
+                value="true">
+            </attribute>
+        </markerResolutionGenerator>
+    </extension>
+</plugin>

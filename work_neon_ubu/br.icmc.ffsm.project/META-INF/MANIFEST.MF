@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Project
+Bundle-SymbolicName: br.icmc.ffsm.project
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: icmc
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.yakindu.sct.ui.editor.validation.SCTValidationJob"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.IBaseLabelProvider"/>
+<fullyQualifiedTypeName name="org.yakindu.base.gmf.runtime.decorators.AbstractMarkerBasedDecorationProvider.StatusDecorator"/>
+<fullyQualifiedTypeName name="org.yakindu.sct.ui.editor.providers.StatechartValidationDecorationProvider"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.ILabelDecorator"/>
+<fullyQualifiedTypeName name="org.eclipse.gmf.runtime.diagram.ui.editpolicies.DecorationEditPolicy.DecoratorTarget"/>
+<fullyQualifiedTypeName name="org.yakindu.sct.model.sgraph.validation.SGraphJavaValidator"/>
+<fullyQualifiedTypeName name="org.yakindu.sct.model.stext.validation.STextJavaValidator"/>
+<fullyQualifiedTypeName name="org.yakindu.sct.model.stext.STextStandaloneSetupGenerated"/>
+<fullyQualifiedTypeName name="org.yakindu.sct.model.sgraph.Transition"/>
+<fullyQualifiedTypeName name="br.usp.icmc.ffsm.FTransition"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.usp.icmc.ffsm.Cond_in_seq"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="javax.xml.transform.TransformerFactory"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Transformer"/>
+<fullyQualifiedTypeName name="javax.xml.transform.dom.DOMSource"/>
+<fullyQualifiedTypeName name="javax.xml.transform.stream.StreamResult"/>
+<fullyQualifiedTypeName name="br.usp.icmc.uml.HFFSM"/>
+<fullyQualifiedTypeName name="org.w3c.dom.NamedNodeMap"/>
+<fullyQualifiedTypeName name="java.io.StringWriter"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.EList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="br.usp.icmc.feature.logic.FFSMProperties"/>
+<fullyQualifiedTypeName name="br.usp.icmc.uml.CState"/>
+<fullyQualifiedTypeName name="br.usp.icmc.ffsm.Compose"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Display"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.ProgressBar"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.SWT"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Label"/>
+</qualifiedTypeNameHistroy>

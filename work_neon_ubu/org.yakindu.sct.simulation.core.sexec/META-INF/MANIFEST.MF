@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: YAKINDU Simulation Execution
+Bundle-SymbolicName: org.yakindu.sct.simulation.core.sexec;singleton:=true
+Bundle-Version: 2.9.0.qualifier
+Bundle-Activator: org.yakindu.sct.simulation.core.sexec.SExecCoreActivator
+Require-Bundle: org.yakindu.sct.simulation.core,
+ org.eclipse.core.runtime,
+ org.yakindu.sct.model.sexec,
+ com.google.inject,
+ org.eclipse.xtext,
+ org.yakindu.sct.model.stext,
+ org.eclipse.xtend.lib,
+ com.google.guava,
+ org.yakindu.sct.commons,
+ org.eclipse.emf.workspace,
+ org.yakindu.base.xtext.utils.jface,
+ org.yakindu.sct.domain
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: org.yakindu.sct.simulation.core.sexec,
+ org.yakindu.sct.simulation.core.sexec.container,
+ org.yakindu.sct.simulation.core.sexec.interpreter,
+ org.yakindu.sct.simulation.core.sexec.launch
+Bundle-Vendor: statecharts.org
+

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Yakindu Statechart Tools (SCT) C# Generator
+Bundle-SymbolicName: org.yakindu.sct.generator.csharp;singleton:=true
+Bundle-Version: 2.9.0.qualifier
+Require-Bundle: org.yakindu.sct.model.stext,
+ org.yakindu.sct.generator.core,
+ org.yakindu.sct.generator.genmodel,
+ org.yakindu.sct.model.resource,
+ org.eclipse.xpand
+Bundle-Vendor: statecharts.org
+Export-Package: org.yakindu.sct.generator.csharp,
+ org.yakindu.sct.generator.csharp.features
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+

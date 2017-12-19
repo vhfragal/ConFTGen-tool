@@ -1,0 +1,1093 @@
+/**
+ * Copyright (c) 2012-2016 committers of YAKINDU and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     committers of YAKINDU - initial API and implementation
+ */
+package org.yakindu.sct.model.sgraph.validation;
+
+import static org.yakindu.sct.model.sgraph.util.SGgraphUtil.areOrthogonal;
+import static org.yakindu.sct.model.sgraph.util.SGgraphUtil.collectAncestors;
+import static org.yakindu.sct.model.sgraph.util.SGgraphUtil.commonAncestor;
+import static org.yakindu.sct.model.sgraph.util.SGgraphUtil.findCommonAncestor;
+import static org.yakindu.sct.model.sgraph.util.SGgraphUtil.sources;
+import static org.yakindu.sct.model.sgraph.util.SGgraphUtil.targets;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.validation.AbstractDeclarativeValidator;
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.validation.CheckType;
+import org.eclipse.xtext.validation.EValidatorRegistrar;
+import org.yakindu.base.base.BasePackage;
+import org.yakindu.sct.model.sgraph.Choice;
+import org.yakindu.sct.model.sgraph.CompositeElement;
+import org.yakindu.sct.model.sgraph.Entry;
+import org.yakindu.sct.model.sgraph.EntryKind;
+import org.yakindu.sct.model.sgraph.Exit;
+import org.yakindu.sct.model.sgraph.FinalState;
+import org.yakindu.sct.model.sgraph.Region;
+import org.yakindu.sct.model.sgraph.Statechart;
+import org.yakindu.sct.model.sgraph.Synchronization;
+import org.yakindu.sct.model.sgraph.Transition;
+import org.yakindu.sct.model.sgraph.Vertex;
+
+import com.google.inject.Inject;
+
+import br.usp.icmc.feature.logic.FFSMProperties;
+import br.usp.icmc.ffsm.FState;
+import br.usp.icmc.fsm.common.FileHandler;
+import br.usp.icmc.reader.FFSMModelReaderYAKINDU;
+import br.usp.icmc.uml.CState;
+import parser.yakindu.FCONSTRAINT;
+
+/**
+ * This validator is intended to be used by a compositeValidator (See
+ * {@link org.eclipse.xtext.validation.ComposedChecks}) of another language
+ * specific validator. It does not register itself as an EValidator.
+ * 
+ * This validator checks for common graphical constraints for all kinds of state
+ * charts.
+ * 
+ * @author terfloth
+ * @author muelder
+ * @author bohl - migrated to xtext infrastruture
+ * @author schwertfeger
+ * @author antony
+ */
+public class SGraphJavaValidator extends AbstractDeclarativeValidator {
+		
+	private ArrayList<FState> not_init_con = new ArrayList<FState>();
+	private boolean not_deterministic = false;
+	private boolean not_minimal = false; 
+	String header;
+	String project_path;
+	String resource_path;
+	FFSMProperties p;
+
+	public static final String ISSUE_STATE_WITHOUT_NAME = "A state must have a name.";
+	public static final String ISSUE_NODE_NOT_REACHABLE = "Node is not reachable.";
+	public static final String ISSUE_INVALID_DIST_STATE_PAIR = "Missing distinguishing sequences of configurations for:";
+	public static final String ISSUE_INVALID_CONDITIONAL_STATE = "Invalid Feature Constraint:";
+	public static final String ISSUE_INVALID_HCONDITIONAL_STATE = "Invalid Hierarchical Feature Constraint:";
+	public static final String ISSUE_INVALID_DETERMINISM = "Conflicting Transitions for Determinism on State:";
+	public static final String ISSUE_INVALID_CONDITIONAL_STATE_PATH = "Conditional State cannot be reached by all products:";
+	public static final String ISSUE_INVALID_CONDITIONAL_TRANSITION = "Invalid Transition Constraint:";
+	public static final String ISSUE_INVALID_TRANSITION = "FFSM Transition requires input/output";
+	public static final String ISSUE_NODE_NOT_REACHABLE_PRODUCTS = "State is not reachable by all products";
+	public static final String ISSUE_FINAL_STATE_OUTGOING_TRANSITION = "A final state should have no outgoing transition.";
+	public static final String ISSUE_STATE_WITHOUT_OUTGOING_TRANSITION = "A state should have at least one outgoing transition.";
+	public static final String ISSUE_INITIAL_ENTRY_WITH_IN_TRANS = "Initial entry should have no incoming transition.";
+	public static final String ISSUE_INITIAL_ENTRY_WITHOUT_OUT_TRANS = "Initial entry should have a single outgoing transition.";
+	public static final String ISSUE_ENTRY_WITH_MULTIPLE_OUT_TRANS = "Entries must not have more than one outgoing transition.";
+	public static final String ISSUE_ENTRY_WITH_TRIGGER = "Outgoing Transitions from Entries can not have a Trigger or Guard.";
+	public static final String ISSUE_EXIT_WITH_OUT_TRANS = "Exit node should have no outgoing transition.";
+	public static final String ISSUE_EXIT_WITHOUT_IN_TRANS = "Exit node should have at least one incoming transition.";
+	public static final String ISSUE_EXIT_ON_STATECHART = "Exit node in top level region not supported - use final states instead.";
+	public static final String ISSUE_CHOICE_WITHOUT_OUTGOING_TRANSITION = "A choice must have at least one outgoing transition.";
+	public static final String ISSUE_REGION_CANT_BE_ENTERED_USING_SHALLOW_HISTORY_NO_DEFAULT_ENTRY = "The region can't be entered using the shallow history. Add a default entry node.";
+	public static final String ISSUE_REGION_CANT_BE_ENTERED_USING_SHALLOW_HISTORY_NON_CONNECTED_DEFAULT_ENTRY = "The region can't be entered using the shallow history. Add a transition from default entry to a state.";
+	public static final String ISSUE_SUBMACHINE_UNRESOLVABLE = "Referenced substate machine '%s'does not exist!";
+	public static final String ISSUE_SYNCHRONIZATION_TARGET_STATES_NOT_ORTHOGONAL = "The target states of a synchronization must be orthogonal!";
+	public static final String ISSUE_SYNCHRONIZATION_TARGET_STATES_NOT_WITHIN_SAME_PARENTSTATE = "The target states of a synchronization have to be contained in the same parent state within different regions!";
+	public static final String ISSUE_SYNCHRONIZATION_SOURCE_STATES_NOT_ORTHOGONAL = "The source states of a synchronization must be orthogonal!";
+	public static final String ISSUE_SYNCHRONIZATION_SOURCE_STATES_NOT_WITHIN_SAME_PARENTSTATE = "The source states of a synchronization have to be contained in the same parent state within different regions!";
+	public static final String ISSUE_SYNCHRONIZATION_TRANSITION_COUNT = "A synchronization should have at least two incoming or two outgoing transitions.";
+	public static final String ISSUE_TRANSITION_ORTHOGONAL = "Source and target of a transition must not be located in orthogonal regions!";
+	public static final String ISSUE_INITIAL_ENTRY_WITH_TRANSITION_TO_CONTAINER = "Outgoing Transitions from Entries can only target to sibling or inner states.";
+	public static final String ISSUE_STATECHART_NAME_NO_IDENTIFIER = "%s is not a valid identifier!";
+
+	/*
+	//check reachability of states	
+	@Check(CheckType.FAST)
+	public void vertexNotReachable(final Vertex vertex) {
+		if (!(vertex instanceof Entry)) {
+
+			final Set<Object> stateScopeSet = new HashSet<Object>();
+			for (EObject obj : EcoreUtil2.eAllContents(vertex)) {
+				stateScopeSet.add(obj);
+			}
+			stateScopeSet.add(vertex);
+
+			final List<Object> externalPredecessors = new ArrayList<Object>();
+
+			DFS dfs = new DFS() {
+
+				@Override
+				public Iterator<Object> getElementLinks(Object element) {
+					List<Object> elements = new ArrayList<Object>();
+
+					if (element instanceof org.yakindu.sct.model.sgraph.State) {
+						if (!stateScopeSet.contains(element)) {
+							externalPredecessors.add(element);
+						} else {
+							elements.addAll(((org.yakindu.sct.model.sgraph.State) element).getRegions());
+							elements.addAll(((org.yakindu.sct.model.sgraph.State) element).getIncomingTransitions());
+						}
+
+					} else if (element instanceof Region) {
+						elements.addAll(((Region) element).getVertices());
+					} else if (element instanceof Entry) {
+						if (!stateScopeSet.contains(element)) {
+							externalPredecessors.add(element);
+						} else {
+							elements.addAll(((Entry) element).getIncomingTransitions());
+						}
+
+					} else if (element instanceof Vertex) {
+						elements.addAll(((Vertex) element).getIncomingTransitions());
+
+					} else if (element instanceof Transition) {
+						elements.add(((Transition) element).getSource());
+
+					}
+
+					return elements.iterator();
+				}
+			};
+
+			dfs.perform(vertex);
+
+			if (externalPredecessors.size() == 0) {
+				error(ISSUE_NODE_NOT_REACHABLE, vertex, null, -1);
+			}
+		}
+	}
+	*/
+	@Check(CheckType.FAST)
+	public void vertexNotReachable(final Vertex vertex) {
+		if (!(vertex instanceof Entry)) {
+
+			final Set<Object> stateScopeSet = new HashSet<Object>();
+			for (EObject obj : EcoreUtil2.eAllContents(vertex)) {
+				stateScopeSet.add(obj);
+			}
+			stateScopeSet.add(vertex);
+
+			final List<Object> externalPredecessors = new ArrayList<Object>();
+
+			DFS dfs = new DFS() {
+
+				@Override
+				public Iterator<Object> getElementLinks(Object element) {
+					List<Object> elements = new ArrayList<Object>();
+
+					if (element instanceof org.yakindu.sct.model.sgraph.State) {
+						if (!stateScopeSet.contains(element)) {
+							externalPredecessors.add(element);
+						} else {
+							elements.addAll(((org.yakindu.sct.model.sgraph.State) element).getRegions());
+							elements.addAll(((org.yakindu.sct.model.sgraph.State) element).getIncomingTransitions());
+						}
+
+					} else if (element instanceof Region) {
+						elements.addAll(((Region) element).getVertices());
+					} else if (element instanceof Entry) {
+						if (!stateScopeSet.contains(element)) {
+							externalPredecessors.add(element);
+						} else {
+							elements.addAll(((Entry) element).getIncomingTransitions());
+						}
+
+					} else if (element instanceof Vertex) {
+						elements.addAll(((Vertex) element).getIncomingTransitions());
+
+					} else if (element instanceof Transition) {
+						elements.add(((Transition) element).getSource());
+
+					}
+
+					return elements.iterator();
+				}
+			};
+
+			dfs.perform(vertex);
+
+			if (externalPredecessors.size() == 0) {
+				error(ISSUE_NODE_NOT_REACHABLE, vertex, null, -1);
+			}
+		}
+	}
+
+	/**
+	 * Calculates all predecessor states
+	 */
+
+	@Check(CheckType.FAST)
+	public void finalStateWithOutgoingTransition(FinalState finalState) {
+		if ((finalState.getOutgoingTransitions().size() > 0)) {
+			warning(ISSUE_FINAL_STATE_OUTGOING_TRANSITION, finalState, null, -1);
+		}
+	}
+	
+	/*
+	 * EXTENSIONS ::::::
+	 */
+	
+	public String get_Z3_condition(String cond){
+		Reader r = new BufferedReader(new StringReader(";"));
+		try{
+			FCONSTRAINT.ReInit(r);
+		} catch (Exception e) {
+			new FCONSTRAINT(r);
+		}
+		
+		String ex = cond;
+		ex = ex.concat(";");
+		String z3 = "";
+		z3 = FFSMModelReaderYAKINDU.getZ3(ex);
+		return z3;
+	}
+	
+	public void pre_processing(Statechart sct){
+		project_path = ""+ResourcesPlugin.getWorkspace().getRoot().getLocationURI();
+		project_path = project_path.substring(project_path.indexOf(":")+1, project_path.length());		
+		resource_path = ""+sct.eResource().getURI();
+		resource_path = resource_path.substring(resource_path.indexOf(":")+2, resource_path.length());
+		resource_path = resource_path.substring(resource_path.indexOf("/"), resource_path.lastIndexOf("."));
+		resource_path = resource_path.replaceAll("%20", " ");		
+		
+		String FM_path = project_path.concat(resource_path+".xml");
+		String folder = FM_path.substring(0,FM_path.lastIndexOf("/"));
+		
+		boolean islog = false;
+		boolean debug = true;
+		p = new FFSMProperties(folder, islog, debug);
+		header = p.read_XML_FeatureModel(FM_path);
+			
+		String file_path = project_path.concat(resource_path+".txt");				
+		String fpath = project_path.concat(resource_path+".ffsm");
+		File yakindu_file = new File(fpath);
+		
+		Reader r = new BufferedReader(new StringReader(";"));
+		try{
+			FCONSTRAINT.ReInit(r);
+		} catch (Exception e) {
+			new FCONSTRAINT(r);
+		}
+		
+		// generate intermediate FFSM
+		FFSMModelReaderYAKINDU reader = new FFSMModelReaderYAKINDU(yakindu_file);
+		String model = reader.generate_FFSM_interm();
+		FileHandler fh = new FileHandler();		
+		try {
+			fh.print_file(model, file_path);
+			//set FFSM
+			String resource_path = this.resource_path;
+			String diagram_name = resource_path.substring(resource_path.lastIndexOf("/")+1, resource_path.length());			
+			//get back to root
+			while(resource_path.lastIndexOf("/") > resource_path.indexOf("/")){
+				resource_path = resource_path.substring(0,resource_path.lastIndexOf("/"));
+			}
+			resource_path = resource_path + "/z3/"+diagram_name;
+			p.setFFSM(file_path, header, project_path, resource_path);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public String get_state_condition(org.yakindu.sct.model.sgraph.State state){
+		String cond = "true";
+		String sname = state.getName();
+		String label = sname;		
+		String original_cond = "";
+		if(sname.indexOf("[") > 0){
+			cond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));
+			label = sname.substring(0,sname.indexOf("["));
+			original_cond = cond;
+				
+			cond = get_Z3_condition(cond);			
+			sname = label+"["+cond+"]";
+		}else{
+			sname = label+"[true]";
+		}
+			
+		try {
+			if(!p.checkFFSM_condition(cond)){
+				return original_cond;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "";
+	}
+	
+	public String get_state_any_hcondition(org.yakindu.sct.model.sgraph.State state){
+		
+		//String entire_cond = "(and ";
+		String entire_cond = "";	
+		org.yakindu.sct.model.sgraph.State st = state;
+		int deep = 0;
+		for(int i=0; i < 100; i++){
+			String cond = "true";
+			try{
+				Statechart sct = (Statechart) st.getParentRegion().getComposite();
+				String sname = state.getName();				
+				if(sname.indexOf("[") > 0){
+					cond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));
+					cond = get_Z3_condition(cond);
+				}	
+				if(!cond.equals("true")){
+					if(deep == 0){
+						return cond;
+					}else {
+						entire_cond = "(and "+entire_cond+ " " +cond+")";
+					}
+				}else {
+					if(deep == 0){						
+						return cond;
+					}else if(deep > 1){						
+						entire_cond = "(and "+entire_cond+")";
+					}
+				}				
+				return entire_cond;
+			}catch (Exception e){				
+				//ok not root yet
+				Region r = (Region) st.getParentRegion();
+				org.yakindu.sct.model.sgraph.State s = (org.yakindu.sct.model.sgraph.State) 
+						st.getParentRegion().getComposite();
+				String rname = r.getName();
+				String sname = s.getName();
+				String scond = "true";
+				String rcond = "true";
+				if(rname.indexOf("[") > 0){
+					rcond = rname.substring(rname.indexOf("[")+1, rname.lastIndexOf("]"));				
+					rcond = get_Z3_condition(rcond);	
+				}				
+				if(sname.indexOf("[") > 0){
+					scond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));				
+					scond = get_Z3_condition(scond);	
+				}
+				if(!scond.equals("true")){
+					if(deep == 0){
+						entire_cond = scond;
+					}else entire_cond = scond+" "+entire_cond;					
+					deep++;
+				}
+				if(!rcond.equals("true")){
+					if(deep == 0){
+						entire_cond = rcond;
+					}else entire_cond = rcond+" "+entire_cond;
+					deep++;
+				}
+				st = (org.yakindu.sct.model.sgraph.State) st.getParentRegion().getComposite();
+			}
+		}		
+		return "";
+	}
+	
+	public String get_state_hierarchical_condition(org.yakindu.sct.model.sgraph.State state){
+		
+		//String entire_cond = "(and ";
+		String entire_cond = "";	
+		org.yakindu.sct.model.sgraph.State st = state;
+		int deep = 0;
+		for(int i=0; i < 100; i++){
+			String cond = "true";
+			try{
+				Statechart sct = (Statechart) st.getParentRegion().getComposite();
+				String sname = state.getName();
+				if(sname.indexOf("[") > 0){
+					cond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));
+					cond = get_Z3_condition(cond);
+				}	
+				if(!cond.equals("true")){
+					if(deep == 0){
+						entire_cond = cond;
+					}else {
+						entire_cond = "(and "+entire_cond+ " " +cond+")";
+					}
+				}else {
+					if(deep == 0){						
+						entire_cond = cond;
+					}else if(deep > 1){						
+						entire_cond = "(and "+entire_cond+")";
+					}
+				}					
+				if(!p.checkFFSM_condition(entire_cond)){
+					return entire_cond;
+				}
+				break;
+			}catch (Exception e){				
+				//ok not root yet
+				Region r = (Region) st.getParentRegion();
+				org.yakindu.sct.model.sgraph.State s = (org.yakindu.sct.model.sgraph.State) 
+						st.getParentRegion().getComposite();
+				String rname = r.getName();
+				String sname = s.getName();
+				String scond = "true";
+				String rcond = "true";
+				if(rname.indexOf("[") > 0){
+					rcond = rname.substring(rname.indexOf("[")+1, rname.lastIndexOf("]"));				
+					rcond = get_Z3_condition(rcond);	
+				}				
+				if(sname.indexOf("[") > 0){
+					scond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));				
+					scond = get_Z3_condition(scond);	
+				}
+				if(!scond.equals("true")){
+					if(deep == 0){
+						entire_cond = scond;
+					}else entire_cond = scond+" "+entire_cond;					
+					deep++;
+				}
+				if(!rcond.equals("true")){
+					if(deep == 0){
+						entire_cond = rcond;
+					}else entire_cond = rcond+" "+entire_cond;
+					deep++;
+				}
+				st = (org.yakindu.sct.model.sgraph.State) st.getParentRegion().getComposite();
+			}
+		}		
+		return "";
+	}
+	
+	public String getZ3_state_name(org.yakindu.sct.model.sgraph.State state){		
+		String sname = state.getName();
+		String label = sname;		
+		if(sname.indexOf("[") > 0){			
+			label = sname.substring(0,sname.indexOf("[")).trim();
+		}
+		String hcond = get_state_any_hcondition(state);				
+		return label+"@"+hcond;
+	}
+	
+	public String getZ3_state_name_old(org.yakindu.sct.model.sgraph.State state){
+		String cond = "true";
+		String sname = state.getName();
+		String label = sname;		
+		//String original_cond = "";
+		if(sname.indexOf("[") > 0){
+			cond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));
+			label = sname.substring(0,sname.indexOf("[")).trim();
+			//original_cond = cond;
+				
+			cond = get_Z3_condition(cond);			
+			sname = label+"["+cond+"]";
+		}else{
+			sname = label+"[true]";
+		}
+				
+		return label+"@"+cond;
+	}
+	
+	public String getZ3_transition_name(Transition t){
+		String source = getZ3_state_name((org.yakindu.sct.model.sgraph.State) t.getSource());
+		String target = getZ3_state_name((org.yakindu.sct.model.sgraph.State) t.getTarget());
+				
+		String spec = t.getSpecification();
+		String[] parts = spec.split("/");
+		String cond = "true";
+		
+		String cinput = parts[0].trim();
+		String output = parts[1].trim();
+		String input = cinput;
+		if(cinput.indexOf("[") > 0){
+			input = input.substring(0, input.indexOf("[")).trim();
+			cond = cinput.substring(cinput.indexOf("[")+1, cinput.lastIndexOf("]"));										
+			cond = get_Z3_condition(cond);			
+		}
+		
+		return source+"--"+input+"@"+cond+"/"+output+"->"+target;
+	}
+	/*
+	public String get_state_path_condition(org.yakindu.sct.model.sgraph.State state){
+		
+		//get equivalent FFSM FState
+		FState equiv = null;
+		for(FState fs : p.getFFSM().getFStates()){
+			if(fs.toString().equals(getZ3_state_name(state))){
+				equiv = fs;
+				break;
+			}
+		}		
+		if(equiv != null && !equiv.equals(p.getFFSM().getFInitialState())){				
+			try {
+				if(!p.checkFFSM_state_path_condition(equiv)){
+					return state.getName();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}		
+		return "";
+	}*/
+		
+	public String get_transition_condition(Transition t){		
+		String spec = t.getSpecification();
+		String[] parts = spec.split("/");
+		String cond = "true";
+		if(parts.length == 2){
+			String cinput = parts[0].trim();							
+			if(cinput.indexOf("[") > 0){
+				cond = cinput.substring(cinput.indexOf("[")+1, cinput.lastIndexOf("]"));										
+				cond = get_Z3_condition(cond);			
+			}
+		}
+		
+		String source_cond = get_state_any_hcondition((org.yakindu.sct.model.sgraph.State) t.getSource());
+		String target_cond = get_state_any_hcondition((org.yakindu.sct.model.sgraph.State) t.getTarget());
+		
+		String z3_cond = "(and "+source_cond+" "+cond+" "+target_cond+")";		
+		//String original_cond = sname+" AND "+spec+" AND "+tname;
+			
+		try {
+			if(!p.checkFFSM_condition(z3_cond)){
+				//return original_cond;
+				return z3_cond;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "";
+	}
+	
+	public String get_transition_condition_old(Transition t){
+		String source_cond = "";
+		String target_cond = "";
+		String sname = t.getSource().getName();
+		String tname = t.getTarget().getName();
+		if(sname.indexOf("[") > 0){
+			source_cond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));
+		}
+		if(tname.indexOf("[") > 0){
+			target_cond = tname.substring(tname.indexOf("[")+1, tname.lastIndexOf("]"));
+		}
+		source_cond = get_Z3_condition(source_cond);
+		target_cond = get_Z3_condition(target_cond);
+		if(source_cond.equals("")) source_cond = "true";
+		if(target_cond.equals("")) target_cond = "true";
+				
+		String spec = t.getSpecification();
+		String[] parts = spec.split("/");
+		String cond = "true";
+		if(parts.length == 2){
+			String cinput = parts[0].trim();							
+			if(cinput.indexOf("[") > 0){
+				cond = cinput.substring(cinput.indexOf("[")+1, cinput.lastIndexOf("]"));										
+				cond = get_Z3_condition(cond);			
+			}
+		}
+		
+		String z3_cond = "(and "+source_cond+" "+cond+" "+target_cond+")";		
+		//String original_cond = sname+" AND "+spec+" AND "+tname;
+			
+		try {
+			if(!p.checkFFSM_condition(z3_cond)){
+				//return original_cond;
+				return z3_cond;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "";
+	}
+	
+	public FState get_equivalent(org.yakindu.sct.model.sgraph.State state){
+		FState equiv = null;
+		for(FState fs : p.getFFSM().getFStates()){			
+			if(fs.toString().equals(getZ3_state_name(state))){
+				equiv = fs;
+				break;
+			}
+		}
+		return equiv;
+	}
+	
+	@Check(CheckType.FAST)
+	public void check_state_fcondition(org.yakindu.sct.model.sgraph.State state) {
+				
+		//System.out.println("CHECK State "+state.getName());	
+		
+		//Statechart sct = (Statechart) state.getParentRegion().getComposite();
+		//System.out.println(state.getName());
+		//System.out.println(state.eResource());
+		//System.out.println(state.eContainer());
+		//System.out.println(state.getParentRegion().getComposite());
+		Statechart sct = get_Statechart(state);
+		org.yakindu.sct.model.sgraph.State root = get_StatechartRoot(state); 
+				//(org.yakindu.sct.model.sgraph.State) state.getParentRegion().eContents().get(1);
+		
+		//Statechart statechart
+		//List<View> result = EcoreUtil2.getAllContentsOfType(sct, View.class);
+		//System.out.println("VIEW SIZE "+result.size());
+		//View v = (View) sct.eContents().get(1);
+		//if(root.getParentRegion().eContents().size() <= 1) return;
+		if(root == state){
+			pre_processing(sct);		
+				
+			//check determinism	root		
+			String input = p.yak_is_deterministic(p.getFFSM().getFInitialState());			
+			if(input.length() > 0){
+				for(Transition t : state.getOutgoingTransitions()){
+					String spec = t.getSpecification().trim();
+					String[] left = spec.split("/");
+					String[] ins = left[0].split(",");
+					for(String s : ins){
+						if(s.startsWith(input)){
+							error(ISSUE_INVALID_DETERMINISM+state.getName(), t, null, -1);
+						}
+					}
+				}
+			}
+			not_init_con.clear();
+			not_init_con.addAll(p.yak_is_initially_connected());
+			System.out.println("not init con. "+not_init_con);
+			//check state paths			
+			for(FState f : not_init_con){
+				System.out.println("SET "+ get_StateList(root));
+				for(org.yakindu.sct.model.sgraph.State st : get_StateList(root)){					
+					FState q = get_equivalent(st);					
+					if(f.equals(q)){
+						error(ISSUE_INVALID_CONDITIONAL_STATE_PATH+f.getStateName()+"@"+f.getCondition(),
+								st, null, -1);
+					}
+				}				
+			}
+			return;
+		}
+				
+		//check state condition
+		if(state.getName().indexOf("[") > 0){
+			String condition = get_state_condition(state);
+			if(condition.length() > 0){
+				error(ISSUE_INVALID_CONDITIONAL_STATE+condition, state, null, -1);
+			}
+		}
+		//check state hierarchy condition
+		String condition = get_state_hierarchical_condition(state);
+		if(condition.length() > 0){
+			error(ISSUE_INVALID_HCONDITIONAL_STATE+condition, state, null, -1);
+		}
+				
+		//System.out.println("CHECK DET State "+state.getName());
+		//get FState equivalent
+		FState equiv = get_equivalent(state);		
+			
+		//check determinism
+		Transition t = not_determ(state, equiv);
+		if(t != null){
+			error(ISSUE_INVALID_DETERMINISM+state.getName(), t, null, -1);
+		}		
+		
+		//check for minimal pair				
+		for(FState fs : p.getFFSM().getFStates()){				
+			if(!fs.equals(equiv)){				
+				if(!p.yak_is_minimal(equiv,fs)){
+					error(ISSUE_INVALID_DIST_STATE_PAIR+equiv.toString()+" AND "+fs.toString(), state, null, -1);
+					break;
+				}
+			}			
+		}			
+	}
+	
+	public Transition not_determ(org.yakindu.sct.model.sgraph.State state, FState equiv){
+		String input = p.yak_is_deterministic(equiv);
+		if(input.length() > 0){
+			ArrayList<org.yakindu.sct.model.sgraph.State> alist = get_AncestorList(state);
+			ArrayList<Transition> tlist = new ArrayList<Transition>();
+			for(org.yakindu.sct.model.sgraph.State st : alist){
+				tlist.addAll(st.getOutgoingTransitions());
+			}
+			for(Transition t : tlist){
+				String spec = t.getSpecification().trim();
+				String[] left = spec.split("/");
+				String[] ins = left[0].split(",");
+				for(String s : ins){
+					if(s.startsWith(input)){
+						return t;
+					}
+				}
+			}
+		}
+		return null;
+	}
+	
+	
+	public ArrayList<org.yakindu.sct.model.sgraph.State> get_AncestorList(org.yakindu.sct.model.sgraph.State state){
+		ArrayList<org.yakindu.sct.model.sgraph.State> list = new ArrayList<org.yakindu.sct.model.sgraph.State>();
+		Statechart sct = null;
+		org.yakindu.sct.model.sgraph.State source = state;
+		for(int i=0; i < 100; i++){
+			try{
+				sct = (Statechart) source.getParentRegion().getComposite();
+				list.add(source);
+				break;
+			}catch (Exception e){
+				list.add(source);
+				source = (org.yakindu.sct.model.sgraph.State) source.getParentRegion().getComposite();
+			}
+		}		
+		return list;
+	}
+	
+	public ArrayList<org.yakindu.sct.model.sgraph.State> get_StateList(org.yakindu.sct.model.sgraph.State root){
+		ArrayList<org.yakindu.sct.model.sgraph.State> list = new ArrayList<org.yakindu.sct.model.sgraph.State>();
+		for(Region region : root.getRegions()){
+			for(EObject state : region.eContents()){
+				try{
+					org.yakindu.sct.model.sgraph.State st = (org.yakindu.sct.model.sgraph.State) state;
+					list.add(st);
+					if(st.isComposite()){
+						ArrayList<org.yakindu.sct.model.sgraph.State> tlist = get_StateList(st);
+						list.addAll(tlist);
+					}
+				}catch (Exception e){
+				}
+			}
+		}		
+		return list;
+	}
+	
+	public Statechart get_Statechart(org.yakindu.sct.model.sgraph.State s){
+		Statechart sct = null;
+		org.yakindu.sct.model.sgraph.State source = s;
+		for(int i=0; i < 100; i++){
+			try{
+				sct = (Statechart) source.getParentRegion().getComposite();
+				break;
+			}catch (Exception e){
+				source = (org.yakindu.sct.model.sgraph.State) source.getParentRegion().getComposite();
+			}
+		}
+		return sct;
+	}
+	
+	public org.yakindu.sct.model.sgraph.State get_StatechartRoot(org.yakindu.sct.model.sgraph.State s){
+		Statechart sct = null;
+		org.yakindu.sct.model.sgraph.State source = s;
+		for(int i=0; i < 100; i++){
+			try{
+				sct = (Statechart) source.getParentRegion().getComposite();
+				break;
+			}catch (Exception e){
+				source = (org.yakindu.sct.model.sgraph.State) source.getParentRegion().getComposite();
+			}
+		}
+		return source;
+	}
+			
+	@Check(CheckType.FAST)
+	public void check_transition_fcondition(Transition t) {
+				
+		//System.out.println("CHECK Transition "+t.getSource().getName()+"--"+
+		//		t.getSpecification()+"->"+t.getTarget().getName());	
+		//Statechart sct = (Statechart) t.getSource().getParentRegion().getComposite();
+		try {
+			//check if element is state or other
+			org.yakindu.sct.model.sgraph.State source = (org.yakindu.sct.model.sgraph.State) t.getSource();
+			org.yakindu.sct.model.sgraph.State target = (org.yakindu.sct.model.sgraph.State) t.getTarget();
+		}catch (Exception e){
+			//System.out.println("source "+t.getSource().getName());
+			return;
+		}
+		
+		org.yakindu.sct.model.sgraph.State source = (org.yakindu.sct.model.sgraph.State) t.getSource();
+		Statechart sct = get_Statechart(source);
+		org.yakindu.sct.model.sgraph.State root = get_StatechartRoot(source); 
+		//org.yakindu.sct.model.sgraph.State root = (org.yakindu.sct.model.sgraph.State) 
+		//		t.getSource().getParentRegion().eContents().get(1);
+		if(root.getOutgoingTransitions() == null || root.getOutgoingTransitions().size() <= 0){
+			return;
+		}
+				
+		if(root.getOutgoingTransitions().get(0) == t){
+			pre_processing(sct);		
+		}
+		
+		String spec = t.getSpecification();
+		String[] parts = spec.split("/");		
+		if(parts.length != 2){
+			error(ISSUE_INVALID_TRANSITION, t, null, -1);
+		}
+		
+		String condition = get_transition_condition(t);
+		if(condition.length() > 0){
+			error(ISSUE_INVALID_CONDITIONAL_TRANSITION+condition, t, null, -1);
+		}
+	}
+	
+	
+	/*
+	 * EXTENSIONS END ::::::
+	 */
+
+	@Check(CheckType.FAST)
+	public void nameIsNotEmpty(org.yakindu.sct.model.sgraph.State state) {
+		if ((state.getName() == null || state.getName().trim().length() == 0) && !(state instanceof FinalState)) {
+			error(ISSUE_STATE_WITHOUT_NAME, state, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void choiceWithoutOutgoingTransition(Choice choice) {
+		// Choice without outgoing transition
+		if (choice.getOutgoingTransitions().size() == 0) {
+			error(ISSUE_CHOICE_WITHOUT_OUTGOING_TRANSITION, choice, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void disallowTrigger(Entry entry) {
+		for (Transition transition : entry.getOutgoingTransitions()) {
+			if (transition.getTrigger() != null) {
+				error(ISSUE_ENTRY_WITH_TRIGGER, entry, null, -1);
+			}
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void initialEntryWithoutIncomingTransitions(Entry entry) {
+		if (entry.getIncomingTransitions().size() > 0 && entry.getKind().equals(EntryKind.INITIAL)) {
+			warning(ISSUE_INITIAL_ENTRY_WITH_IN_TRANS, entry, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void initialEntryWithoutOutgoingTransition(Entry entry) {
+		if (entry.getOutgoingTransitions().size() == 0 && ((Entry) entry).getKind().equals(EntryKind.INITIAL)) {
+			warning(ISSUE_INITIAL_ENTRY_WITHOUT_OUT_TRANS, entry, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void initialEntryWithMultipleOutgoingTransition(Entry entry) {
+		if (entry.getOutgoingTransitions().size() > 1) {
+			error(ISSUE_ENTRY_WITH_MULTIPLE_OUT_TRANS, entry, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void exitWithoutIncomingTransition(Exit exit) {
+		if (exit.getIncomingTransitions().size() == 0) {
+			warning(ISSUE_EXIT_WITHOUT_IN_TRANS, exit, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void exitWithOutgoingTransition(Exit exit) {
+		if (exit.getOutgoingTransitions().size() > 0) {
+			error(ISSUE_EXIT_WITH_OUT_TRANS, exit, null, -1);
+		}
+	}
+
+	/**
+	 * Exit nodes in top level regions are not supported.
+	 * 
+	 * @param exit
+	 */
+	@Check(CheckType.FAST)
+	public void exitOnStatechart(Exit exit) {
+		if (exit.getParentRegion().getComposite() instanceof Statechart) {
+			error(ISSUE_EXIT_ON_STATECHART, exit, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void synchronizationTransitionCount(Synchronization sync) {
+		if (sync.getIncomingTransitions().size() < 2 && sync.getOutgoingTransitions().size() < 2) {
+			warning(ISSUE_SYNCHRONIZATION_TRANSITION_COUNT, sync, null, -1);
+		}
+	}
+
+	@Check(CheckType.FAST)
+	public void initialEntryWithTransitionToContainer(Transition t) {
+		if (t.getSource() instanceof Entry && !isChildOrSibling(t.getSource(), t.getTarget())) {
+			error(ISSUE_INITIAL_ENTRY_WITH_TRANSITION_TO_CONTAINER, t, null, -1);
+		}
+	}
+
+	private boolean isChildOrSibling(Vertex source, Vertex target) {
+		TreeIterator<EObject> iter = source.getParentRegion().eAllContents();
+		while (iter.hasNext()) {
+			if (target == iter.next()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Checks if all composite states that are siblings of a shallow history can
+	 * enter their regions.
+	 * 
+	 * @param e
+	 */
+	@Check(CheckType.FAST)
+	public void regionCantBeEnteredUsingShallowHistory(Entry e) {
+
+		if (e.getKind() == EntryKind.SHALLOW_HISTORY) {
+
+			// get all regions off all sibling states
+			List<Region> regions = new ArrayList<Region>();
+			for (Vertex v : e.getParentRegion().getVertices()) {
+				if (v instanceof org.yakindu.sct.model.sgraph.State) {
+					org.yakindu.sct.model.sgraph.State state = (org.yakindu.sct.model.sgraph.State) v;
+					regions.addAll(state.getRegions());
+				}
+			}
+
+			// check each region
+			for (Region r : regions) {
+
+				// first determine if the region contains a default entry
+				Entry defaultEntry = null;
+				for (Vertex v : r.getVertices()) {
+					if (v instanceof Entry) {
+						String name = v.getName().trim().toLowerCase();
+						if (name != null || "".equals(name) || "default".equals(name)) {
+							defaultEntry = (Entry) v;
+							break;
+						}
+					}
+				}
+
+				// now check error conditions
+				if (defaultEntry == null) {
+					error(ISSUE_REGION_CANT_BE_ENTERED_USING_SHALLOW_HISTORY_NO_DEFAULT_ENTRY, r, null, -1);
+				} else if (defaultEntry.getOutgoingTransitions().size() != 1) {
+					error(ISSUE_REGION_CANT_BE_ENTERED_USING_SHALLOW_HISTORY_NON_CONNECTED_DEFAULT_ENTRY, r, null, -1);
+				}
+			}
+
+		}
+
+	}
+
+	@Check
+	public void orthogonalTransition(Transition transition) {
+
+		Vertex source = transition.getSource();
+		Vertex target = transition.getTarget();
+
+		if ((source instanceof Synchronization) || (target instanceof Synchronization))
+			return; // ... the check does not apply.
+
+		EObject commonAncestor = commonAncestor(source, target);
+
+		if (commonAncestor instanceof CompositeElement) {
+
+			error(ISSUE_TRANSITION_ORTHOGONAL, transition, null, -1);
+		}
+	}
+
+	@Check
+	public void orthogonalSourceStates(Synchronization sync) {
+
+		List<Vertex> sourceVertices = sources(sync.getIncomingTransitions());
+
+		if (!areOrthogonal(sourceVertices)) {
+			error(ISSUE_SYNCHRONIZATION_SOURCE_STATES_NOT_ORTHOGONAL, sync, null, -1);
+		}
+	}
+
+	@Check
+	public void orthogonalTargetStates(Synchronization sync) {
+
+		List<Vertex> sourceVertices = targets(sync.getOutgoingTransitions());
+
+		if (!areOrthogonal(sourceVertices)) {
+			error(ISSUE_SYNCHRONIZATION_TARGET_STATES_NOT_ORTHOGONAL, sync, null, -1);
+		}
+	}
+
+	@Check
+	public void orthogonalSynchronizedTransition(Synchronization sync) {
+
+		List<Transition> incoming = sync.getIncomingTransitions();
+		List<List<EObject>> inAncestorsList = new ArrayList<List<EObject>>();
+		for (Transition trans : incoming) {
+			inAncestorsList.add(collectAncestors(trans.getSource(), new ArrayList<EObject>()));
+		}
+
+		List<Transition> outgoing = sync.getOutgoingTransitions();
+		List<List<EObject>> outAncestorsList = new ArrayList<List<EObject>>();
+		for (Transition trans : outgoing) {
+			outAncestorsList.add(collectAncestors(trans.getTarget(), new ArrayList<EObject>()));
+		}
+
+		Set<Transition> inOrthogonal = new HashSet<Transition>(incoming);
+		Set<Transition> outOrthogonal = new HashSet<Transition>(outgoing);
+
+		for (int i = 0; i < incoming.size(); i++) {
+			for (int j = 0; j < outgoing.size(); j++) {
+
+				EObject commonAncestor = findCommonAncestor(inAncestorsList.get(i), outAncestorsList.get(j));
+
+				if (commonAncestor instanceof Region) {
+					inOrthogonal.remove(incoming.get(i));
+					outOrthogonal.remove(outgoing.get(j));
+				}
+			}
+		}
+
+		for (Transition trans : inOrthogonal) {
+			error(ISSUE_SYNCHRONIZATION_SOURCE_STATES_NOT_WITHIN_SAME_PARENTSTATE, trans, null, -1);
+		}
+
+		for (Transition trans : outOrthogonal) {
+			error(ISSUE_SYNCHRONIZATION_TARGET_STATES_NOT_WITHIN_SAME_PARENTSTATE, trans, null, -1);
+		}
+
+	}
+
+	@Check
+	public void checkStatechartNameIsIdentifier(Statechart statechart) {
+		if (!isValidJavaIdentifier(statechart.getName())) {
+			error(String.format(ISSUE_STATECHART_NAME_NO_IDENTIFIER, statechart.getName()), statechart, BasePackage.Literals.NAMED_ELEMENT__NAME, -1);
+
+		}
+	}
+	
+	protected boolean isValidJavaIdentifier(String s) {
+		if (s == null || s.length() == 0) {
+			return false;
+		}
+
+		char[] c = s.toCharArray();
+		if (!Character.isJavaIdentifierStart(c[0])) {
+			return false;
+		}
+
+		for (int i = 1; i < c.length; i++) {
+			if (!Character.isJavaIdentifierPart(c[i])) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public boolean isLanguageSpecific() {
+		return false;
+	}
+
+	@Inject
+	public void register(EValidatorRegistrar registrar) {
+		// Do not register because this validator is only a composite #398987
+	}
+}

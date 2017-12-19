@@ -1,0 +1,10 @@
+1@true -- a@true/_0() -> 2@A
+1@true -- b@true/_0() -> 3@B
+1@true -- c@true/_0() -> 1@true
+2@A -- a@true/_1() -> 1@true
+2@A -- b@true/_1() -> 4@true
+3@B -- b@true/_1() -> 1@true
+3@B -- a@true/_1() -> 4@true
+4@true -- a@true/_0() -> 3@B
+4@true -- b@true/_0() -> 2@A
+4@true -- c@true/_1() -> 4@true

@@ -1,0 +1,27 @@
+options{  JDK_VERSION = "1.5";  static = true;}PARSER_BEGIN(FCONSTRAINT)package parser.yakindu;
+
+public class FCONSTRAINT {
+  public static void main(String args []) throws ParseException  {
+    new FCONSTRAINT(System.in);
+    while (true) {
+      System.out.println("Reading from standard input...");     
+      try {        SimpleNode root = FCONSTRAINT.Parse();        if(root == null) {			System.out.println("Goodbye.");			        }else {            root.dump("-");            //System.out.println(toString(prefix) + "(" + jjtGetValue()+ ")");        }        return;
+      }
+      catch (Exception e) {
+        System.out.println("Erro sintático.");
+        System.out.println(e.getMessage());
+        FCONSTRAINT.ReInit(System.in);
+      }
+      catch (Error e) {
+        System.out.println("Erro léxico.");
+        System.out.println(e.getMessage());
+        break;
+      }
+    }
+  }
+}PARSER_END(FCONSTRAINT)SKIP:
+{ " " | "\r" | "\t" | "\n" }TOKEN: /* OPERATORS */{  <NEG: "!" >| <AND: "&&" >| <OR: "||" >}
+
+TOKEN:
+{ <ID: (<LETTER>)+ >| <#LETTER: [ "_", "a"-"z", "A"-"Z" ]>
+}SimpleNode Parse() :{}{ term()			{return jjtThis;}| ";"				{return null;}}Object term(): 					{Object i,a="",b="",c="";String z="";}{ i=unary()	((a=AND()| b=OR()) c=unary())*	{z=z.concat(""+i+a+b+c);}   {jjtThis.jjtSetValue(z);	return z;}}Object unary(): 				{Object i,a,b;String z="";}{ i=element()					{z=z.concat(i+"");}	{jjtThis.jjtSetValue(z);	return z;}| a=NEG() b=element()			{z=z.concat(a+""+b);}  	{jjtThis.jjtSetValue(z);	return z;}}Object element(): 				{Object i,t;String z="";}{ i=ID()						{z=z.concat(i+"");}	{jjtThis.jjtSetValue(z);	return z;}| "(" t=term() ")" 				{z=z.concat("("+t+")");}  	{jjtThis.jjtSetValue(z);	return z;}}Object NEG() #neg:				{Token t;}{  t=<NEG> {jjtThis.value = t.image; return t.image;}}Object AND() #and:				{Token t;}{  t=<AND> {jjtThis.value = t.image; return t.image;}}Object OR() #or:				{Token t;}{  t=<OR> {jjtThis.value = t.image; return t.image;}}Object ID() #id:				{Token t;}{  t=<ID> {jjtThis.value = t.image; return t.image;}}

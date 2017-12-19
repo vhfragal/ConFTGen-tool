@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <file-association
+            content-type="org.eclipse.emf.compare.content.type"
+            file-extensions="ffsm"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.matchEngine">
+      <engineFactory
+            class="org.yakindu.sct.compare.match.SCTMatchEngineFactory"
+            ranking="11">
+      </engineFactory>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.postProcessor">
+      <processor
+            class="org.yakindu.sct.compare.postprocessor.EdgeChangePostProcessor"
+            ordinal="100">
+         <nsURI
+               value="http://www.eclipse.org/gmf/runtime/\d.\d.\d/notation">
+         </nsURI>
+      </processor>
+   </extension>
+  <extension
+         point="org.eclipse.emf.compare.edit.adapterFactory">
+      <factory
+            class="org.yakindu.sct.compare.labelprovider.SCTCompareAdapterFactory"
+              supportedTypes="org.eclipse.emf.edit.provider.IItemLabelProvider"
+            ranking="11"
+            uri="http://www.eclipse.org/emf/compare">
+      </factory>
+</extension>
+</plugin>

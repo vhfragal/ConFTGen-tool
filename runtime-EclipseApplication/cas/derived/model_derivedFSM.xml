@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="CAS_A">
+				<description>
+					
+				</description>
+				<and mandatory="true" name="Playback_B">
+					<description>
+						
+					</description>
+					<feature name="USB_U">
+						<description>
+							
+						</description>
+					</feature>
+					<alt mandatory="true" name="Player_Y">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="CD_C">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Cassette_T">
+							<description>
+								
+							</description>
+						</feature>
+					</alt>
+				</and>
+				<and mandatory="true" name="Control_L">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Channel_N">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Switch_W">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints><rule><conj><var>CAS_A</var><conj><var>Playback_B</var><conj><var>Player_Y</var><conj><var>Cassette_T</var><conj><var>Control_L</var><conj><var>Channel_N</var><var>Switch_W</var><conj><not><var>USB_U</var></not><not><var>CD_C</var></not></conj></conj></conj></conj></conj></conj></conj></rule></constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments>(and A B Y T L N W (not U) (not C) )</comments>
+		<featureOrder userDefined="false"/>
+	</featureModel>

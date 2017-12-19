@@ -1,0 +1,6 @@
+MAX_RECENT_WORKSPACES=10
+RECENT_WORKSPACES=/home/vanderson/Programs/eclipse_yakindu/sct-master2/eclipse_neon_ffsm_v3/work_neon_ubu\n/home/vanderson/Dropbox/workspaces/work_neon_ubu\n/home/vanderson/Programs/eclipse_yakindu/sct-master2/work_base2\n/home/vanderson/Programs/eclipse_yakindu/sct-master2/work_test_git_original\n/home/vanderson/Programs/eclipse_yakindu/sct-master2/ws\n/home/vanderson/Programs/eclipse_yakindu/sct-master2/work_base1\n/home/vanderson/Programs/eclipse_yakindu/sct-master2/work1
+RECENT_WORKSPACES_PROTOCOL=3
+SHOW_RECENT_WORKSPACES=false
+SHOW_WORKSPACE_SELECTION_DIALOG=false
+eclipse.preferences.version=1

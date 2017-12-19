@@ -1,0 +1,466 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.papyrus.uml.diagram.wizards;singleton
+ :=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.papyrus
+Require-Bundle: org.eclipse.m2m.qvt.oml;bundle-version="[3.6.0,4.0.0)"
+ ;visibility:=reexport,org.eclipse.emf.ecore.edit;bundle-version="[2.9
+ .0,3.0.0)",org.eclipse.ui.intro;bundle-version="[3.5.0,4.0.0)",org.ec
+ lipse.emf.transaction;bundle-version="[1.9.0,2.0.0)";visibility:=reex
+ port,org.eclipse.papyrus.infra.widgets.toolbox;bundle-version="[1.2.0
+ ,2.0.0)",org.eclipse.papyrus.uml.tools;bundle-version="[2.0.0,3.0.0)"
+ ,org.eclipse.papyrus.infra.gmfdiag.common;bundle-version="[2.0.0,3.0.
+ 0)",org.eclipse.help;bundle-version="[3.7.0,4.0.0)",org.eclipse.papyr
+ us.uml.extensionpoints;bundle-version="[1.2.0,2.0.0)"
+Bundle-ActivationPolicy: lazy
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/papyru
+ s/org.eclipse.papyrus;path="plugins/uml/diagram/org.eclipse.papyrus.u
+ ml.diagram.wizards";commitId=d3a5c7fd66c71a2f38cdf4e279c5a294982e1127
+Bundle-Vendor: %pluginProvider
+Export-Package: org.eclipse.papyrus.uml.diagram.wizards,org.eclipse.pa
+ pyrus.uml.diagram.wizards.category,org.eclipse.papyrus.uml.diagram.wi
+ zards.command,org.eclipse.papyrus.uml.diagram.wizards.kind,org.eclips
+ e.papyrus.uml.diagram.wizards.messages,org.eclipse.papyrus.uml.diagra
+ m.wizards.pages,org.eclipse.papyrus.uml.diagram.wizards.providers,org
+ .eclipse.papyrus.uml.diagram.wizards.template,org.eclipse.papyrus.uml
+ .diagram.wizards.transformation,org.eclipse.papyrus.uml.diagram.wizar
+ ds.utils,org.eclipse.papyrus.uml.diagram.wizards.wizards
+Bundle-Version: 2.0.0.201609141603
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.papyrus.uml.diagram.wizards.Activator
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_51
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/INewModelStora
+ geProvider$ISelectProviderPart.class
+SHA-256-Digest: 8eEDmoC4jofxMREha/zUJMzeS/PV/lv/PnJ1R85MXSo=
+
+Name: plugin.xml
+SHA-256-Digest: nVE9VJlvmZZo805FRQe3N+Wxn23hZ/FBqgutvcXPtJE=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/Messages.class
+SHA-256-Digest: awXkBJGYjvgOtfwxjvdzqZsQ4A00dsFJI6gQZR4rLkY=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/PapyrusProjectCrea
+ tionPage$1.class
+SHA-256-Digest: 4A2fBD5XUeC7P5WGNdONakavynZJa/eROmIcKg+6tMY=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/NewModelStorag
+ eProviderRegistry$Descriptor.class
+SHA-256-Digest: 7ODahd8lSdGLPipch9GsW1u02Z+ca62HeYK2e1Y8L3c=
+
+Name: icons/checked.gif
+SHA-256-Digest: c8UL6yQdTJ99ofMWkWh8ABEUYvlF6E5/QkdQSYq2h6k=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/action/NewProjectAction.
+ class
+SHA-256-Digest: oP2ZJ7TKFVU5D3cW2x7IwOXaO+ikbkiwIn6w/rsGZEc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/SelectModelTemp
+ lateComposite$1.class
+SHA-256-Digest: s0m0CUVADcienYuy7cmix8e8Cj/7PguuI2vs1OAAAuU=
+
+Name: intro/overview.xml
+SHA-256-Digest: qYgHD/KWwUg4cecexz+WVNDu0l+o4xxF65BqYOVYfX4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/ModelTemplatesC
+ ontentProvider.class
+SHA-256-Digest: 9zIcQKtpRPLUxJ99oQMuX0DDpjvWeWhjija+wRca/24=
+
+Name: intro/css/firststeps.css
+SHA-256-Digest: HwdCTqNcngK6OXULkdSR1PO12oDNHUjKBY+SIxg/d3Y=
+
+Name: intro/firststeps.xml
+SHA-256-Digest: clN7kCrhz1peRyFLyP1sorYqrSq39+CLwsgRIMgdFaI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/transformation/IGenerato
+ r.class
+SHA-256-Digest: EeT3pO8c1HSjHJpROv1aAJJ8DvFD6OH81HfBeYupiEA=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/AbstractNewMod
+ elStorageProvider.class
+SHA-256-Digest: 9rjYtciKYkr/hZpGI6Ikj8dSbGUYxzX478MFKohHhXM=
+
+Name: META-INF/maven/org.eclipse.papyrus/org.eclipse.papyrus.uml.diagr
+ am.wizards/pom.xml
+SHA-256-Digest: RWVFKmjdZY7FZyIN6/rZ1wY1jGQIeYHILm788HCQShw=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/NewPapyrusProjec
+ tWithMultiModelsWizard.class
+SHA-256-Digest: ofcGWdmJ/M3Fs+Zrva3qjDqJgbU0UWGBGfko8LmxaeQ=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/command/PapyrusModelFrom
+ ExistingDomainModelCommand.class
+SHA-256-Digest: pZ1HBnyCcXUgHVab4h/AaGZQw5N0L/CqHgsjKDuVqco=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/transformation/QVToGener
+ ator.class
+SHA-256-Digest: cvOa7J/1EDuXbHXFQEnGg3z6qNrHZohX3imCKyyOV48=
+
+Name: intro/css/overview.css
+SHA-256-Digest: HwdCTqNcngK6OXULkdSR1PO12oDNHUjKBY+SIxg/d3Y=
+
+Name: icons/unchecked.gif
+SHA-256-Digest: 2hjNSrOzVkF52oLOS8wWN1ItvMYfTjp/+GZ0h/TtqC0=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/category/DiagramCategory
+ Descriptor.class
+SHA-256-Digest: Eg0TZ4p7DP7tzJdRYkSCOxag6hPcFMle4k2YSjrd/dw=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/AbstractSelect
+ StorageProviderPart.class
+SHA-256-Digest: URAR9uTZ/tRvJh0havvbU3exTMAeKRKYbJbu9xCZb/I=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/messages/Messages.class
+SHA-256-Digest: 69hXLvwluDBP6Z7IhJz7+m/om8dEiWgn5FAucG2/h/g=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$6$1.class
+SHA-256-Digest: Aj3OmIsQPPZJjBZ0k2MOMqFREzW/5TCO+mWQ2NbB5vQ=
+
+Name: schema/newModelStorageProviders.exsd
+SHA-256-Digest: X3NdToC5Whce9yXoJhvf3Z0XeJ/F3L2WHwqjrh9vjPk=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/profile/ProfileChooserLa
+ belProvider.class
+SHA-256-Digest: NqpgymkBzlyExDENRPNQSV9S2COnWfJswMf39uhpL5s=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/NewDiagramForExist
+ ingModelPage.class
+SHA-256-Digest: 6m9dKivLq0OJ3t3URDNmUcrhDqFdQcpYb/BCGu2eNuY=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramCateg
+ oryPage$2.class
+SHA-256-Digest: KFho/geC1xzVNFHfQyHmuwZEEJiTbdzlf8VgbTN39aI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/category/DiagramCategory
+ Registry.class
+SHA-256-Digest: mWf3qQ9EMhCTXfhTwzsOBjoWp6zMjJVF9BaGQtV6q04=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/WorkspaceNewMo
+ delStorageProvider.class
+SHA-256-Digest: aJugwdQebpwnyLIiJEicLIxDWRnMvI1wtuCq7z6BfL0=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$6.class
+SHA-256-Digest: YUkDAMNrliucvAA86T/T4hIv0pxIWS/jl63KRodHQC0=
+
+Name: META-INF/maven/org.eclipse.papyrus/org.eclipse.papyrus.uml.diagr
+ am.wizards/pom.properties
+SHA-256-Digest: FWFJtlCQuWfzfJRXRMDXQ9VS1XyHYLBYOovKurhKs0s=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/NewPapyrusProjec
+ tWizard.class
+SHA-256-Digest: QQzIPdYfGPEDZxoNb4fVzYYgcHzV82JszSVzLN+2bCk=
+
+Name: icons/papyrus/Papyrus_16x16.gif
+SHA-256-Digest: W/uEQqt6k85Zo2l7v8k5TKvDtbwPIwmsSRJ0BDYsb3Y=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramKindP
+ age$CategoryProvider.class
+SHA-256-Digest: Sp66Aq6zu73mRf03JjwDFkY3rnPZSMs/Q33VmKkAyZc=
+
+Name: icons/papyrus/new_papyrus_model.gif
+SHA-256-Digest: W/uEQqt6k85Zo2l7v8k5TKvDtbwPIwmsSRJ0BDYsb3Y=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramKindP
+ age$1.class
+SHA-256-Digest: 09q2PIIlcAUMH+AuDAQUOkpuWXDkF9tdAV4TK0VMIRc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramCateg
+ oryPage$1.class
+SHA-256-Digest: wYfZxE48gcTLCy6W0ZrflkZox2QMlOlDwuHVocAvg/8=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/ModelTemplateTr
+ ansfoProvider.class
+SHA-256-Digest: +oomdM1HjOuKyPG0btrfs93zXuLhWgRFow67Za67SHE=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/CreateSeveralMod
+ elsWizard.class
+SHA-256-Digest: NZuF7ajDbexJhUqguXQLvRKIZ8mSnMigULgSzzl8FcA=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/messages/messages.proper
+ ties
+SHA-256-Digest: imE+BXKeXGi6E1k6XWAlbqOhZikDffxOZQ6woXsWlY4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$7.class
+SHA-256-Digest: qYffw/Zs4FHVhvIBk4lWrKqPQvpcmecoELs+Hq6uVAw=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/InitModelWizard.
+ class
+SHA-256-Digest: Xk6XpHakmb04VA9yiStjuk3wR+VswVf76O7QTQTn3BA=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/command/CopyModelCommand
+ .class
+SHA-256-Digest: 0YqsX0/v7fliZVsFpJ3MHQaFOYOirzV1UX4D0Mw+GCw=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramKindP
+ age.class
+SHA-256-Digest: xCSFhztXyGvpd8gfQbyz9iEeLEcSzXSMamYSzb1G1P0=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/widget/FileChooser.class
+SHA-256-Digest: qxvyHEx2s+nkzZZM78zLChm30zRVj3T1smLCOFMeqA4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectStorageProvi
+ derPage$1.class
+SHA-256-Digest: ojjl1jy3E/Fwc4YAbmtJ60DfB3/mY8wJmnyETI49bTE=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectRootElementP
+ age$2.class
+SHA-256-Digest: 9/hVI8FslBg0mhaPYTI7V5YacpWc5+Ttqt+Jl74cFrI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/NewModelStorag
+ eProviderRegistry.class
+SHA-256-Digest: TKr9LPLuLe/QMrgFr5r64U8cXW4HdWv8gkKIuIdu6H4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectRootElementP
+ age$1.class
+SHA-256-Digest: NVX9l0zImhVCocoDJC71jq6zIhtlgiNBElyGiOs/G1s=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramCateg
+ oryPage.class
+SHA-256-Digest: MY4GAVfS3o7SixrY7fdZ2U8TjvoSqfo/x7K1X9A1oKo=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/command/PapyrusModelFrom
+ ExistingDomainModelCommand$1.class
+SHA-256-Digest: YFt+RZ3HGAtUOCCgbJVpA4sZiWWbIDFIXkSOLEi/5XM=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/AbstractSelectStoragePro
+ viderPart.class
+SHA-256-Digest: v1xOAX0+S5TIckpV1Cr5MLdg1+kFnqcozxtvO0taBJ4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$1.class
+SHA-256-Digest: nEzG4XSsU2dmtAfXmj2lovp9ZxHRrFrva9PQM81t9KM=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/NewPapyrusProjectWithMul
+ tiModelsWizard.class
+SHA-256-Digest: r+1or7PFPkx2dnvpdkeD6q0sAOA+bFs+dh52o+Rp6A8=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectStorageProvi
+ derPage$2.class
+SHA-256-Digest: nMq1UN537TWX3QgNY1Fa0FD1ds8gjSQ/mxPlawdjYUE=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/INewModelStora
+ geProvider.class
+SHA-256-Digest: C6VRxAqj6VCvT0I1EagHhonZ4IWLyyMfzaz/z4sElgI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$5.class
+SHA-256-Digest: WIMwS9qPCitpC3bXdhqk22hHYW5ms4GVMPlcN5b4Yj0=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/CreateModelWizar
+ d$2.class
+SHA-256-Digest: ca4e7GmZQBGdFXeavfKAJRPnTH6gGjlQw1JjnMlqc5o=
+
+Name: icons/papyrus/new_papyrus_project.gif
+SHA-256-Digest: ipReP24lSvrzuNDegXeb3WLt2UwPhdIIt/pT61JtJRo=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e.class
+SHA-256-Digest: napZjJiRkZmLlvGPksr4iIWgqpeRbrXdQQlbCzOqowc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/category/PapyrusModelFro
+ mExistingDomainModelCommand.class
+SHA-256-Digest: JWXbKYdTs+Ti5Nifa9YX5gE6JTMwORIdKBVsEKG8tPU=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$8.class
+SHA-256-Digest: 4UalLWd2pV29E39Mjb19nvsBh+JiaDtAh8fFjrB8jYc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/NewModelFilePage.c
+ lass
+SHA-256-Digest: zCJ0bxa4DQR6NfwZqqgif13SynPISyGFHHcnKo28DOs=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectDiagramCateg
+ oryPage$3.class
+SHA-256-Digest: A6d8SV7SQODymBgOS3uMFyaEVLPGyqdABR7dHDTuKnc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/NewPapyrusProjectWizard.
+ class
+SHA-256-Digest: iXk63aDOgkUQhpguEvQz30Brxg6Xt+xTAZLFXG29W2Q=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/command/NewPapyrusModelC
+ ommand.class
+SHA-256-Digest: BMI1+EKkJA9JurwVOOqgfVcibTUMzbGlKo6waOF7qyc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$2.class
+SHA-256-Digest: j9xDltsjbIkLv9HIF1LmFo1n/uJUoD6Bp0T4wL3P4aU=
+
+Name: schema/templates.exsd
+SHA-256-Digest: I5y9KHMBJepR9go4qVXIRHAoU/GBVVCI4K00R3pnrws=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/PapyrusProjectCrea
+ tionPage.class
+SHA-256-Digest: gfLSk9Fx7BOizvDviZx8O+wfGJLBd527AbNJtRykdLE=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/WorkspaceNewModelStorage
+ Provider.class
+SHA-256-Digest: 8mfNij9X/Q/FAvQnrVn9E0gynJrPdpMvzbTpPMfPdgE=
+
+Name: plugin.properties
+SHA-256-Digest: IaSRmJFx1koJx0ZUUrzoTpA/PzPYo64kthrGm78+1rs=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/utils/SettingsHelper.cla
+ ss
+SHA-256-Digest: DcWfViSb05/jAHO2GQd6zanZw6lVP4WQAwl1m3ABixI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/InitFromTemplat
+ eCommand.class
+SHA-256-Digest: WNUjO5TNiQPHZUzu3AaUYqPq69fC99KvQ+5fd1zsu44=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/InitModelWizard$
+ 1.class
+SHA-256-Digest: xtJGMKpJOMtqASrloxgGLnEgiZp0HMstbdVWNvreLrI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindContentP
+ rovider.class
+SHA-256-Digest: ULFq/Or1fDo6T96kM9M+IkTEz7cYp553H78WwuEQ3Ak=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/profile/ProfileChooserCo
+ ntentProvider.class
+SHA-256-Digest: vlShFBlLdNpuALl/Hru6ZJ+vurPfuCxmx7QBXT3LpYk=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/ModelCopyWizard.class
+SHA-256-Digest: AeFk+EHiBatTXmSwncUL1TxY04OsFrEdVg0bltSJRzU=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectStorageProvi
+ derPage.class
+SHA-256-Digest: oacNkPDqYBZaRZLg1ClNEqpu8LGlzZk56/o9z58O5M4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/widget/ExtensionFilter.c
+ lass
+SHA-256-Digest: v1zt7jrqjSGXvGrCD+9HJCe8jk2OpGtwfX17HSruxmI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/ModelCopyWizard.
+ class
+SHA-256-Digest: TtzLPRBtvvo2kbUspMqCKqNcICSqOuEfLSYdxoeGUJg=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/INewModelStora
+ geProvider$ISelectProviderPart$IPartCompleteListener.class
+SHA-256-Digest: HJ/G/25AvcoSKvJiSN/O94SLtAoeWfyqozaqo9mLvmU=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/utils/WizardsHelper.clas
+ s
+SHA-256-Digest: r7+gVxqQ/yKRuow9M6zFTgHY5K5JXAp1GEoiY9kkyK8=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/SelectModelTemp
+ lateComposite$2.class
+SHA-256-Digest: /HVjp2CSjhJv6ghA3DRxlATx4i8bBe+7DfTu+SSLE0w=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectRootElementP
+ age.class
+SHA-256-Digest: C72d2gSIdV2/9oaguAuZT7h0B80vgF3rZdbAclxjdA4=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/NewProjectAction.class
+SHA-256-Digest: PD1su203EjFJ1mi3bcwlqvIQ42E5xwFPlEEj98ubo98=
+
+Name: icons/papyrus/PapyrusProjectWizban_75x66.gif
+SHA-256-Digest: gmsI0ryU2Au67Cenh6BWBYgXYEADtuQ1OEPZMGp6yhA=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/CreateModelWizar
+ d.class
+SHA-256-Digest: 77lO8RiPjA4beLmnTvp5137U+E2Ly2tewLHvQ+7Dy5A=
+
+Name: icons/papyrus/PapyrusWizban_75x66.gif
+SHA-256-Digest: CCY2rdoqDvLq1WrfKXBXs2xqdFwextHu+8ZywrF604w=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/ModelTemplateDe
+ scription.class
+SHA-256-Digest: 8LtXheDu05TVjCNSGD5+nnyJreCGUXJ1BSo0eQP2DD8=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/CreateSeveralModelsWizar
+ d.class
+SHA-256-Digest: EMYKeD+kT99cjx3xdortJnFE9x72WxRPFG5yNnfS184=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/INewModelStorageProvider
+ .class
+SHA-256-Digest: Mw1bRnB4bGNGOR0T3Tr783yz/o19qDRo/J06ZgZefI0=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$3.class
+SHA-256-Digest: /a0gih20SUn67oJMgjLrpKsyX0etEX9flgj4R0GVp0U=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/SelectModelTemp
+ lateComposite.class
+SHA-256-Digest: d3tVFYqG2+msHgKG5ORGolHJ8kqVp4Ysr0qUE96fpYw=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/NewModelStorag
+ eProviderRegistry$NullProvider.class
+SHA-256-Digest: hbqTTWFPRYdzCzDUfgJ8se/hPkxmVKvmPfwpCg2Ok+s=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/AbstractModelTe
+ mplateContentProvider.class
+SHA-256-Digest: 8l7NEjOaQlUhTRK5Dv4cWqWMd0jqYF95jze9t7Q66jo=
+
+Name: intro/css/graphics/newproject.png
+SHA-256-Digest: WtFs47pCSR/p/OZZY0I5DMLW1SBbFSy4ST/HQ8lfqSM=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/pages/SelectStorageProvi
+ derPage$ProviderPair.class
+SHA-256-Digest: 8ySB6QGxxnOI8t+Xxajk9do9SE2dpGRbwKIVCdIbmQc=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/InitModelWizard.class
+SHA-256-Digest: 6zPn+FmppyH1MFBmAwyqJk0pD2jbsvEj3KSBRWy9xVI=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/Activator.class
+SHA-256-Digest: TDEHp7uX18LcNzKB35TbSpRq1BY61+QvqFj2GDV8ywY=
+
+Name: about.html
+SHA-256-Digest: PwBCKTx+Q5OHmDi5VgTDt1RC04i631808yDNKpoh5BQ=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindComposit
+ e$4.class
+SHA-256-Digest: NpzlFg5V0D+sGXmKpFCC8djU5o5wJJjLSHjwcTA8dMs=
+
+Name: intro/css/graphics/newproject_hov.png
+SHA-256-Digest: WtFs47pCSR/p/OZZY0I5DMLW1SBbFSy4ST/HQ8lfqSM=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/category/NewPapyrusModel
+ Command.class
+SHA-256-Digest: HIKURZyJSYoQSoVlL/3L7CWNLa6H1KyWDK/+CRf3aLU=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/profile/ProfileChooserCo
+ mposite$1.class
+SHA-256-Digest: fQX3tCqmfeCxxq1q3++ZhqPqv8WaFzXkluGFZsYTkVo=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/template/ModelTemplatesL
+ abelProvider.class
+SHA-256-Digest: DpooWf/uS4GQl07exccOUo6LTPCcNDIXf3FZa6jxVb8=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/wizards/CreateModelWizar
+ d$1.class
+SHA-256-Digest: 64WKzvMzgJUK49wO0d+Lw+tcw+Vbk+eEmOVUbWITXzg=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/CreateModelWizard.class
+SHA-256-Digest: 3Vdsz7tz2Zvnde1TwvqL8wVyyPSPAlf/Eg0u6m1uG6M=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/AbstractNewModelStorageP
+ rovider.class
+SHA-256-Digest: pRFZxIGUJxZz64wvFGmaqZiaEb82qTIlZaHWJjrB6+s=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/NewModelStorageProviderR
+ egistry.class
+SHA-256-Digest: whHTw4FrhM6hn7K1nvkfZvXmXjE+64Ks/2Q9jOeEm40=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/kind/DiagramKindLabelPro
+ vider.class
+SHA-256-Digest: /D4VplqidefFu5iByAoLTHPoH86SDoFtt07yvjEPZCg=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/providers/NewModelStorag
+ eProviderRegistry$1.class
+SHA-256-Digest: TiXAKz1ey8udLo9m4OAbghZzCKy/cu4U+gbEyNGu2uk=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/profile/ProfileChooserCo
+ mposite.class
+SHA-256-Digest: hRacw/WFCozu0WI8NBvXtX/MCH/tu/xN11wwBSveb1Y=
+
+Name: org/eclipse/papyrus/uml/diagram/wizards/command/InitFromTemplate
+ Command.class
+SHA-256-Digest: 6kS8CvoHfd4EanEhtWD90kQWNlurUExBIFtdLStEbO8=
+

@@ -1,0 +1,2 @@
+([on,switch],true)
+([on,switch,switch],(or (and true C (or C T) U) (and true T (or C T) U)))

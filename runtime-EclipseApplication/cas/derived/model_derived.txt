@@ -1,0 +1,10 @@
+Off@true -- off@true/nothing() -> Off@true
+Off@true -- switch@true/nothing() -> Off@true
+Off@true -- on@true/track() -> Radio@true
+Radio@true -- off@true/shutdown() -> Off@true
+Radio@true -- switch@T/cass_on() -> CD_Cassette@(or C T)
+CD_Cassette@(or C T) -- switch@true/usb_on() -> USB@U
+CD_Cassette@(or C T) -- switch@(not U)/radio_on() -> Radio@true
+CD_Cassette@(or C T) -- off@true/shutdown() -> Off@true
+USB@U -- off@true/shutdown() -> Off@true
+USB@U -- switch@true/radio_on() -> Radio@true

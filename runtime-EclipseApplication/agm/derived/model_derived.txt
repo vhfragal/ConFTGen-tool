@@ -1,0 +1,17 @@
+1@true -- a@true/_1() -> 3@W
+1@true -- b@W/_1() -> 5@true
+1@true -- c@(and W (not S))/_1() -> 1@true
+1@true -- c@(or (not W) S)/_0() -> 1@true
+1@true -- d@S/_0() -> 1@true
+3@W -- c@S/_1() -> 5@true
+3@W -- c@(not S)/_0() -> 3@W
+3@W -- d@S/_1() -> 6@S
+3@W -- a@true/_0() -> 3@W
+3@W -- b@true/_1() -> 5@true
+5@true -- a@true/_1() -> 3@W
+5@true -- c@true/_1() -> 1@true
+5@true -- b@true/_0() -> 5@true
+6@S -- a@true/_1() -> 3@W
+6@S -- c@true/_0() -> 6@S
+6@S -- d@true/_0() -> 6@S
+6@S -- b@W/_0() -> 6@S

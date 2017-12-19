@@ -1,0 +1,3 @@
+([Start,Save],(and true (or B N W) W S))
+([Start,Pause],(and true (or B N W)))
+([Start,Pause,Save],(or (and true (or B N W) B S) (and true (or B N W) N S)))

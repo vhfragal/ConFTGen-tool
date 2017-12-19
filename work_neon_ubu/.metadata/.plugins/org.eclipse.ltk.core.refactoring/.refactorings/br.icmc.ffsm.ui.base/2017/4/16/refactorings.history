@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PairTable.java&apos; to &apos;br.icmc.ffsm.ui.base/src/br.usp.icmc.ffsm&apos;&#x0A;- Original project: &apos;br.icmc.ffsm.ui.base&apos;&#x0A;- Destination element: &apos;br.icmc.ffsm.ui.base/src/br.usp.icmc.ffsm&apos;&#x0A;- Original element: &apos;br.usp.icmc.ffsm.PairTable.java&apos;" description="Copy compilation unit" destination="/src&lt;br.usp.icmc.ffsm" element1="/src&lt;br.usp.icmc.ffsm{PairTable.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1492617800595" units="1" version="1.0"/>
+</session>

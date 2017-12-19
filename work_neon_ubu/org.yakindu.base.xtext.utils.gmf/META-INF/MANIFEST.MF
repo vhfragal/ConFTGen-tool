@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.yakindu.base.xtext.utils.gmf
+Bundle-Version: 2.9.0.qualifier
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.xtext.ui,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.yakindu.base.xtext.utils.jface,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
+ org.eclipse.xtext.ui.shared
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.yakindu.base.xtext.utils.gmf.directedit,
+ org.yakindu.base.xtext.utils.gmf.experimental,
+ org.yakindu.base.xtext.utils.gmf.figures,
+ org.yakindu.base.xtext.utils.gmf.resource,
+ org.yakindu.base.xtext.utils.gmf.viewers
+Bundle-ActivationPolicy: lazy
+

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.yakindu.sct.domain;singleton:=true
+Bundle-Version: 2.9.0.qualifier
+Bundle-Activator: org.yakindu.sct.domain.DomainActivator
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime,
+ com.google.guava,
+ com.google.inject,
+ org.eclipse.xtext,
+ org.yakindu.base.types
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: org.yakindu.sct.domain,
+ org.yakindu.sct.domain.extension
+Bundle-ClassPath: .

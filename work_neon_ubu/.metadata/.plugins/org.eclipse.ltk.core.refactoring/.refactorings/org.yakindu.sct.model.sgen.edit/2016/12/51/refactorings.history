@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;extra&apos;&#x0A;- Original project: &apos;org.yakindu.sct.model.sgen.edit&apos;&#x0A;- Destination element: &apos;extra&apos;&#x0A;- Original elements:&#x0A;     ctool16&#x0A;     obj16" description="Copy folders" element1="icons/full/ctool16" element2="icons/full/obj16" files="0" flags="589830" folders="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1481551450673" target="/org.yakindu.sct.ui.editor/icons/extra" units="0" version="1.0"/>
+</session>

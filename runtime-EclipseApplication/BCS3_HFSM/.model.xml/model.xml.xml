@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<layout chosenLayoutAlgorithm="0" horizontalLayout="true">
+		<struct>
+			<feature X="623" Y="182" name="Finger_Protection_FP"/>
+			<feature X="423" Y="411" name="Remote_Control_Key_RCK"/>
+			<feature X="623" Y="128" name="LED_Exterior_Mirror_LEDEM"/>
+			<feature X="878" Y="236" name="Automatic_AutPW"/>
+			<feature X="878" Y="209" name="Manual_ManPW"/>
+			<feature X="623" Y="371" name="Control_Alarm_System_CAS"/>
+			<feature X="623" Y="452" name="Adjust_Exterior_Mirror_AEM"/>
+			<feature X="623" Y="20" name="LED_Alarm_System_LEDAS"/>
+			<feature X="623" Y="317" name="Interior_Monitoring_IM"/>
+			<feature X="623" Y="222" name="Window_WIN"/>
+			<feature X="210" Y="239" name="Door_System_DS"/>
+			<feature X="623" Y="101" name="LED_Power_Window_LEDPW"/>
+			<feature X="623" Y="344" name="Automatic_Locking_AL"/>
+			<feature X="423" Y="87" name="Status_LED"/>
+			<feature X="423" Y="344" name="Central_Locking_System_CLS"/>
+			<feature X="623" Y="47" name="LED_Finger_Protection_LEDFP"/>
+			<feature X="210" Y="87" name="Human_Machine_Interface_HMI"/>
+			<feature X="623" Y="74" name="LED_Central_Locking_System_LEDCLS"/>
+			<feature X="423" Y="202" name="Power_Window_PW"/>
+			<feature X="423" Y="276" name="Exterior_Mirror_EM"/>
+			<feature X="210" Y="364" name="Security_SEC"/>
+			<feature X="623" Y="425" name="Control_Automatic_Power_Window_CAP"/>
+			<feature X="623" Y="263" name="Eletric_ELE"/>
+			<feature X="20" Y="225" name="Body_Comfort_System_BCS"/>
+			<feature X="623" Y="290" name="Heatable_HEAT"/>
+			<feature X="623" Y="155" name="LED_Heatable_LEDH"/>
+			<feature X="623" Y="398" name="Safety_Function_SF"/>
+			<feature X="423" Y="317" name="Alarm_System_AS"/>
+		</struct>
+		<constraints>
+			<rule X="619" Y="477"/>
+			<rule X="558" Y="494"/>
+			<rule X="641" Y="511"/>
+			<rule X="617" Y="528"/>
+			<rule X="592" Y="545"/>
+			<rule X="657" Y="562"/>
+			<rule X="692" Y="579"/>
+			<rule X="694" Y="596"/>
+			<rule X="674" Y="613"/>
+		</constraints>
+	</layout>

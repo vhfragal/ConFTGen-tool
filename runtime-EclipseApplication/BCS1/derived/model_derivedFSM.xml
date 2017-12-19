@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="Body_Comfort_System_BCS">
+				<description>
+					
+				</description>
+				<and name="Human_Machine_Interface_HMI">
+					<description>
+						
+					</description>
+					<or name="Status_LED">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="LED_Alarm_System_LEDAS">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="LED_Finger_Protection_LEDFP">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="LED_Central_Locking_System_LEDCLS">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="LED_Power_Window_LEDPW">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="LED_Exterior_Mirror_LEDEM">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="LED_Heatable_LEDH">
+							<description>
+								
+							</description>
+						</feature>
+					</or>
+				</and>
+				<and mandatory="true" name="Door_System_DS">
+					<description>
+						
+					</description>
+					<and mandatory="true" name="Power_Window_PW">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="Finger_Protection_FP">
+							<description>
+								
+							</description>
+						</feature>
+						<alt mandatory="true" name="Window_WIN">
+							<description>
+								
+							</description>
+							<feature mandatory="true" name="Manual_ManPW">
+								<description>
+									
+								</description>
+							</feature>
+							<feature mandatory="true" name="Automatic_AutPW">
+								<description>
+									
+								</description>
+							</feature>
+						</alt>
+					</and>
+					<and name="Exterior_Mirror_EM">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="Eletric_ELE">
+							<description>
+								
+							</description>
+						</feature>
+						<feature name="Heatable_HEAT">
+							<description>
+								
+							</description>
+						</feature>
+					</and>
+				</and>
+				<and name="Security_SEC">
+					<description>
+						
+					</description>
+					<and name="Alarm_System_AS">
+						<description>
+							
+						</description>
+						<feature name="Interior_Monitoring_IM">
+							<description>
+								
+							</description>
+						</feature>
+					</and>
+					<and name="Central_Locking_System_CLS">
+						<description>
+							
+						</description>
+						<feature name="Automatic_Locking_AL">
+							<description>
+								
+							</description>
+						</feature>
+					</and>
+					<and name="Remote_Control_Key_RCK">
+						<description>
+							
+						</description>
+						<feature name="Control_Alarm_System_CAS">
+							<description>
+								
+							</description>
+						</feature>
+						<feature name="Safety_Function_SF">
+							<description>
+								
+							</description>
+						</feature>
+						<feature name="Control_Automatic_Power_Window_CAP">
+							<description>
+								
+							</description>
+						</feature>
+						<feature name="Adjust_Exterior_Mirror_AEM">
+							<description>
+								
+							</description>
+						</feature>
+					</and>
+				</and>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>LED_Alarm_System_LEDAS</var>
+					<var>Alarm_System_AS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>LED_Central_Locking_System_LEDCLS</var>
+					<var>Central_Locking_System_CLS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>LED_Heatable_LEDH</var>
+					<var>Heatable_HEAT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Control_Alarm_System_CAS</var>
+					<var>Alarm_System_AS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Remote_Control_Key_RCK</var>
+					<var>Central_Locking_System_CLS</var>
+				</imp>
+			</rule>
+			<rule>
+				<not>
+					<var>Security_SEC</var>
+				</not>
+			</rule>
+			<rule>
+				<not>
+					<var>Exterior_Mirror_EM</var>
+				</not>
+			</rule>
+			<rule>
+				<not>
+					<var>Human_Machine_Interface_HMI</var>
+				</not>
+			</rule>
+		<rule><conj><var>Body_Comfort_System_BCS</var><conj><var>Door_System_DS</var><conj><var>Power_Window_PW</var><conj><var>Finger_Protection_FP</var><conj><var>Window_WIN</var><var>Manual_ManPW</var><conj><not><var>Human_Machine_Interface_HMI</var></not><conj><not><var>Status_LED</var></not><conj><not><var>LED_Alarm_System_LEDAS</var></not><conj><not><var>LED_Finger_Protection_LEDFP</var></not><conj><not><var>LED_Central_Locking_System_LEDCLS</var></not><conj><not><var>LED_Power_Window_LEDPW</var></not><conj><not><var>LED_Exterior_Mirror_LEDEM</var></not><conj><not><var>LED_Heatable_LEDH</var></not><conj><not><var>Automatic_AutPW</var></not><conj><not><var>Exterior_Mirror_EM</var></not><conj><not><var>Eletric_ELE</var></not><conj><not><var>Heatable_HEAT</var></not><conj><not><var>Security_SEC</var></not><conj><not><var>Alarm_System_AS</var></not><conj><not><var>Interior_Monitoring_IM</var></not><conj><not><var>Central_Locking_System_CLS</var></not><conj><not><var>Automatic_Locking_AL</var></not><conj><not><var>Remote_Control_Key_RCK</var></not><conj><not><var>Control_Alarm_System_CAS</var></not><conj><not><var>Safety_Function_SF</var></not><conj><not><var>Control_Automatic_Power_Window_CAP</var></not><not><var>Adjust_Exterior_Mirror_AEM</var></not></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></conj></rule></constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments>(and BCS DS PW FP WIN ManPW (not HMI) (not LED) (not LEDAS) (not LEDFP) (not LEDCLS) (not LEDPW) (not LEDEM) (not LEDH) (not AutPW) (not EM) (not ELE) (not HEAT) (not SEC) (not AS) (not IM) (not CLS) (not AL) (not RCK) (not CAS) (not SF) (not CAP) (not AEM) )</comments>
+		<featureOrder userDefined="false"/>
+	</featureModel>

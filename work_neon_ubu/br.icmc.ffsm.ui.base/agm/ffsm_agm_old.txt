@@ -1,0 +1,39 @@
+SG@y -- SG@y / 1 -> PG@(and n (not w) (not b))
+SG@y -- SG@y / 1 -> BW@(and w (not n) (not b))
+SG@y -- SG@y / 1 -> SB@(and b (not w) (not n))
+SG@y -- PS@w / 1 -> PS@p
+SG@y -- PS@(not w) / 0 -> SG@y
+SG@y -- SV@y / 0 -> SG@y
+SG@y -- EX@(or s (not w)) / 0 -> SG@y
+SG@y -- EX@(and w (not s)) / 1 -> SG@y
+PG@(and n (not w) (not b)) -- EX@n / 1 -> SG@y
+PG@(and n (not w) (not b)) -- PS@n / 1 -> PS@p
+PG@(and n (not w) (not b)) -- SV@s / 1 -> PS@p
+PG@(and n (not w) (not b)) -- SV@(not s) / 0 -> PG@(and n (not w) (not b))
+PG@(and n (not w) (not b)) -- SG@n / 0 -> PG@(and n (not w) (not b))
+BW@(and w (not n) (not b)) -- EX@s / 1 -> PS@p
+BW@(and w (not n) (not b)) -- EX@(not s) / 0 -> BW@(and w (not n) (not b))
+BW@(and w (not n) (not b)) -- PS@w / 1 -> PS@p
+BW@(and w (not n) (not b)) -- SV@s / 1 -> SV@s
+BW@(and w (not n) (not b)) -- SV@(not s) / 0 -> BW@(and w (not n) (not b))
+BW@(and w (not n) (not b)) -- SG@w / 0 -> BW@(and w (not n) (not b))
+SB@(and b (not w) (not n)) -- PS@b / 1 -> PS@p
+SB@(and b (not w) (not n)) -- SV@s / 1 -> PS@p
+SB@(and b (not w) (not n)) -- SV@(not s) / 0 -> SB@(and b (not w) (not n))
+SB@(and b (not w) (not n)) -- EX@b / 0 -> SB@(and b (not w) (not n))
+SB@(and b (not w) (not n)) -- SG@b / 0 -> SB@(and b (not w) (not n))
+PS@p -- SV@b / 0 -> SV@s
+PS@p -- SV@n / 1 -> SV@s
+PS@p -- SV@(or w (not s)) / 0 -> PS@p
+PS@p -- PS@p / 0 -> PS@p
+PS@p -- SG@p / 1 -> PG@(and n (not w) (not b))
+PS@p -- SG@p / 1 -> BW@(and w (not n) (not b))
+PS@p -- SG@p / 1 -> SB@(and b (not w) (not n))
+PS@p -- EX@p / 1 -> SG@y
+SV@s -- SG@s / 1 -> PG@(and n (not w) (not b))
+SV@s -- SG@s / 1 -> BW@(and w (not n) (not b))
+SV@s -- SG@s / 1 -> SB@(and b (not w) (not n))
+SV@s -- SV@s / 0 -> SV@s
+SV@s -- PS@w / 0 -> SV@s
+SV@s -- PS@(not w) / 1 -> SV@s
+SV@s -- EX@s / 0 -> SV@s

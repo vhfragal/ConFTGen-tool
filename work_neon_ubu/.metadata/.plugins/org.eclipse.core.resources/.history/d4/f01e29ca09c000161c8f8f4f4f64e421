@@ -1,0 +1,158 @@
+/**
+ * Copyright (c) 2013 committers of YAKINDU and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * Contributors:
+ * 	committers of YAKINDU - initial API and implementation (http://www.statecharts.org)
+ * 
+ */
+package menu;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.debug.ui.console.IConsole;
+import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.console.ConsolePlugin;
+import org.eclipse.ui.console.IConsoleManager;
+import org.eclipse.ui.console.MessageConsole;
+import org.eclipse.ui.console.MessageConsoleStream;
+import org.eclipse.xtext.EcoreUtil2;
+import org.yakindu.sct.model.sgraph.State;
+import org.yakindu.sct.model.sgraph.validation.SGraphJavaValidator;
+import org.yakindu.sct.ui.editor.editor.StatechartDiagramEditor;
+
+import br.usp.icmc.feature.logic.FFSMProperties;
+import br.usp.icmc.ffsm.FState;
+import br.usp.icmc.fsm.common.FileHandler;
+import br.usp.icmc.reader.FFSMModelReaderYAKINDU;
+import parser.yakindu.FCONSTRAINT;
+
+
+/**
+ * 
+ * @author vanderson hf
+ * 
+ */
+public class FFSMValidationCommand extends AbstractHandler {
+
+	public static final String ISSUE_INVALID_CONDITIONAL_STATE = "Invalid Feature Constraint:";
+	
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		// TODO Auto-generated method stub
+		System.out.println("VALIDATION:::");
+		
+		State state = null;
+				
+		IEditorPart activeEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
+				.getActiveEditor();
+		if (activeEditor instanceof StatechartDiagramEditor) {
+			Diagram diagram = ((StatechartDiagramEditor) activeEditor).getDiagram();
+			List<View> result = EcoreUtil2.getAllContentsOfType(diagram, View.class);					
+			
+			// identify all invalid states			
+			ArrayList<FState> flist = pre_processing(diagram);
+			
+			for(FState f : flist){		
+				String fname = f.getStateName()+"["+f.getCondition()+"]";
+				for(View view : result){				
+					if(view.getType().equals("State")){					
+						state = (State) view.getElement();
+						String sname = state.getName();
+						String cond = "true";						
+						String label = sname;
+						//String original_cond = "";
+						if(sname.indexOf("[") > 0){
+							cond = sname.substring(sname.indexOf("[")+1, sname.lastIndexOf("]"));
+							label = sname.substring(0,sname.indexOf("["));
+							//original_cond = cond;
+							
+							String ex = cond;
+							ex = ex.concat(";");
+							String z3 = "";
+							z3 = FFSMModelReaderYAKINDU.getZ3(ex);			
+							cond = z3;
+							
+							sname = label+"["+cond+"]";
+						}else{
+							sname = label+"[true]";
+						}
+						if(sname.equals(fname)){
+							//MessageConsole myConsole = findConsole("Console");
+							//MessageConsoleStream out = myConsole.newMessageStream();
+							//out.println(ISSUE_INVALID_CONDITIONAL_STATE+" "+state.getName());
+							//STextJavaValidator s = null;s.
+							//SGraphJavaValidator val = new SGraphJavaValidator();
+							//val.acceptError(ISSUE_INVALID_CONDITIONAL_STATE+original_cond, state, null, -1, null);							
+						}
+					}				
+				}
+			}			
+		}		
+		return null;
+	}
+		
+
+	public ArrayList<FState> pre_processing(Diagram diagram){
+		
+		boolean islog = false;
+		boolean debug = true;
+		//get project paths
+		String project_path = ""+ResourcesPlugin.getWorkspace().getRoot().getLocationURI();
+		project_path = project_path.substring(project_path.indexOf(":")+1, project_path.length());		
+		String resource_path = ""+diagram.getElement().eResource().getURI();
+		resource_path = resource_path.substring(resource_path.indexOf(":")+2, resource_path.length());
+		resource_path = resource_path.substring(resource_path.indexOf("/"), resource_path.lastIndexOf("."));
+		resource_path = resource_path.replaceAll("%20", " ");		
+		String FM_path = project_path.concat(resource_path+".xml");
+		String folder = FM_path.substring(0,FM_path.lastIndexOf("/"));
+		
+		//read feature model file
+		FFSMProperties p = new FFSMProperties(folder, islog, debug);
+		String header = p.read_XML_FeatureModel(FM_path);
+		//System.out.println(header);
+		
+		String file_path = project_path.concat(resource_path+".txt");				
+		String fpath = project_path.concat(resource_path+".ffsm");
+		File yakindu_file = new File(fpath);
+		
+		//start condition expression parser (specially for states and so on)
+		Reader r = new BufferedReader(new StringReader(";"));
+		try{
+			FCONSTRAINT.ReInit(r);
+		} catch (Exception e) {
+			new FCONSTRAINT(r);
+		}
+	
+		// generate intermediate FFSM
+		FFSMModelReaderYAKINDU reader = new FFSMModelReaderYAKINDU(yakindu_file);
+		String model = reader.generate_FFSM_interm();
+		FileHandler fh = new FileHandler();		
+		try {
+			fh.print_file(model, file_path);
+			//System.out.println(model);
+			//check states and transitions
+			ArrayList<FState> flist = p.checkFFSM_states(file_path, header, project_path, resource_path);
+			return flist;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new ArrayList<FState>();
+	}
+	
+}

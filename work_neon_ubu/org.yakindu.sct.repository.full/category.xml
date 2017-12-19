@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.yakindu.sct_0.0.0.jar" id="org.yakindu.sct" version="0.0.0">
+      <category name="YAKINDU SCT"/>
+   </feature>
+   <feature url="features/org.yakindu.sct.generator.c_0.0.0.jar" id="org.yakindu.sct.generator.c" version="0.0.0">
+      <category name="YAKINDU SCT"/>
+   </feature>
+   <feature url="features/org.yakindu.sct.generator.java_0.0.0.jar" id="org.yakindu.sct.generator.java" version="0.0.0">
+      <category name="YAKINDU SCT"/>
+   </feature>
+   <feature url="features/org.yakindu.sct.test_0.0.0.jar" id="org.yakindu.sct.test" version="0.0.0">
+      <category name="YAKINDU SCT Test"/>
+   </feature>
+   <feature url="features/org.yakindu.sct.generator.cpp_0.0.0.jar" id="org.yakindu.sct.generator.cpp" version="0.0.0">
+      <category name="YAKINDU SCT"/>
+   </feature>
+   <feature url="features/org.yakindu.sct.generator_0.0.0.jar" id="org.yakindu.sct.generator" version="0.0.0">
+      <category name="YAKINDU SCT"/>
+   </feature>
+   <feature url="features/org.yakindu.base_0.0.0.jar" id="org.yakindu.base" version="0.0.0">
+      <category name="YAKINDU BASE"/>
+   </feature>
+   <category-def name="YAKINDU SCT" label="YAKINDU SCT">
+      <description>
+         YAKINDU Statechart Tools (SCT)
+      </description>
+   </category-def>
+   <category-def name="YAKINDU SCT Test" label="YAKINDU SCT Test">
+      <description>
+         Tests of YAKINDU
+      </description>
+   </category-def>
+   <category-def name="YAKINDU BASE" label="YAKINDU BASE">
+      <description>
+         YAKINDU Base features
+      </description>
+   </category-def>
+</site>

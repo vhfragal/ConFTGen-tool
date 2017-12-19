@@ -1,0 +1,3 @@
+1@true -- a@true/out1() -> 2@A
+1@true -- c@true/out0() -> 1@true
+2@A -- a@true/out0() -> 1@true

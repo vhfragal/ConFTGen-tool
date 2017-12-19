@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1489598380729" transient="false" version="3.0">
+	<site updateable="true" url="../../../../.p2/pool/" enabled="true" policy="MANAGED-ONLY">
+		<feature id="org.eclipse.emf.mapping.ui.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.mapping.ui.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xtext.docs" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.docs_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.model.controls.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.model.controls.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.ui.view.editor.controls">
+		</feature>
+		<feature id="org.eclipse.xsd.ecore.converter" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.ecore.converter_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.repositories" version="1.13.0.v20160630-1702" url="features/org.eclipse.mylyn.commons.repositories_1.13.0.v20160630-1702/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.xsd.doc" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.doc_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.oda.source" version="1.3.0.v20150123-0452" url="features/org.eclipse.emf.oda.source_1.3.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.vertical.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.vertical.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.vertical.model">
+		</feature>
+		<feature id="org.eclipse.emf.oda.ecore.ui.source" version="1.2.1.v20150123-0452" url="features/org.eclipse.emf.oda.ecore.ui.source_1.2.1.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.table.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.table.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.table.model">
+		</feature>
+		<feature id="org.eclipse.rcp.source" version="4.6.1.v20160907-1200" url="features/org.eclipse.rcp.source_4.6.1.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.gmf.tooling" version="3.3.1.201509291144" url="features/org.eclipse.gmf.tooling_3.3.1.201509291144/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.feature" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.feature_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.common">
+		</feature>
+		<feature id="org.eclipse.aether.maven.feature" version="3.1.0.20140706-2237" url="features/org.eclipse.aether.maven.feature_3.1.0.20140706-2237/" plugin-identifier="org.eclipse.aether.maven">
+		</feature>
+		<feature id="org.eclipse.pde.source" version="3.12.1.v20160907-1200" url="features/org.eclipse.pde.source_3.12.1.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.m2m.atl" version="3.6.0.v201505180909" url="features/org.eclipse.m2m.atl_3.6.0.v201505180909/">
+		</feature>
+		<feature id="org.eclipse.sirius.runtime.ide.ui" version="4.0.1.201608261223" url="features/org.eclipse.sirius.runtime.ide.ui_4.0.1.201608261223/" plugin-identifier="org.eclipse.sirius.common.ui">
+		</feature>
+		<feature id="org.eclipse.draw2d" version="3.10.100.201606061308" url="features/org.eclipse.draw2d_3.10.100.201606061308/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore.lib.source" version="1.2.100.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore.lib.source_1.2.100.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.cvs" version="1.4.300.v20160907-1200" url="features/org.eclipse.cvs_1.4.300.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.license.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.license.feature_1.10.0.20160912-1709/">
+		</feature>
+		<feature id="org.eclipse.emf.transaction.source" version="1.10.0.201606071900" url="features/org.eclipse.emf.transaction.source_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.edit" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.ecore.edit_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.databinding" version="1.4.0.v20160526-0356" url="features/org.eclipse.emf.databinding_1.4.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.mylyn.git" version="1.13.0.v20160630-2022" url="features/org.eclipse.mylyn.git_1.13.0.v20160630-2022/" plugin-identifier="org.eclipse.mylyn.versions.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.stack.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.stack.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.stack.model">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.validation.initial.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.validation.initial.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.validation">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.validation.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.validation.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.validation">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.e3.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.e3.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.ui.e3">
+		</feature>
+		<feature id="org.eclipse.zest" version="1.7.0.201606061308" url="features/org.eclipse.zest_1.7.0.201606061308/" plugin-identifier="org.eclipse.zest.core">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ecore.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.codegen.ecore.source_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.mylyn.reviews.feature" version="2.11.0.v20160421-1821" url="features/org.eclipse.mylyn.reviews.feature_2.11.0.v20160421-1821/" plugin-identifier="org.eclipse.mylyn.reviews.core">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui.source" version="2.2.200.v20160815-1406" url="features/org.eclipse.equinox.p2.user.ui.source_2.2.200.v20160815-1406/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfforms.runtime.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfforms.runtime.feature_1.10.0.20160912-1709/">
+		</feature>
+		<feature id="org.eclipse.xtext.runtime" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.runtime_2.10.0.v201605250459/">
+		</feature>
+		<feature id="de.ovgu.featureide.featuremodeling" version="3.1.2.201610041906" url="features/de.ovgu.featureide.featuremodeling_3.1.2.201610041906/">
+		</feature>
+		<feature id="org.eclipse.emf.facet.common.source" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.common.source_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfforms.idetooling.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfforms.idetooling.feature.source_1.10.0.20160912-1709/">
+		</feature>
+		<feature id="org.eclipse.papyrus.infra.emf.feature" version="2.0.1.201609141603" url="features/org.eclipse.papyrus.infra.emf.feature_2.0.1.201609141603/">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.12.0.v20160420-0247" url="features/org.eclipse.emf.common_2.12.0.v20160420-0247/">
+		</feature>
+		<feature id="org.eclipse.xtend.sdk" version="2.10.0.v201605250459" url="features/org.eclipse.xtend.sdk_2.10.0.v201605250459/" plugin-identifier="org.eclipse.xtend.ide">
+		</feature>
+		<feature id="org.eclipse.mylyn.discovery" version="3.21.0.v20160729-1739" url="features/org.eclipse.mylyn.discovery_3.21.0.v20160729-1739/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.gmf.runtime.notation.source" version="1.10.0.201606071631" url="features/org.eclipse.gmf.runtime.notation.source_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.epp.package.common.feature" version="4.6.2.20161208-0625" url="features/org.eclipse.epp.package.common.feature_4.6.2.20161208-0625/">
+		</feature>
+		<feature id="org.eclipse.emf.diffmerge.sdk.feature" version="0.6.0.v20160523-1452" url="features/org.eclipse.emf.diffmerge.sdk.feature_0.6.0.v20160523-1452/">
+		</feature>
+		<feature id="org.eclipse.rcp" version="4.6.2.v20161124-1400" url="features/org.eclipse.rcp_4.6.2.v20161124-1400/">
+		</feature>
+		<feature id="org.eclipse.emf.validation" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.oomph.setup" version="1.7.0.v20170305-1123" url="features/org.eclipse.oomph.setup_1.7.0.v20170305-1123/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.cdo.feature.source" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.cdo.feature.source_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.cdo.common">
+		</feature>
+		<feature id="org.eclipse.emf.edit.ui.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.edit.ui.source_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.transaction.sdk" version="1.10.0.201606071900" url="features/org.eclipse.emf.transaction.sdk_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ui" version="2.8.0.v20160526-0356" url="features/org.eclipse.emf.codegen.ui_2.8.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.aether.feature" version="1.0.1.v20141111" url="features/org.eclipse.aether.feature_1.0.1.v20141111/">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.identity" version="1.13.0.v20160630-1702" url="features/org.eclipse.mylyn.commons.identity_1.13.0.v20160630-1702/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.pde" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.setup.pde_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.edapt.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.edapt.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.edapt">
+		</feature>
+		<feature id="org.eclipse.emf.gwt.ecore.edit" version="2.8.0.v20150123-0452" url="features/org.eclipse.emf.gwt.ecore.edit_2.8.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfstore.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfstore.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.emfstore.core">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.feature.source" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.feature.source_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.common">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.example.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.example.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.example.installer">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore.ui.source" version="1.4.0.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore.ui.source_1.4.0.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.emf.edapt.runtime.feature.source" version="1.2.0.201606020942" url="features/org.eclipse.emf.edapt.runtime.feature.source_1.2.0.201606020942/">
+		</feature>
+		<feature id="org.eclipse.emf.edit.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.edit.source_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.cdo.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.cdo.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.cdo.core">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature" version="1.1.0.v20160823-2221" url="features/org.eclipse.ecf.filetransfer.httpclient4.ssl.feature_1.1.0.v20160823-2221/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.examples.feature" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.examples.feature_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.ui.examples">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.mapping.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.oomph.manifests" version="1.5.0.v20161019-0656" url="features/org.eclipse.oomph.manifests_1.5.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.epp.logging.aeri.feature" version="2.0.3.v20161205-0933" url="features/org.eclipse.epp.logging.aeri.feature_2.0.3.v20161205-0933/">
+		</feature>
+		<feature id="org.eclipse.jdt.source" version="3.12.1.v20160907-1200" url="features/org.eclipse.jdt.source_3.12.1.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.xpand.ui" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.ui_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.xtend.dependencies.source" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.dependencies.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.recommenders.snipmatch.rcp.feature" version="2.4.5.v20161130-1427" url="features/org.eclipse.recommenders.snipmatch.rcp.feature_2.4.5.v20161130-1427/" plugin-identifier="org.eclipse.recommenders.snipmatch.rcp">
+		</feature>
+		<feature id="org.eclipse.gmf.examples.runtime.ui.pde" version="1.10.0.201606071959" url="features/org.eclipse.gmf.examples.runtime.ui.pde_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.emf.eef.extended-feature" version="1.5.1.201601141612" url="features/org.eclipse.emf.eef.extended-feature_1.5.1.201601141612/" plugin-identifier="org.eclipse.emf.eef.branding">
+		</feature>
+		<feature id="org.eclipse.xsd.editor" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.editor_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" version="1.3.201.v20161115-1950" url="features/org.eclipse.equinox.p2.core.feature_1.3.201.v20161115-1950/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.cdo.feature" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.cdo.feature_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.cdo.common">
+		</feature>
+		<feature id="org.eclipse.emf.compare.ide.ui" version="3.2.1.201608311750" url="features/org.eclipse.emf.compare.ide.ui_3.2.1.201608311750/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.edapt.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.edapt.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.edapt">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfforms.runtime.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfforms.runtime.feature.source_1.10.0.20160912-1709/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.model.editor.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.model.editor.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.model.editor">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore.source" version="1.4.0.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore.source_1.4.0.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.help.source" version="2.2.0.v20160907-1200" url="features/org.eclipse.help.source_2.2.0.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.gef.sdk" version="3.11.0.201606061308" url="features/org.eclipse.gef.sdk_3.11.0.201606061308/" plugin-identifier="org.eclipse.gef">
+		</feature>
+		<feature id="org.eclipse.recommenders.rcp.feature" version="2.4.5.v20161130-1427" url="features/org.eclipse.recommenders.rcp.feature_2.4.5.v20161130-1427/" plugin-identifier="org.eclipse.recommenders.rcp">
+		</feature>
+		<feature id="org.eclipse.emf.facet.util.source" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.util.source_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.mylyn.ide_feature" version="3.21.0.v20160912-1820" url="features/org.eclipse.mylyn.ide_feature_3.21.0.v20160912-1820/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="org.eclipse.egit" version="4.5.0.201609210915-r" url="features/org.eclipse.egit_4.5.0.201609210915-r/">
+		</feature>
+		<feature id="org.eclipse.oomph.p2" version="1.7.0.v20170228-1751" url="features/org.eclipse.oomph.p2_1.7.0.v20170228-1751/">
+		</feature>
+		<feature id="org.eclipse.xsd.editor.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.editor.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.repositories.http" version="1.13.0.v20160630-1702" url="features/org.eclipse.mylyn.commons.repositories.http_1.13.0.v20160630-1702/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.mylyn.java_feature" version="3.21.0.v20160701-1337" url="features/org.eclipse.mylyn.java_feature_3.21.0.v20160701-1337/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons.notifications" version="1.13.0.v20160721-2347" url="features/org.eclipse.mylyn.commons.notifications_1.13.0.v20160721-2347/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.xsd.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.xsd.source_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.mapping_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xtend" version="2.2.0.v201605260315" url="features/org.eclipse.xtend_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.converter" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.converter_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature.source" version="1.2.200.v20160815-1406" url="features/org.eclipse.equinox.p2.extras.feature.source_1.2.200.v20160815-1406/">
+		</feature>
+		<feature id="org.eclipse.oomph.version" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.version_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.xtext.xbase.source" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xbase.source_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ecore.ui" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.codegen.ecore.ui_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.editor" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.ecore.editor_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.wst.common_core.feature" version="3.7.1.v201508262220" url="features/org.eclipse.wst.common_core.feature_3.7.1.v201508262220/">
+		</feature>
+		<feature id="org.eclipse.emf.gwt.edit.ui" version="2.7.0.v20150123-0452" url="features/org.eclipse.emf.gwt.edit.ui_2.7.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.jgit" version="4.5.0.201609210915-r" url="features/org.eclipse.jgit_4.5.0.201609210915-r/">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.workingsets" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.setup.workingsets_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.gmf.tooling.runtime" version="3.3.1.201509291144" url="features/org.eclipse.gmf.tooling.runtime_3.3.1.201509291144/">
+		</feature>
+		<feature id="org.eclipse.emf.validation.sdk" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation.sdk_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.emf.compare" version="3.2.1.201608311750" url="features/org.eclipse.emf.compare_3.2.1.201608311750/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.discovery.feature" version="1.0.401.v20160901-1335" url="features/org.eclipse.equinox.p2.discovery.feature_1.0.401.v20160901-1335/">
+		</feature>
+		<feature id="org.eclipse.emf.facet.common.feature" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.common.feature_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.wst.common_ui.feature" version="3.8.0.v201603091933" url="features/org.eclipse.wst.common_ui.feature_3.8.0.v201603091933/">
+		</feature>
+		<feature id="org.eclipse.xpand.doc" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.doc_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.uml2" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.uml2_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.categorization.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.categorization.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.categorization.model">
+		</feature>
+		<feature id="org.eclipse.m2m.atl.doc" version="3.6.0.v201505180909" url="features/org.eclipse.m2m.atl.doc_3.6.0.v201505180909/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature.source" version="1.3.200.v20160815-1406" url="features/org.eclipse.equinox.p2.core.feature.source_1.3.200.v20160815-1406/">
+		</feature>
+		<feature id="org.eclipse.mylyn.builds" version="1.13.0.v20160725-1817" url="features/org.eclipse.mylyn.builds_1.13.0.v20160725-1817/" plugin-identifier="org.eclipse.mylyn.builds.core">
+		</feature>
+		<feature id="org.eclipse.gmf.tooling.source" version="3.3.0.201509291144" url="features/org.eclipse.gmf.tooling.source_3.3.0.201509291144/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_ui.feature" version="3.8.0.v201608061842" url="features/org.eclipse.wst.xml_ui.feature_3.8.0.v201608061842/" plugin-identifier="org.eclipse.wst.xml.ui">
+		</feature>
+		<feature id="org.eclipse.emf.query.ocl" version="1.10.0.201606071631" url="features/org.eclipse.emf.query.ocl_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.workspace.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.workspace.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.workspace.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.horizontal.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.horizontal.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.horizontal.model">
+		</feature>
+		<feature id="org.eclipse.xsd.sdk" version="2.12.0.v20160526-0356" url="features/org.eclipse.xsd.sdk_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.compoundcontrol.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.compoundcontrol.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.compoundcontrol.model">
+		</feature>
+		<feature id="org.eclipse.gmf.runtime.thirdparty.source" version="1.10.0.201606071959" url="features/org.eclipse.gmf.runtime.thirdparty.source_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.rule.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.rule.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.rule">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.viewproxy.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.viewproxy.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.viewproxy.model">
+		</feature>
+		<feature id="org.eclipse.emf.oda.ecore.ui" version="1.2.1.v20150123-0452" url="features/org.eclipse.emf.oda.ecore.ui_1.2.1.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.ecoretools.design" version="3.1.0.201605311155" url="features/org.eclipse.emf.ecoretools.design_3.1.0.201605311155/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore.lib" version="1.2.100.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore.lib_1.2.100.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.epp.mpc" version="1.5.3.v20161116-1851" url="features/org.eclipse.epp.mpc_1.5.3.v20161116-1851/" plugin-identifier="org.eclipse.epp.mpc.ui">
+		</feature>
+		<feature id="org.eclipse.zest.sdk" version="1.7.0.201606061308" url="features/org.eclipse.zest.sdk_1.7.0.201606061308/" plugin-identifier="org.eclipse.zest.core">
+		</feature>
+		<feature id="org.eclipse.xsd.mapping.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.mapping.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xpand.source" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.license.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.license.feature_1.8.0.v20160606-1028/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.examples.feature.source" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.examples.feature.source_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.ui.examples">
+		</feature>
+		<feature id="org.eclipse.emf.query.ocl.source" version="1.10.0.201606071631" url="features/org.eclipse.emf.query.ocl.source_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.compare.uml2" version="3.2.1.201608311750" url="features/org.eclipse.emf.compare.uml2_3.2.1.201608311750/">
+		</feature>
+		<feature id="org.eclipse.xsd.edit.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.edit.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.databinding.edit.source" version="1.4.0.v20160526-0356" url="features/org.eclipse.emf.databinding.edit.source_1.4.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.converter.source" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.converter.source_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.workspace" version="1.10.0.201606071900" url="features/org.eclipse.emf.workspace_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.draw2d.sdk" version="3.10.100.201606061308" url="features/org.eclipse.draw2d.sdk_3.10.100.201606061308/" plugin-identifier="org.eclipse.draw2d">
+		</feature>
+		<feature id="org.eclipse.mylyn.monitor" version="3.21.0.v20160630-1702" url="features/org.eclipse.mylyn.monitor_3.21.0.v20160630-1702/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.launching" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.setup.launching_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ecore.editor" version="2.10.0.v20160526-0356" url="features/org.eclipse.emf.mapping.ecore.editor_2.10.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.query.doc" version="1.10.0.201606071631" url="features/org.eclipse.emf.query.doc_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.query" version="1.10.0.201606071631" url="features/org.eclipse.emf.query_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore.sdk" version="1.4.0.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore.sdk_1.4.0.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.buildship" version="1.0.21.v20161010-1640" url="features/org.eclipse.buildship_1.0.21.v20161010-1640/" plugin-identifier="org.eclipse.buildship.branding">
+		</feature>
+		<feature id="org.eclipse.gmf.source" version="1.10.0.201606071959" url="features/org.eclipse.gmf.source_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.emf.facet.widgets.feature" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.widgets.feature_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.pde" version="3.12.1.v20160907-1200" url="features/org.eclipse.pde_3.12.1.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.emf.edit.ui" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.edit.ui_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.feature" version="1.3.0.v20160823-2221" url="features/org.eclipse.ecf.core.feature_1.3.0.v20160823-2221/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.viewmodel.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.viewmodel.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.model">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfforms.sdk.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfforms.sdk.feature_1.10.0.20160912-1709/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ecore.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.mapping.ecore.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ecore.ui.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.codegen.ecore.ui.source_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.gwt.ecore" version="2.9.0.v20150123-0452" url="features/org.eclipse.emf.gwt.ecore_2.9.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.platform.source" version="4.6.1.v20160907-1200" url="features/org.eclipse.platform.source_4.6.1.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.server.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.server.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.server">
+		</feature>
+		<feature id="org.eclipse.mylyn.gerrit.feature" version="2.11.0.v20160421-1821" url="features/org.eclipse.mylyn.gerrit.feature_2.11.0.v20160421-1821/" plugin-identifier="org.eclipse.mylyn.reviews.core">
+		</feature>
+		<feature id="org.eclipse.emf.workspace.doc" version="1.10.0.201606071900" url="features/org.eclipse.emf.workspace.doc_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.zest.source" version="1.7.0.201606061308" url="features/org.eclipse.zest.source_1.7.0.201606061308/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.validation.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.validation.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.validation">
+		</feature>
+		<feature id="org.eclipse.mylyn.hudson" version="1.13.0.v20160806-1446" url="features/org.eclipse.mylyn.hudson_1.13.0.v20160806-1446/" plugin-identifier="org.eclipse.mylyn.builds.core">
+		</feature>
+		<feature id="org.eclipse.xpand.ui.source" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.ui.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.common.ui" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.common.ui_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.papyrus.infra.core.feature" version="2.0.1.201609141603" url="features/org.eclipse.papyrus.infra.core.feature_2.0.1.201609141603/">
+		</feature>
+		<feature id="org.eclipse.emf.sdk" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.sdk_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.template.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.template.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.template.model">
+		</feature>
+		<feature id="org.eclipse.xtend.ui.source" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.ui.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.oomph.projectconfig" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.projectconfig_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.source" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.codegen.source_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.table.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.table.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.table.model">
+		</feature>
+		<feature id="org.eclipse.xtend.dependencies" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.dependencies_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.m2e.logback.feature" version="1.7.0.20160603-1933" url="features/org.eclipse.m2e.logback.feature_1.7.0.20160603-1933/" plugin-identifier="org.eclipse.m2e.logback.configuration">
+		</feature>
+		<feature id="org.eclipse.emf.eef.codegen.ecore-feature" version="1.5.1.201601141612" url="features/org.eclipse.emf.eef.codegen.ecore-feature_1.5.1.201601141612/" plugin-identifier="org.eclipse.emf.eef.branding">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" version="2.12.0.v20160420-0247" url="features/org.eclipse.emf.ecore_2.12.0.v20160420-0247/">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.xsd.source" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.xsd.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.stack.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.stack.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.stack.model">
+		</feature>
+		<feature id="org.eclipse.xpand" version="2.2.0.v201605260315" url="features/org.eclipse.xpand_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.papyrus.uml.diagram.feature" version="2.0.1.201609141603" url="features/org.eclipse.papyrus.uml.diagram.feature_2.0.1.201609141603/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.junit4.feature" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.junit4.feature_1.0.1.v20160706-1123/">
+		</feature>
+		<feature id="org.eclipse.xtend.source" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.codegen_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.help" version="2.2.1.v20161124-1400" url="features/org.eclipse.help_2.2.1.v20161124-1400/" plugin-identifier="org.eclipse.help.base">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.categorization.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.categorization.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.categorization.model">
+		</feature>
+		<feature id="org.eclipse.emf.examples" version="2.10.1.v20150123-0452" url="features/org.eclipse.emf.examples_2.10.1.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.gmf.sdk" version="3.3.1.201509291144" url="features/org.eclipse.gmf.sdk_3.3.1.201509291144/">
+		</feature>
+		<feature id="org.eclipse.mylyn.bugzilla_feature" version="3.21.0.v20160909-1813" url="features/org.eclipse.mylyn.bugzilla_feature_3.21.0.v20160909-1813/" plugin-identifier="org.eclipse.mylyn.tasks.core">
+		</feature>
+		<feature id="org.eclipse.emf.doc.source" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.doc.source_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.treemasterdetail.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.treemasterdetail.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.treemasterdetail.model">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient4.feature" version="3.13.2.v20160823-2221" url="features/org.eclipse.ecf.filetransfer.httpclient4.feature_3.13.2.v20160823-2221/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.workspace.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.workspace.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.workspace.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.e3.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.e3.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.ui.e3">
+		</feature>
+		<feature id="org.eclipse.gmf.runtime.notation.sdk" version="1.10.0.201606071631" url="features/org.eclipse.gmf.runtime.notation.sdk_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.source_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xtext.examples.source" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.examples.source_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.mylyn.versions" version="1.13.0.v20160630-2022" url="features/org.eclipse.mylyn.versions_1.13.0.v20160630-2022/" plugin-identifier="org.eclipse.mylyn.versions.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.treemasterdetail.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.treemasterdetail.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.treemasterdetail.model">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfforms.idetooling.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfforms.idetooling.feature_1.10.0.20160912-1709/">
+		</feature>
+		<feature id="org.eclipse.xtext.xbase.lib.source" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xbase.lib.source_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.doc" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.doc_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.epp.package.committers.feature" version="4.6.1.20161007-1200" url="features/org.eclipse.epp.package.committers.feature_4.6.1.20161007-1200/" plugin-identifier="org.eclipse.epp.package.committers">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.core">
+		</feature>
+		<feature id="org.eclipse.emfforms.editor.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emfforms.editor.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emfforms.editor">
+		</feature>
+		<feature id="org.eclipse.aether.transport.file.feature" version="1.0.1.v20141111" url="features/org.eclipse.aether.transport.file.feature_1.0.1.v20141111/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.edit.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.ecore.edit.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.custom.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.custom.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.custom.model">
+		</feature>
+		<feature id="org.eclipse.mylyn.tasks.ide" version="3.21.0.v20160929-1805" url="features/org.eclipse.mylyn.tasks.ide_3.21.0.v20160929-1805/" plugin-identifier="org.eclipse.mylyn.tasks.core">
+		</feature>
+		<feature id="org.eclipse.emf.facet.util.feature" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.util.feature_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.sirius.runtime.aql" version="4.0.1.201608261223" url="features/org.eclipse.sirius.runtime.aql_4.0.1.201608261223/" plugin-identifier="org.eclipse.sirius.common.acceleo.aql">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.template.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.template.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.template.model">
+		</feature>
+		<feature id="org.eclipse.emf.eef.runtime-feature" version="1.5.1.201601141612" url="features/org.eclipse.emf.eef.runtime-feature_1.5.1.201601141612/" plugin-identifier="org.eclipse.emf.eef.branding">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui" version="2.2.201.v20161124-1529" url="features/org.eclipse.equinox.p2.user.ui_2.2.201.v20161124-1529/">
+		</feature>
+		<feature id="org.eclipse.mylyn.team_feature" version="3.21.0.v20160701-1337" url="features/org.eclipse.mylyn.team_feature_3.21.0.v20160701-1337/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.client.ui.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.client.ui.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.client.ui">
+		</feature>
+		<feature id="org.eclipse.gef" version="3.11.0.201606061308" url="features/org.eclipse.gef_3.11.0.201606061308/">
+		</feature>
+		<feature id="org.eclipse.xtext.xtext.ui" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xtext.ui_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.sdk.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.sdk.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.branding">
+		</feature>
+		<feature id="org.eclipse.emf.compare.egit" version="1.1.1.201608311750" url="features/org.eclipse.emf.compare.egit_1.1.1.201608311750/">
+		</feature>
+		<feature id="org.eclipse.emfforms.editor.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emfforms.editor.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emfforms.editor">
+		</feature>
+		<feature id="org.eclipse.e4.core.tools.feature" version="4.5.100.v20160503-0947" url="features/org.eclipse.e4.core.tools.feature_4.5.100.v20160503-0947/">
+		</feature>
+		<feature id="org.eclipse.papyrus.infra.gmfdiag.feature" version="2.0.1.201609141603" url="features/org.eclipse.papyrus.infra.gmfdiag.feature_2.0.1.201609141603/">
+		</feature>
+		<feature id="org.eclipse.emf.transaction" version="1.10.0.201606071900" url="features/org.eclipse.emf.transaction_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.emf.facet.widgets.source" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.widgets.source_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.emf.databinding.source" version="1.4.0.v20160526-0356" url="features/org.eclipse.emf.databinding.source_1.4.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xtext.xbase" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xbase_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.oomph.workingsets" version="1.6.0.v20161111-1110" url="features/org.eclipse.oomph.workingsets_1.6.0.v20161111-1110/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ecore" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.mapping.ecore_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.emf.source" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.emf.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.gmf.tooling.runtime.source" version="3.3.1.201509291144" url="features/org.eclipse.gmf.tooling.runtime.source_3.3.1.201509291144/">
+		</feature>
+		<feature id="org.eclipse.emf.oda" version="1.3.0.v20150123-0452" url="features/org.eclipse.emf.oda_1.3.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.oomph.projectcopy" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.projectcopy_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.xtext.xbase.lib" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xbase.lib_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp.source" version="1.5.1.v20160907-0248" url="features/org.eclipse.e4.rcp.source_1.5.1.v20160907-0248/">
+		</feature>
+		<feature id="org.eclipse.emf.eef.sdk-feature" version="1.5.1.201601141612" url="features/org.eclipse.emf.eef.sdk-feature_1.5.1.201601141612/" plugin-identifier="org.eclipse.emf.eef.branding">
+		</feature>
+		<feature id="org.eclipse.emf.transaction.doc" version="1.10.0.201606071900" url="features/org.eclipse.emf.transaction.doc_1.10.0.201606071900/">
+		</feature>
+		<feature id="br.ufal.ic.colligens.feature" version="1.1.4.201610041906" url="features/br.ufal.ic.colligens.feature_1.1.4.201610041906/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.cdo.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.cdo.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.cdo.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.unset.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.unset.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.unset">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.2.201.v20161116-1353" url="features/org.eclipse.equinox.p2.extras.feature_1.2.201.v20161116-1353/">
+		</feature>
+		<feature id="org.eclipse.xsd.mapping.editor" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.mapping.editor_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xpand.examples.source" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.examples.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.cvs.source" version="1.4.300.v20160907-1200" url="features/org.eclipse.cvs.source_1.4.300.v20160907-1200/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.vertical.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.vertical.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.vertical.model">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.emf" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.emf_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.gmf.runtime.notation" version="1.10.0.201606071631" url="features/org.eclipse.gmf.runtime.notation_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.demo.e3.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.demo.e3.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.application.e3">
+		</feature>
+		<feature id="org.eclipse.emf.workspace.source" version="1.10.0.201606071900" url="features/org.eclipse.emf.workspace.source_1.10.0.201606071900/">
+		</feature>
+		<feature id="org.eclipse.mylyn.commons" version="3.21.0.v20160707-1856" url="features/org.eclipse.mylyn.commons_3.21.0.v20160707-1856/" plugin-identifier="org.eclipse.mylyn.commons.core">
+		</feature>
+		<feature id="org.eclipse.xtend.ui" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.ui_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.viewmodel.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.viewmodel.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.model">
+		</feature>
+		<feature id="org.eclipse.jgit.http.apache" version="4.5.0.201609210915-r" url="features/org.eclipse.jgit.http.apache_4.5.0.201609210915-r/">
+		</feature>
+		<feature id="org.eclipse.m2m.atl.profiler" version="3.6.0.v201505180909" url="features/org.eclipse.m2m.atl.profiler_3.6.0.v201505180909/">
+		</feature>
+		<feature id="org.eclipse.ocl" version="3.6.0.v20160523-1914" url="features/org.eclipse.ocl_3.6.0.v20160523-1914/" plugin-identifier="org.eclipse.ocl.ecore">
+		</feature>
+		<feature id="org.eclipse.m2e.feature" version="1.7.0.20160603-1933" url="features/org.eclipse.m2e.feature_1.7.0.20160603-1933/" plugin-identifier="org.eclipse.m2e.core">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ui.source" version="2.8.0.v20160526-0356" url="features/org.eclipse.emf.codegen.ui.source_2.8.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.facet.examples.source" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.examples.source_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.git" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.setup.git_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.emf.common.ui.source" version="2.11.0.v20160526-0356" url="features/org.eclipse.emf.common.ui.source_2.11.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ui" version="2.9.0.v20160526-0356" url="features/org.eclipse.emf.mapping.ui_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_userdoc.feature" version="3.8.0.v201511030001" url="features/org.eclipse.wst.xml_userdoc.feature_3.8.0.v201511030001/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.model.controls.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.model.controls.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.ui.view.editor.controls">
+		</feature>
+		<feature id="org.eclipse.ecf.core.ssl.feature" version="1.1.0.v20160823-2221" url="features/org.eclipse.ecf.core.ssl.feature_1.1.0.v20160823-2221/">
+		</feature>
+		<feature id="org.eclipse.emf.compare.diagram.papyrus" version="3.2.1.201608311750" url="features/org.eclipse.emf.compare.diagram.papyrus_3.2.1.201608311750/" plugin-identifier="org.eclipse.emf.compare.diagram.ide.ui.papyrus">
+		</feature>
+		<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.10.0.201606071959" url="features/org.eclipse.gmf.runtime.thirdparty_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.sdk" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.sdk_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.common">
+		</feature>
+		<feature id="org.eclipse.egit.mylyn" version="4.5.0.201609210915-r" url="features/org.eclipse.egit.mylyn_4.5.0.201609210915-r/" plugin-identifier="org.eclipse.egit">
+		</feature>
+		<feature id="org.eclipse.emf.facet.sdk.feature" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.sdk.feature_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.gmf.examples.runtime" version="1.10.0.201606071959" url="features/org.eclipse.gmf.examples.runtime_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.ecore.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.ecore.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.ecore">
+		</feature>
+		<feature id="org.eclipse.emf.compare.diagram.gmf" version="3.2.1.201608311750" url="features/org.eclipse.emf.compare.diagram.gmf_3.2.1.201608311750/" plugin-identifier="org.eclipse.emf.compare.diagram">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.xsd" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.xsd_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature.source" version="1.2.200.v20160815-1406" url="features/org.eclipse.equinox.p2.rcp.feature.source_1.2.200.v20160815-1406/">
+		</feature>
+		<feature id="org.eclipse.emf.compare.diagram.sirius" version="3.2.1.201608311750" url="features/org.eclipse.emf.compare.diagram.sirius_3.2.1.201608311750/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.13.2.v20160823-2221" url="features/org.eclipse.ecf.filetransfer.feature_3.13.2.v20160823-2221/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.viewproxy.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.viewproxy.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.viewproxy.model">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.compoundcontrol.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.compoundcontrol.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.compoundcontrol.model">
+		</feature>
+		<feature id="org.eclipse.xtext.examples" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.examples_2.10.0.v201605250459/">
+		</feature>
+		<feature id="de.ovgu.featureide" version="3.1.2.201610041906" url="features/de.ovgu.featureide_3.1.2.201610041906/">
+		</feature>
+		<feature id="org.eclipse.emf.validation.ocl" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation.ocl_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.xtext.sdk" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.sdk_2.10.0.v201605250459/" plugin-identifier="org.eclipse.xtext">
+		</feature>
+		<feature id="org.eclipse.gmf.tooling.codegen.xtend2" version="3.3.1.201509291144" url="features/org.eclipse.gmf.tooling.codegen.xtend2_3.3.1.201509291144/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.dsl.feature.source" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.dsl.feature.source_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.dsl">
+		</feature>
+		<feature id="org.eclipse.mylyn_feature" version="3.21.0.v20160914-0252" url="features/org.eclipse.mylyn_feature_3.21.0.v20160914-0252/" plugin-identifier="org.eclipse.mylyn.tasks.core">
+		</feature>
+		<feature id="org.eclipse.xtext.ui.source" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.ui.source_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.ecoretools.sdk" version="3.1.0.201605311155" url="features/org.eclipse.emf.ecoretools.sdk_3.1.0.201605311155/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.horizontal.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.horizontal.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.horizontal.model">
+		</feature>
+		<feature id="org.eclipse.emf" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.edit" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.edit_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.group.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.group.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.group.model">
+		</feature>
+		<feature id="org.eclipse.emf.examples.source" version="2.10.1.v20150123-0452" url="features/org.eclipse.emf.examples.source_2.10.1.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.client.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.client.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.client">
+		</feature>
+		<feature id="org.eclipse.xsd" version="2.12.0.v20160526-0356" url="features/org.eclipse.xsd_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore.ui" version="1.4.0.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore.ui_1.4.0.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.xtext.runtime.source" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.runtime.source_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.emfstore.common.feature" version="1.8.0.v20160606-1028" url="features/org.eclipse.emf.emfstore.common.feature_1.8.0.v20160606-1028/" plugin-identifier="org.eclipse.emf.emfstore.common">
+		</feature>
+		<feature id="org.eclipse.xtext.xtext.ui.source" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.xtext.ui.source_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.mylyn.wikitext_feature" version="2.10.1.v20161129-1925" url="features/org.eclipse.mylyn.wikitext_feature_2.10.1.v20161129-1925/" plugin-identifier="org.eclipse.mylyn.wikitext.core">
+		</feature>
+		<feature id="org.eclipse.emf.facet.sdk.source" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.sdk.source_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.unset.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.unset.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.unset">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.demo.e3.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.demo.e3.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.application.e3">
+		</feature>
+		<feature id="org.eclipse.emf.gwt.edit" version="2.8.0.v20150123-0452" url="features/org.eclipse.emf.gwt.edit_2.8.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.facet.examples.feature" version="1.1.0.201603181016" url="features/org.eclipse.emf.facet.examples.feature_1.1.0.201603181016/">
+		</feature>
+		<feature id="org.eclipse.emf.validation.doc" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation.doc_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.label.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.label.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.label.model">
+		</feature>
+		<feature id="org.eclipse.gef.source" version="3.11.0.201606061308" url="features/org.eclipse.gef.source_3.11.0.201606061308/">
+		</feature>
+		<feature id="org.eclipse.emf.gwt.common" version="2.9.0.v20150123-0452" url="features/org.eclipse.emf.gwt.common_2.9.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.xsd.ecore.converter.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.ecore.converter.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.recommenders.news.rcp.feature" version="2.4.3.v20160913-0645" url="features/org.eclipse.recommenders.news.rcp.feature_2.4.3.v20160913-0645/" plugin-identifier="org.eclipse.recommenders.news">
+		</feature>
+		<feature id="org.eclipse.emf.databinding.edit" version="1.4.0.v20160526-0356" url="features/org.eclipse.emf.databinding.edit_1.4.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xsd.mapping.editor.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.mapping.editor.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.diffmerge.sdk.source.feature" version="0.6.0.v20160523-1452" url="features/org.eclipse.emf.diffmerge.sdk.source.feature_0.6.0.v20160523-1452/">
+		</feature>
+		<feature id="org.eclipse.emf.oda.sdk" version="1.3.1.v20150123-0452" url="features/org.eclipse.emf.oda.sdk_1.3.1.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature" version="1.1.0.v20160823-2221" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.0.v20160823-2221/">
+		</feature>
+		<feature id="org.eclipse.xpand.sdk" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.sdk_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.gmf.doc" version="1.4.0.201509291144" url="features/org.eclipse.gmf.doc_1.4.0.201509291144/">
+		</feature>
+		<feature id="org.eclipse.aether.transport.http.feature" version="1.0.1.v20141111" url="features/org.eclipse.aether.transport.http.feature_1.0.1.v20141111/">
+		</feature>
+		<feature id="org.eclipse.platform" version="4.6.2.v20161124-1529" url="features/org.eclipse.platform_4.6.2.v20161124-1529/">
+		</feature>
+		<feature id="org.eclipse.m2m.atl.sdk" version="3.6.0.v201505180909" url="features/org.eclipse.m2m.atl.sdk_3.6.0.v201505180909/">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.projects" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.setup.projects_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.recommenders.mylyn.rcp.feature" version="2.4.5.v20161130-1427" url="features/org.eclipse.recommenders.mylyn.rcp.feature_2.4.5.v20161130-1427/" plugin-identifier="org.eclipse.recommenders.mylyn.rcp">
+		</feature>
+		<feature id="org.eclipse.mylyn.gerrit.dashboard.feature" version="2.11.0.v20160518-1752" url="features/org.eclipse.mylyn.gerrit.dashboard.feature_2.11.0.v20160518-1752/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.group.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.group.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.group.model">
+		</feature>
+		<feature id="org.eclipse.gmf.runtime.sdk" version="1.10.0.201606071959" url="features/org.eclipse.gmf.runtime.sdk_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.xcore" version="1.4.0.v20160526-0606" url="features/org.eclipse.emf.ecore.xcore_1.4.0.v20160526-0606/">
+		</feature>
+		<feature id="org.eclipse.xpand.examples" version="2.2.0.v201605260315" url="features/org.eclipse.xpand.examples_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.core" version="1.7.0.v20170301-0747" url="features/org.eclipse.oomph.setup.core_1.7.0.v20170301-0747/">
+		</feature>
+		<feature id="org.eclipse.emf.validation.ocl.source" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation.ocl.source_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" version="1.2.201.v20161124-1529" url="features/org.eclipse.equinox.p2.rcp.feature_1.2.201.v20161124-1529/">
+		</feature>
+		<feature id="org.eclipse.oomph.launches" version="1.4.0.v20161019-0656" url="features/org.eclipse.oomph.launches_1.4.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.emf.edapt.runtime.feature" version="1.2.0.201606020942" url="features/org.eclipse.emf.edapt.runtime.feature_1.2.0.201606020942/">
+		</feature>
+		<feature id="org.eclipse.aether.connector.basic.feature" version="1.0.1.v20141111" url="features/org.eclipse.aether.connector.basic.feature_1.0.1.v20141111/">
+		</feature>
+		<feature id="org.eclipse.xsd.doc.source" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.doc.source_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.xsd.edit" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.edit_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.label.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.label.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.label.model">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.emfstore.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.emfstore.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.emfstore.core">
+		</feature>
+		<feature id="org.eclipse.wst.xml_core.feature" version="3.8.0.v201608061842" url="features/org.eclipse.wst.xml_core.feature_3.8.0.v201608061842/">
+		</feature>
+		<feature id="org.eclipse.xsd.mapping" version="2.9.0.v20160526-0356" url="features/org.eclipse.xsd.mapping_2.9.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.jdt" version="3.12.2.v20161124-1400" url="features/org.eclipse.jdt_3.12.2.v20161124-1400/">
+		</feature>
+		<feature id="org.eclipse.xtend.typesystem.uml2.source" version="2.2.0.v201605260315" url="features/org.eclipse.xtend.typesystem.uml2.source_2.2.0.v201605260315/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.custom.feature" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.custom.feature_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.custom.model">
+		</feature>
+		<feature id="org.eclipse.oomph.setup.jdt" version="1.6.0.v20161019-0656" url="features/org.eclipse.oomph.setup.jdt_1.6.0.v20161019-0656/">
+		</feature>
+		<feature id="org.eclipse.m2m.atl.examples" version="3.6.0.v201505180909" url="features/org.eclipse.m2m.atl.examples_3.6.0.v201505180909/">
+		</feature>
+		<feature id="org.eclipse.epp.package.java.feature" version="4.6.2.20161208-0625" url="features/org.eclipse.epp.package.java.feature_4.6.2.20161208-0625/" plugin-identifier="org.eclipse.epp.package.java">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.dsl.feature" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.dsl.feature_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.dsl">
+		</feature>
+		<feature id="org.eclipse.gmf" version="1.10.0.201606071959" url="features/org.eclipse.gmf_1.10.0.201606071959/">
+		</feature>
+		<feature id="org.eclipse.xtext.ui" version="2.10.0.v201605250459" url="features/org.eclipse.xtext.ui_2.10.0.v201605250459/">
+		</feature>
+		<feature id="org.eclipse.emf.oda.ecore" version="1.3.0.v20150123-0452" url="features/org.eclipse.emf.oda.ecore_1.3.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.query.sdk" version="1.10.0.201606071631" url="features/org.eclipse.emf.query.sdk_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.emf.oda.ecore.source" version="1.3.0.v20150123-0452" url="features/org.eclipse.emf.oda.ecore.source_1.3.0.v20150123-0452/">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.sdk.source" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.sdk.source_1.0.1.v20160706-1123/" plugin-identifier="org.eclipse.emf.parsley.common">
+		</feature>
+		<feature id="org.eclipse.emf.query.source" version="1.10.0.201606071631" url="features/org.eclipse.emf.query.source_1.10.0.201606071631/">
+		</feature>
+		<feature id="org.eclipse.mylyn.context_feature" version="3.21.0.v20160815-2336" url="features/org.eclipse.mylyn.context_feature_3.21.0.v20160815-2336/" plugin-identifier="org.eclipse.mylyn.context.core">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.validation.initial.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.validation.initial.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.validation">
+		</feature>
+		<feature id="org.eclipse.papyrus.uml.tools.feature" version="2.0.1.201609141603" url="features/org.eclipse.papyrus.uml.tools.feature_2.0.1.201609141603/">
+		</feature>
+		<feature id="org.eclipse.draw2d.source" version="3.10.100.201606061308" url="features/org.eclipse.draw2d.source_3.10.100.201606061308/">
+		</feature>
+		<feature id="org.eclipse.emf.codegen.ecore" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.codegen.ecore_2.12.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.eef.edt-feature" version="1.5.1.201601141612" url="features/org.eclipse.emf.eef.edt-feature_1.5.1.201601141612/" plugin-identifier="org.eclipse.emf.eef.branding">
+		</feature>
+		<feature id="org.eclipse.sirius.runtime" version="4.0.1.201608261223" url="features/org.eclipse.sirius.runtime_4.0.1.201608261223/" plugin-identifier="org.eclipse.sirius">
+		</feature>
+		<feature id="org.eclipse.emf.parsley.junit4.feature.source" version="1.0.1.v20160706-1123" url="features/org.eclipse.emf.parsley.junit4.feature.source_1.0.1.v20160706-1123/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="1.5.2.v20161122-1740" url="features/org.eclipse.e4.rcp_1.5.2.v20161122-1740/">
+		</feature>
+		<feature id="org.eclipse.emf.validation.source" version="1.10.0.201606071713" url="features/org.eclipse.emf.validation.source_1.10.0.201606071713/">
+		</feature>
+		<feature id="org.eclipse.emf.mapping.ecore.editor.source" version="2.10.0.v20160526-0356" url="features/org.eclipse.emf.mapping.ecore.editor.source_2.10.0.v20160526-0356/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.model.editor.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.model.editor.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.model.editor">
+		</feature>
+		<feature id="de.ovgu.featureide.exampleprojects" version="3.1.2.201610041906" url="features/de.ovgu.featureide.exampleprojects_3.1.2.201610041906/">
+		</feature>
+		<feature id="org.eclipse.emf.ecp.view.rule.feature.source" version="1.10.0.20160912-1709" url="features/org.eclipse.emf.ecp.view.rule.feature.source_1.10.0.20160912-1709/" plugin-identifier="org.eclipse.emf.ecp.view.rule">
+		</feature>
+		<feature id="org.eclipse.emf.ecore.editor.source" version="2.12.0.v20160526-0356" url="features/org.eclipse.emf.ecore.editor.source_2.12.0.v20160526-0356/">
+		</feature>
+	</site>
+</config>

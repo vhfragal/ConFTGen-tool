@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="http://marketplace.eclipse.org/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eclipse Plugins, Bundles and Products - Eclipse Marketplace</title>
+    <link>http://marketplace.eclipse.org/</link>
+    <description></description>
+    <language>en</language>
+     <atom:link href="http://marketplace.eclipse.org/rss.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Java 9 Support for Oxygen</title>
+    <link>http://marketplace.eclipse.org/content/java-9-support-oxygen</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2015-06-16 11:11&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-09-25 05:25&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22The%20Eclipse%20Foundation%22&quot;&gt;The Eclipse Foundation&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/wbeaton/listings&quot; title=&quot;Wayne Beaton&quot;&gt;Wayne Beaton&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Java™ 9 support for Eclipse JDT is available now. Full Java ™ 9 support for the Oxygen simultaneous release will come with Oxygen 1a to be released on October 11.&lt;/p&gt;
+&lt;p&gt;You can add the support to your existing Eclipse Oxygen (4.7) install. The Eclipse Java™ 9 support contains the following:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		ability to add JRE and JDK 9 as installed JRE&lt;/li&gt;
+&lt;li&gt;
+		support for JavaSE-9 execution environment&lt;/li&gt;
+&lt;li&gt;
+		ability to create Java and Plug-in projects that use a JRE or JDK 9&lt;/li&gt;
+&lt;li&gt;
+		ability to compile modules that are part of a Java project&lt;/li&gt;
+&lt;li&gt;
+		Checkout &lt;a href=&quot;https://wiki.eclipse.org/Java9/Examples&quot; rel=&quot;nofollow&quot;&gt;https://wiki.eclipse.org/Java9/Examples&lt;/a&gt; for some working examples of Java 9 features.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Pre-requisite:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		You need Oxygen (4.7 or above)  Eclipse SDK or maintenance(M) builds (available from &lt;a href=&quot;http://download.eclipse.org/eclipse/downloads/&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/downloads/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;
+		The Java™ 9 support also works when the IDE is launched with a Java™ 8 VM. There is no need to switch Java™ 9 VM for that.&lt;/li&gt;
+&lt;li&gt;
+		For any Eclipse install &amp;lt;= Oxygen 1 you have to add --add-modules=ALL-SYSTEM. For more details and potential issues see &lt;a href=&quot;https://wiki.eclipse.org/Configure_Eclipse_for_Java_9&quot; rel=&quot;nofollow&quot;&gt;https://wiki.eclipse.org/Configure_Eclipse_for_Java_9&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;
+		You need Java™ 9 JDK ( Available from the JDK9 pointer at the parent site: &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot; rel=&quot;nofollow&quot;&gt;http://www.oracle.com/technetwork/java/javase/downloads/index.html&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;To try out Java 9 support in Eclipse, you can follow any of these:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Update your Eclipse 4.7 build using this update site: &lt;a href=&quot;http://download.eclipse.org/eclipse/updates/4.7-U-builds&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/updates/4.7-U-builds&lt;/a&gt;. In Eclipse, go to Help &amp;gt; Install New Software... and uncheck &quot;Group items by category&quot;. Select &quot;Eclipse SDK&quot; from the list of items and proceed with the installation.&lt;/li&gt;
+&lt;li&gt;
+		Update your Eclipse 4.7 build for committers (&lt;a href=&quot;https://www.eclipse.org/downloads/packages/eclipse-ide-eclipse-committers/oxygenr&quot; rel=&quot;nofollow&quot;&gt;https://www.eclipse.org/downloads/packages/eclipse-ide-eclipse-committer...&lt;/a&gt;) using Eclipse Marketplace entry (currently, needs some additional steps):&lt;/li&gt;
+&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;
+		Drag and drop the Install button on this web page to your running Eclipse workspace. This will open the Eclipse Marketplace dialog.&lt;/li&gt;
+&lt;li&gt;
+		Click the link &quot;One solution selected&quot; at the bottom.&lt;/li&gt;
+&lt;li&gt;
+		In the Java 9 support entry, press &quot;Update Pending&quot; button.&lt;/li&gt;
+&lt;li&gt;
+		Press the same button again, now named &quot;Update&quot;. Ignore the progress bar message at the bottom.&lt;/li&gt;
+&lt;li&gt;
+		On the next page which comes up, make sure &quot;Update my installation...&quot; is selected and press &quot;Confirm&quot;.&lt;/li&gt;
+&lt;li&gt;
+		Accept the license and proceed with the installation.&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;
+	Please note that this update is not intended for (4.8) Photon&#039;s builds (integration/milestone) - but is intended for Oxygen builds.&lt;/p&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		If you are using the update site or the marketplace entry with an Eclipse 4.7 M-build, make sure that the latest available U-build on &lt;a href=&quot;http://download.eclipse.org/eclipse/updates/4.7-U-builds/?d&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/updates/4.7-U-builds/?d&lt;/a&gt; (fetched by the update site and marketplace entry) was built after your M-build.&lt;/li&gt;
+&lt;li&gt;
+		Note that this update also contains JUnit 5 support. For details see &lt;a href=&quot;https://marketplace.eclipse.org/content/junit-5-support-oxygen&quot; rel=&quot;nofollow&quot;&gt;https://marketplace.eclipse.org/content/junit-5-support-oxygen&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Tue, 16 Jun 2015 15:11:01 +0000</pubDate>
+ <dc:creator>wbeaton</dc:creator>
+ <guid isPermaLink="false">2393593 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/java-9-support-oxygen#comments</comments>
+  </item>
+  <item>
+    <title>jSparrow - Automatical Java Code Improvement</title>
+    <link>http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/jSparrow_Fluegel_110x80.jpg&quot; width=&quot;110&quot; height=&quot;77&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2017-06-20 11:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-09-25 03:51&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Splendit%20IT-Consulting%20GmbH%22&quot;&gt;Splendit IT-Consulting GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/mprehofer/listings&quot; title=&quot;Michaela Prehofer&quot;&gt;Michaela Prehofer&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;jSparrow is an automated Eclipse PlugIn, which finds and replaces different kinds of threats in Java software systems with a rule based approach.&lt;br /&gt;
+	It applies coding conventions, removes code smells, improves readability and helps the upgrade process to newer Java versions.&lt;/p&gt;
+&lt;p&gt;	The usage of  jSparrow allows you to save a lot of valuable time, while offering the option of automatically upgrading to the latest version of Java within minutes in a safe way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;set standards&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;jSparrow redefines the way companies can set programming standards and improve the legacy code.  jSparrow has a big range of rules to support standards.&lt;/p&gt;
+&lt;p&gt;	&lt;em&gt;ArithmeticAssignment – BracketsToControl – &lt;strong&gt;CodeFormatter&lt;/strong&gt; – FieldNameConvention – MultiVariableDeclarationLine – &lt;strong&gt;OrganiseImports &lt;/strong&gt;– RearrangeClassMembers – StringConcatToPlus – StringLiteralEqualityCheck – StringUtils – &lt;strong&gt;SystemOutToLogging&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;code smells&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Removal of potential bugs and code smells is one of the main purposes of jSparrow. jSparrow is very efficient in disposing of these threats with its rules.  &lt;/p&gt;
+&lt;p&gt;	&lt;em&gt;&lt;strong&gt;InefficientConstructor &lt;/strong&gt;– MultiVariableDeclarationLine – &lt;strong&gt;OverrideAnnotation &lt;/strong&gt;– PrimitiveBoxedForString – RemoveNewStringConstructor – RemoveToStringOnString – SerialVersionUid – StringFormatLineSeparator – StringLiteralEqualityCheck – SystemOutToLogging&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;modernization &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Being up to date with the latest Java standards is requiring a lot of software maintenance work. jSparrow upgrades old code-artifacts to new state-of-the-art programming practices.&lt;/p&gt;
+&lt;p&gt;	&lt;em&gt;CollectionRemoveAll – DiamondRule – &lt;strong&gt;ForEachToLambda &lt;/strong&gt;– &lt;strong&gt;ForToForEach &lt;/strong&gt;– FunctionalInterface – LambdaToMethodReference – MultiCatch – StatementLambdaToExpression – SystemOutToLogging – &lt;strong&gt;TryWithResource &lt;/strong&gt;– WhileToForEach&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OUR RELEASE POLICY IS AS FOLLOWS:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Two major releases&lt;/strong&gt; per year&lt;/p&gt;
+&lt;p&gt;    21st June – Midsummer Release&lt;br /&gt;
+	    21st December – Release of the longest night&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monthly Rule releases&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If we developed new rules, they will be released on the 21st of each month - (if the 21st isn’t an Austrian working day- the release will be postponed one month)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Weekly Bugfix &lt;/strong&gt;releases&lt;/p&gt;
+&lt;p&gt;Bugfixes will be released each Tuesday&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hotfix Releases &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Hotfix Releases can be deployed any time (hopefully not necessary)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Tue, 20 Jun 2017 15:34:11 +0000</pubDate>
+ <dc:creator>mprehofer</dc:creator>
+ <guid isPermaLink="false">3503691 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement#comments</comments>
+  </item>
+  <item>
+    <title>Bash Editor</title>
+    <link>http://marketplace.eclipse.org/content/bash-editor</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/bash-editor-logo.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-07-10 06:27&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sun, 2017-09-24 18:48&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Albert%20Tregnaghi%22&quot;&gt;Albert Tregnaghi&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/atregnaghi/listings&quot; title=&quot;Albert Tregnaghi&quot;&gt;Albert Tregnaghi&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;This plugin is just a bash script editor. &lt;/p&gt;
+&lt;p&gt;Features:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Syntax highlighting&lt;/li&gt;
+&lt;li&gt;
+		Outline&lt;/li&gt;
+&lt;li&gt;
+		Quick-Outline&lt;/li&gt;
+&lt;li&gt;
+		Open referenced functions by hyperlink&lt;/li&gt;
+&lt;li&gt;
+		Validation&lt;/li&gt;
+&lt;li&gt;
+		Colors can be customized. Also additional defaults for dark theme exists.&lt;/li&gt;
+&lt;li&gt;
+		Bracket switching + highlighting&lt;/li&gt;
+&lt;li&gt;
+		Block commenting (CTRL+7)&lt;/li&gt;
+&lt;li&gt;
+		Auto bracket closing for []&lt;/li&gt;
+&lt;li&gt;
+		Small (&amp;lt;200 kb)&lt;/li&gt;
+&lt;li&gt;
+		Works on Linux, Windows and Mac out of the box.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Additional links&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		&lt;a href=&quot;https://github.com/de-jcup/eclipse-bash-editor/issues&quot; rel=&quot;nofollow&quot;&gt;Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;https://www.youtube.com/playlist?list=PLaBYAz_I_8tF7sZVIcUv8zOVe2RMiWn-L&quot; rel=&quot;nofollow&quot;&gt;YouTube Videos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;https://github.com/de-jcup/eclipse-bash-editor/releases&quot; rel=&quot;nofollow&quot;&gt;Release history&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;https://github.com/de-jcup/eclipse-bash-editor/wiki&quot; rel=&quot;nofollow&quot;&gt;Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Mon, 10 Jul 2017 10:27:25 +0000</pubDate>
+ <dc:creator>atregnaghi</dc:creator>
+ <guid isPermaLink="false">3536358 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/bash-editor#comments</comments>
+  </item>
+  <item>
+    <title>ABAP Continuous Integration</title>
+    <link>http://marketplace.eclipse.org/content/abap-continuous-integration</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/abapCI_logo.jpg&quot; width=&quot;110&quot; height=&quot;77&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-08-31 17:35&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sun, 2017-09-24 15:39&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Andreas%20Gautsch%22&quot;&gt;Andreas Gautsch&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/agautsch/listings&quot; title=&quot;Andreas Gautsch&quot;&gt;Andreas Gautsch&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;abapCI is an additional plugin for ABAP in Eclipse which supports you with Continuous Integration features. &lt;/p&gt;
+&lt;p&gt;Further details can be found at: &lt;a href=&quot;https://github.com/andau/abapCI/blob/master/README.md&quot; rel=&quot;nofollow&quot;&gt;https://github.com/andau/abapCI/blob/master/README.md&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 31 Aug 2017 21:35:06 +0000</pubDate>
+ <dc:creator>agautsch</dc:creator>
+ <guid isPermaLink="false">3629791 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/abap-continuous-integration#comments</comments>
+  </item>
+  <item>
+    <title>JUnit 5 Support for Oxygen</title>
+    <link>http://marketplace.eclipse.org/content/junit-5-support-oxygen</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-08-10 07:25&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2017-09-23 02:21&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Eclipse%20Project%22&quot;&gt;Eclipse Project&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/ngupta/listings&quot; title=&quot;Noopur Gupta&quot;&gt;Noopur Gupta&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;JUnit 5 is the next generation of JUnit and Eclipse is embracing it by integrating it in its tooling support.&lt;/p&gt;
+&lt;p&gt;To try out JUnit 5 support in Eclipse, you can follow any of these:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Update your Eclipse 4.7 release build using this update site: &lt;a href=&quot;http://download.eclipse.org/eclipse/updates/4.7-U-builds&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/updates/4.7-U-builds&lt;/a&gt;. In Eclipse, go to Help &amp;gt; Install New Software... and uncheck &quot;Group items by category&quot;. Select &quot;Eclipse SDK&quot; from the list of items and proceed with the installation.&lt;br /&gt;
+		 &lt;/li&gt;
+&lt;li&gt;
+		Update your Eclipse 4.7 release build for EPP packages ( e.g. the committers package: &lt;a href=&quot;https://www.eclipse.org/downloads/packages/eclipse-ide-eclipse-committers/oxygenr&quot; rel=&quot;nofollow&quot;&gt;https://www.eclipse.org/downloads/packages/eclipse-ide-eclipse-committer...&lt;/a&gt;) using Eclipse Marketplace entry (needs additional steps):&lt;/li&gt;
+&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;
+		Drag and drop the Install button on this web page to your running Eclipse workspace. This will open the Eclipse Marketplace dialog.&lt;/li&gt;
+&lt;li&gt;
+		Click the link &quot;One solution selected&quot; at the bottom.&lt;/li&gt;
+&lt;li&gt;
+		In the JUnit 5 support entry, press &quot;Update Pending&quot; button.&lt;/li&gt;
+&lt;li&gt;
+		Press the same button again, now named &quot;Update&quot;. Ignore the progress bar message at the bottom.&lt;/li&gt;
+&lt;li&gt;
+		On the next page which comes up, make sure &quot;Update my installation...&quot; is selected and press &quot;Confirm&quot;.&lt;/li&gt;
+&lt;li&gt;
+		Accept the license and proceed with the installation.&lt;br /&gt;
+		 &lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;
+		JUnit 5 support is also integrated with Eclipse Photon (4.8) M2 (&lt;a href=&quot;http://download.eclipse.org/eclipse/downloads/drops4/S-4.8M2-201709132000/&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/downloads/drops4/S-4.8M2-201709132000/&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		If you are using the update site or the marketplace entry with an Eclipse 4.7 M-build, make sure that the latest available U-build on &lt;a href=&quot;http://download.eclipse.org/eclipse/updates/4.7-U-builds/?d&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/updates/4.7-U-builds/?d&lt;/a&gt; (fetched by the update site and marketplace entry) was built after your M-build.&lt;/li&gt;
+&lt;li&gt;
+		Since Java™ 9 GA, you will also get the Eclipse support for Java™ 9 when you install JUnit 5 support. For more details, go to &lt;a href=&quot;https://marketplace.eclipse.org/content/java-9-support-oxygen&quot; rel=&quot;nofollow&quot;&gt;https://marketplace.eclipse.org/content/java-9-support-oxygen&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Resources:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		JUnit 5 project: &lt;a href=&quot;http://junit.org/junit5&quot; rel=&quot;nofollow&quot;&gt;http://junit.org/junit5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		User guide: &lt;a href=&quot;http://junit.org/junit5/docs/current/user-guide&quot; rel=&quot;nofollow&quot;&gt;http://junit.org/junit5/docs/current/user-guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/M2/#junit-5-support&quot; rel=&quot;nofollow&quot;&gt;https://www.eclipse.org/eclipse/news/4.8/M2/#junit-5-support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 10 Aug 2017 11:25:34 +0000</pubDate>
+ <dc:creator>ngupta</dc:creator>
+ <guid isPermaLink="false">3593893 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/junit-5-support-oxygen#comments</comments>
+  </item>
+  <item>
+    <title>Jmr Code Generator</title>
+    <link>http://marketplace.eclipse.org/content/jmr-code-generator</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/jmrimg_%E9%80%8F%E6%98%8E.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-08-02 23:41&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-09-22 00:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22JmrTeam%22&quot;&gt;JmrTeam&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/yuxinwork/listings&quot; title=&quot;Xin Yu&quot;&gt;Xin Yu&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;A code generator plugin for any kind of project(Java, WEB, Android, PHP, etc.) any kind of framework(struts/struts2, spring/springMVC, hibernate, ibatis/mybatis, JPA etc.).&lt;/p&gt;
+&lt;p&gt;You can create tasks to manage the generation, according to your project and framework and just need to create template files(Jet) and Jmr management file for your project.&lt;/p&gt;
+&lt;p&gt;You can transform the model from database(like table and view), xml, java class, and use these models to generate any code, testcase, and document. Such as, it&#039;s possible to generate CRUD in a few minutes. It also provides ORM tools for mapping types and Convert tool to convert model easily. &lt;/p&gt;
+&lt;p&gt;Jmr uses Jet as a template to generate code. JSP-like template files can be edited and transformed into any kind of source artifact including java, html, properties or xml files in a very simple way. Jet is a project under Eclipse m2t, you can get the source from &lt;a href=&quot;http://www.jmr-source.com/jmr_down.htm&quot; rel=&quot;nofollow&quot;&gt;Jmr-Jet&lt;/a&gt; or &lt;a href=&quot;https://www.eclipse.org/modeling/m2t/?project=jet#jet&quot; rel=&quot;nofollow&quot;&gt;M2t-Jet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Change Logs:&lt;/p&gt;
+&lt;p&gt;     2017/9/21:&lt;/p&gt;
+&lt;p&gt;          1. Adaptation 1080p screen.&lt;/p&gt;
+&lt;p&gt;          2. [Win10]: Fix bug of the Win10 control layout.&lt;/p&gt;
+&lt;p&gt;          3. Optimize the runview interface.&lt;/p&gt;
+&lt;p&gt;     2017/9/15:&lt;/p&gt;
+&lt;p&gt;          1. [Mac]: Fix bug of the control layout.&lt;/p&gt;
+&lt;p&gt;          2. [Mac]: Fix bug of help document link failed.&lt;/p&gt;
+&lt;p&gt;     2017/8/30: Simplify installation process.&lt;/p&gt;
+&lt;p&gt;     2017/8/27: Support for the Mac OS, you can use Jmr like you do on Windows.&lt;/p&gt;
+&lt;p&gt;Home Page: &lt;a href=&quot;http://www.jmr-source.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentation Page: &lt;a href=&quot;http://www.jmr-source.com/doc/en/index.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com/doc/en/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentation Page(中文): &lt;a href=&quot;http://www.jmr-source.com/doc/zh/index.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com/doc/zh/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Plugin Site: &lt;a href=&quot;http://www.jmr-source.com/update/site.xml&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com/update/site.xml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Examples and source: &lt;a href=&quot;http://www.jmr-source.com/jmr_down.htm&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com/jmr_down.htm&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 03 Aug 2017 03:41:16 +0000</pubDate>
+ <dc:creator>yuxinwork</dc:creator>
+ <guid isPermaLink="false">3581018 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/jmr-code-generator#comments</comments>
+  </item>
+  <item>
+    <title>Yatta Launcher for Eclipse</title>
+    <link>http://marketplace.eclipse.org/content/yatta-launcher-eclipse</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/launcherIcon256_0.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2015-09-24 05:17&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-09-21 10:35&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Yatta%20Solutions%20GmbH%22&quot;&gt;Yatta Solutions GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/febelshuser/listings&quot; title=&quot;Frederic Ebelshaeuser&quot;&gt;Frederic Ebelshaeuser&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;h2&gt;
+	Share Your Eclipse Setup With Your Team&lt;/h2&gt;
+&lt;p&gt;The Launcher is a lightweight desktop app and the easiest way to organize your Eclipse setups – for yourself, your team, or within the community. Save your project setup as a profile, share it with your team and just start building great software. &lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution?download&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Try it now - it&#039;s free!&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;
+	What is a Profile?&lt;/h3&gt;
+&lt;p&gt;A profile is a &quot;snapshot&quot; of an Eclipse workspace combination containing plug-ins, workspace settings for your team (e.g. project metadata and -preferences, build server configurations and working sets), and links to source code and task repositories (like on GitHub). No actual source code of course. &lt;/p&gt;
+&lt;p&gt;The Yatta Launcher lets you build a profile form any Eclipse setup – automatically. You can even share your profiles with other users and, if you like, with the community. And it&#039;s for free!&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;
+	Use Cases&lt;/h3&gt;
+&lt;p&gt;Profiles help you manage all your Eclipse installations. Just install the Launcher, and you are good to go. With Profiles, you, your team, or your users will be able to install and update any project setup. Here are some use cases for Profiles:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Easily organize your local installations:
+&lt;ul&gt;&lt;li&gt;
+				Start any Eclipse setup from a central location.&lt;/li&gt;
+&lt;li&gt;
+				Make your setups distinct with a name, an icon and a description.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Share your Eclipse setup with your project team:
+&lt;ul&gt;&lt;li&gt;
+				Help new team members get productive.&lt;/li&gt;
+&lt;li&gt;
+				Distribute your new project setup faster. Stop sending zip files with Eclipse setups.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Create profile templates for your team(s):
+&lt;ul&gt;&lt;li&gt;
+				Create and distribute your profiles for different project teams or for specific tasks or requirements.&lt;/li&gt;
+&lt;li&gt;
+				Automatically inform teams about profile updates.&lt;/li&gt;
+&lt;li&gt;
+				Build chains of parent, child, and grandchild profiles to manage project setups within your company and across your teams.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Transfer your Eclipse setup to a new workstation:
+&lt;ul&gt;&lt;li&gt;
+				Install your profile on another operating system.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+	Features&lt;/h3&gt;
+&lt;h4&gt;
+	Installation&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Download a profile and get a working Eclipse setup including the workspace.&lt;/li&gt;
+&lt;li&gt;
+		Turn any Eclipse installation into a profile.&lt;/li&gt;
+&lt;li&gt;
+		Install your Eclipse IDE and workspace configuration on another device - and even on another operating system.&lt;/li&gt;
+&lt;li&gt;
+		Delete or uninstall obsolete profiles.&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;
+	Sharing&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Deploy your Eclipse setup and workspace to your whole team, and get everyone ready to start coding in seconds.&lt;/li&gt;
+&lt;li&gt;
+		Create a group to privately share your profile with your team.&lt;/li&gt;
+&lt;li&gt;
+		Share your profile publically to build up your own community of followers.&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;
+	Updates&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Synchronize versions of plug-ins and Eclipse releases – with your whole team or all your followers at once.&lt;/li&gt;
+&lt;li&gt;
+		Always get the latest updates for your profiles. Be it plug-ins or the latest Eclipse release, you never have to start from scratch again.&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;
+	Management&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Start any profile directly from the Yatta Launcher, or create your own desktop shortcuts.&lt;/li&gt;
+&lt;li&gt;
+		See the contents of your profile at a single glance.&lt;/li&gt;
+&lt;li&gt;
+		Rearrange your profile list via drag and drop to find your favorite profiles faster.&lt;/li&gt;
+&lt;li&gt;
+		Make your profile unique: Customize name, description, color, and icon.&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+	Components&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;The Client&lt;/strong&gt; – Eclipse plug-in that lets you share and update your running Eclipse (profile) directly from within your IDE.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Launcher&lt;/strong&gt; – Lightweight desktop app to help you manage all your Eclipse installations: Install, start, update, share or uninstall any profile via the Launcher.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Profiles Hub&lt;/strong&gt; – The &lt;a href=&quot;https://www.yatta.de/profiles/hub?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Profiles Hub&lt;/a&gt; is the central Hub for downloading Eclipse profiles. When you share a profile, it will be available on the Profiles Hub. If you are searching for a profile that meets the requirements of your project - for example a certain set of plug-ins - the Profiles Hub is the place to visit. Use the search and filter functions to find what you are looking for. From the Profiles Hub, you can access any profile that&#039;s publicly available.&lt;/p&gt;
+&lt;p&gt;Yatta Profiles was designed to make starting new projects with Eclipse really simple. The best thing: Yatta Profiles for Eclipse is completey free - &lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;so go ahead and try it!&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;
+	Use Cases&lt;/h3&gt;
+&lt;p&gt;Profiles help you manage all your Eclipse installations. Just install the Launcher, and you are good to go. With Profiles, you, your team, or your users will be able to install and update any project setup. Here are some use cases:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Easily manage your local installations:
+&lt;ul&gt;&lt;li&gt;
+				Start a specific Eclipse setup.&lt;/li&gt;
+&lt;li&gt;
+				Make your setups distinct with a name, an icon and a description.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Share your Eclipse setup with a fellow on your project team:
+&lt;ul&gt;&lt;li&gt;
+				Help new team members get productive.&lt;/li&gt;
+&lt;li&gt;
+				Distribute your new project setup faster. Stop sending zip files with Eclipse setups.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Create profile templates for your team(s):
+&lt;ul&gt;&lt;li&gt;
+				Create, describe and distribute you profiles for project teams, specific tasks or requirements.&lt;/li&gt;
+&lt;li&gt;
+				Automatically inform profile followers about profile updates.&lt;/li&gt;
+&lt;li&gt;
+				Build profile Chains and manage Eclipse setups within your enterprise and across your teams.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Transfer your Eclipse setup to a new workstation:
+&lt;ul&gt;&lt;li&gt;
+				Install your profile on another Operating system.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+	Download Yatta Profiles for Eclipse&lt;/h3&gt;
+&lt;p&gt;Visit our &lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;website&lt;/a&gt; for more information and free download.&lt;/p&gt;
+&lt;p&gt;Note that Profiles is still beta but stable – and productive. Anyhow, don&#039;t hesitate to send us feedback or file an error report in case anything doesn&#039;t work as intended.&lt;/p&gt;
+&lt;p&gt;We are working hard to continuously improve Profiles as well as other parts of the Eclipse IDE. Stay tuned for our roadmap. There is a lot more to come. You have a feature request? &lt;a href=&quot;http://www.yatta.de/contact/&quot; rel=&quot;nofollow&quot;&gt;Send us an email!&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution?download&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;
+	Contact us&lt;/h3&gt;
+&lt;p&gt;Do you need more information? &lt;a href=&quot;http://www.yatta.de/contact/&quot; rel=&quot;nofollow&quot;&gt;Contact us&lt;/a&gt; and follow the latest Yatta News on &lt;a href=&quot;http://twitter.com/YattaSolutions/&quot; rel=&quot;nofollow&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://facebook.com/YattaSolutions/&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt; or &lt;a href=&quot;https://plus.google.com/112332560095044183443/posts&quot; rel=&quot;nofollow&quot;&gt;Google +&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 24 Sep 2015 09:17:52 +0000</pubDate>
+ <dc:creator>febelshuser</dc:creator>
+ <guid isPermaLink="false">2540018 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/yatta-launcher-eclipse#comments</comments>
+  </item>
+  <item>
+    <title>HPE Security Fortify on Demand Plugin</title>
+    <link>http://marketplace.eclipse.org/content/hpe-security-fortify-demand-plugin</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/fortify_icon_on_black_110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-02-23 23:23&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-09-20 15:19&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Hewlett%20Packard%20Enterprise%22&quot;&gt;Hewlett Packard Enterprise&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/akarjakina8p7/listings&quot; title=&quot;Anna Karyakina&quot;&gt;Anna Karyakina&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://hpe.com/software/fod&quot; rel=&quot;nofollow&quot;&gt;Fortify on Demand&lt;/a&gt; is a &lt;em&gt;Software as a Service (SaaS)&lt;/em&gt; solution that enables your organization to build and expand a &lt;em&gt;Software Security Assurance&lt;/em&gt; program quickly, easily, and affordably. An application submitted to &lt;a href=&quot;https://www.hpfod.com&quot; rel=&quot;nofollow&quot;&gt;Fortify on Demand&lt;/a&gt; undergoes a security assessment where it is analyzed for a variety of software security vulnerabilities. With this Eclipse plugin, you can upload your code to Fortify on Demand for static assessment, also audit and remediate static and dynamic analysis results as soon as they are available.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 24 Feb 2017 04:23:53 +0000</pubDate>
+ <dc:creator>akarjakina8p7</dc:creator>
+ <guid isPermaLink="false">3310555 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/hpe-security-fortify-demand-plugin#comments</comments>
+  </item>
+  <item>
+    <title>COFIQ - Get Your SOA / API Act Together</title>
+    <link>http://marketplace.eclipse.org/content/cofiq-get-your-soa-api-act-together</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/logo-small1_0.jpg&quot; width=&quot;110&quot; height=&quot;35&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2015-12-17 05:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-09-20 15:05&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22COFIQ%22&quot;&gt;COFIQ&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/amincav/listings&quot; title=&quot;Ad Min&quot;&gt;Ad Min&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://www.cofiq.com&quot; rel=&quot;nofollow&quot;&gt;www.cofiq.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;COFIQ allows service portfolio management the easy way. No cumbersome XML/XSD/WSDL/JSON-SCHEMA manipulation. COFIQ generates these for you from a single repository with vocabularies, message and service definitions. Ofcourse available as SAAS solution.&lt;/p&gt;
+&lt;p&gt;The main attraction of COFIQ is that it guards interoperability and recognizes obsolete services, triggering you to define new versions and determining the impact of vocabulary changes before committing them. This proved illusive for most SOA initiatives, leading to JBOWS at best (Just a Bunch of Web Services). Manually determining the impact of vocabulary changes under pressure from projects has proven too much. With COFIQ this is a breeze! COGIQ generates single file WSDL&#039;s (1.1) and/or JSON HYPER SCHEMA for direct tool consumption. With OpenAPI 3.0 in the pipeline.&lt;/p&gt;
+&lt;p&gt;The generated service-definitions can be imported into Eclipse (WSDL) or other tools able to import Service/API contracts, for subsequent generation of stubs and skeletons, making it a loosely coupled component in your Service/API development process.&lt;/p&gt;
+&lt;p&gt;For human consumption COFIQ uses its user interface, data visualization (force directed graphs) &lt;a href=&quot;https://www.cofiq.com/D3-Visualization.html&quot; rel=&quot;nofollow&quot;&gt;https://www.cofiq.com/D3-Visualization.html&lt;/a&gt; and trusty PDF reports, allowing you to capture and review semantics and syntax precisely. There is really no need to learn any of the specific standard formats. You just interact with the format agnostic repository.&lt;/p&gt;
+&lt;p&gt;Use the free 30 day trial. And don&#039;t hesitate to contact us for any question. Our SOA approach is focussed on keeping things as simple as possible and really reaping the benefits of SOA that have escaped many of us. Currently we are working on supporting the OpenAPI 3.0 standard also (all generated from the same COFIQ repository). We have developed a unique approach where a single repository model can support WSDL as well as REST/API standards. After all, services, independent of format used, can be seen as black boxes with inputs and outputs.&lt;/p&gt;
+&lt;p&gt;** We have discovered that starting a Paypal subscription, even with a 30 free trial period and the option to cancel at any time, forms a threshold for some potential customers. Please contact us for a custom trial setup if that is the case.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cofiq.com&quot; rel=&quot;nofollow&quot;&gt;www.cofiq.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 17 Dec 2015 10:34:29 +0000</pubDate>
+ <dc:creator>amincav</dc:creator>
+ <guid isPermaLink="false">2650830 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/cofiq-get-your-soa-api-act-together#comments</comments>
+  </item>
+  <item>
+    <title>PyDev - Python IDE for Eclipse</title>
+    <link>http://marketplace.eclipse.org/content/pydev-python-ide-eclipse</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/pydev_banner_110_80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2004-07-07 08:06&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-09-20 07:14&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Brainwy%20Software%22&quot;&gt;Brainwy Software&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/fzadroznyr0g/listings&quot; title=&quot;Fabio Zadrozny&quot;&gt;Fabio Zadrozny&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;PyDev is a plugin that enables Eclipse to be used as a Python IDE (supporting also Jython and IronPython). It uses advanced type inference techniques which allow it to provide things such as code completion and code analysis, besides providing a debugger, interactive console, refactoring, tokens browser, django integration, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Homepage:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;http://www.pydev.org&quot; rel=&quot;nofollow&quot;&gt;pydev.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getting Started:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;http://www.pydev.org/manual_101_root.html&quot; rel=&quot;nofollow&quot;&gt;Getting Started (read to make sure you can get most out of PyDev)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature Matrix:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;http://www.pydev.org/manual_adv_features.html&quot; rel=&quot;nofollow&quot;&gt;pydev.org/manual_adv_features.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;General questions:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;http://stackoverflow.com/questions/tagged/pydev&quot; rel=&quot;nofollow&quot;&gt;StackOverflow (with the PyDev tag)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Report issues/features: &lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;https://sw-brainwy.rhcloud.com&quot; rel=&quot;nofollow&quot;&gt;Brainwy Tracker&lt;/a&gt;&lt;br /&gt;
+	 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code questions:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;http://lists.sourceforge.net/lists/listinfo/pydev-code&quot; rel=&quot;nofollow&quot;&gt;pydev-code list&lt;/a&gt;&lt;br /&gt;
+	 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source Code:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;https://github.com/fabioz/Pydev&quot; rel=&quot;nofollow&quot;&gt;github.com/fabioz/Pydev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blog:&lt;/strong&gt;&lt;br /&gt;
+	    &lt;a href=&quot;http://pydev.blogspot.com&quot; rel=&quot;nofollow&quot;&gt;pydev.blogspot.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Below are some of its highlighted features.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		&lt;strong&gt;Python&lt;/strong&gt;, &lt;strong&gt;Jython&lt;/strong&gt; and &lt;strong&gt;IronPython&lt;/strong&gt; support&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Django integration&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Django templates editor&lt;/strong&gt; (requires LiClipse)&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Code completion&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Debugger&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Unittest integration&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Interactive Console&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Code analysis&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		Go to definition (F3)&lt;/li&gt;
+&lt;li&gt;
+		Find References (Ctrl+Shift+G)&lt;/li&gt;
+&lt;li&gt;
+		Refactoring&lt;/li&gt;
+&lt;li&gt;
+		Google App Engine integration&lt;/li&gt;
+&lt;li&gt;
+		Syntax highlighting&lt;/li&gt;
+&lt;li&gt;
+		Parser errors&lt;/li&gt;
+&lt;li&gt;
+		Outline view&lt;/li&gt;
+&lt;li&gt;
+		Tabs or spaces preferences&lt;/li&gt;
+&lt;li&gt;
+		Smart indent / dedent&lt;/li&gt;
+&lt;li&gt;
+		Comment / uncomment / comment blocks&lt;/li&gt;
+&lt;li&gt;
+		Code folding&lt;/li&gt;
+&lt;li&gt;
+		TODO tasks&lt;/li&gt;
+&lt;li&gt;
+		Content Assistants (Ctrl+1)&lt;/li&gt;
+&lt;li&gt;
+		Scripting with Jython&lt;/li&gt;
+&lt;li&gt;
+		Mark Occurrences&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Wed, 07 Jul 2004 12:06:36 +0000</pubDate>
+ <dc:creator>fzadroznyr0g</dc:creator>
+ <guid isPermaLink="false">114 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/pydev-python-ide-eclipse#comments</comments>
+  </item>
+  </channel>
+</rss>

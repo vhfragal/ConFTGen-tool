@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="ARCADE_GAME_MAKER_AGM">
+				<description>
+					
+				</description>
+				<and mandatory="true" name="Action_A">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Movement_M">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Colision_L">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+				<feature mandatory="true" name="Configuration_C">
+					<description>
+						
+					</description>
+				</feature>
+				<alt mandatory="true" name="Rules_R">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Brickles_B">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Pong_N">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Bowling_W">
+						<description>
+							
+						</description>
+					</feature>
+				</alt>
+				<and mandatory="true" name="Services_V">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Play_Y">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Pause_P">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="Save_S">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

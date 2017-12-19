@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="4">
+		<struct>
+			<and mandatory="true" name="Arcade Game Maker - AGM [G]">
+				<and mandatory="true" name="Action [A]">
+					<feature mandatory="true" name="Movement [M]"/>
+					<feature mandatory="true" name="Collision [L]"/>
+				</and>
+				<feature mandatory="true" name="Configuration [C]"/>
+				<alt mandatory="true" name="Rules [R]">
+					<feature mandatory="true" name="Brickles [B]"/>
+					<feature mandatory="true" name="Pong [N]"/>
+					<feature mandatory="true" name="Bowling [W]"/>
+				</alt>
+				<and mandatory="true" name="Services [V]">
+					<feature mandatory="true" name="Play [Y]"/>
+					<feature mandatory="true" name="Pause [P]"/>
+					<feature name="Save [S]"/>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

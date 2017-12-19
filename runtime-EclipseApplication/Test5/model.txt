@@ -1,0 +1,23 @@
+a1*b1*c1@(or A B C) -- b@true/out1() -> 1@true
+a1*b1*c1@(or A B C) -- a@true/out1() -> c2@(and C (and (not A) (not B) C))
+a1*b1*c1@(or A B C) -- a@true/out1() -> a2@(and A (and A (not B) (not C)))
+a1*b1*c1@(or A B C) -- a@true/out1() -> b2@(and B (and (not A) B (not C)))
+a1*b1*c1@(or A B C) -- a@true/out1()*out1() -> a2*b2@(and A B (and A B (not C)))
+a1*b1*c1@(or A B C) -- a@true/out1()*out1() -> a2*c2@(and A C (and A (not B) C))
+a1*b1*c1@(or A B C) -- a@true/out1()*out1() -> b2*c2@(and B C (and (not A) B C))
+a1*b1*c1@(or A B C) -- a@true/out1()*out1()*out1() -> a2*b2*c2@(and (and A B (and A B C)) C (and A B C))
+1@true -- b@true/out0() -> a1*b1*c1@(or A B C)
+c2@(and C (and (not A) (not B) C)) -- b@true/out1() -> 1@true
+c2@(and C (and (not A) (not B) C)) -- a@true/out0() -> a1*b1*c1@(or A B C)
+a2@(and A (and A (not B) (not C))) -- b@true/out1() -> 1@true
+a2@(and A (and A (not B) (not C))) -- a@true/out0() -> a1*b1*c1@(or A B C)
+b2@(and B (and (not A) B (not C))) -- b@true/out1() -> 1@true
+b2@(and B (and (not A) B (not C))) -- a@true/out0() -> a1*b1*c1@(or A B C)
+a2*b2@(and A B (and A B (not C))) -- b@true/out1() -> 1@true
+a2*b2@(and A B (and A B (not C))) -- a@true/out0()*out0() -> a1*b1*c1@(or A B C)
+a2*c2@(and A C (and A (not B) C)) -- b@true/out1() -> 1@true
+a2*c2@(and A C (and A (not B) C)) -- a@true/out0()*out0() -> a1*b1*c1@(or A B C)
+b2*c2@(and B C (and (not A) B C)) -- b@true/out1() -> 1@true
+b2*c2@(and B C (and (not A) B C)) -- a@true/out0()*out0() -> a1*b1*c1@(or A B C)
+a2*b2*c2@(and (and A B (and A B C)) C (and A B C)) -- b@true/out1() -> 1@true
+a2*b2*c2@(and (and A B (and A B C)) C (and A B C)) -- a@true/out0()*out0()*out0() -> a1*b1*c1@(or A B C)

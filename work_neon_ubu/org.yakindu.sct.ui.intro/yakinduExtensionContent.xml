@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+	<extensionContent id="yakindu-overviewExtension" name="YAKINDU Overview Extension"
+		style="css/style.css" alt-style="css/style.properties" path="overview/@">
+		<group style-id="content-group" id="yakindu-introLink-group">
+			<link label="YAKINDU Statechart Tools" url="http://statecharts.org/"
+				id="yakindu-documentation-link" style-id="content-link">
+				<text>Learn more about YAKINDU Statechart Tools …</text>
+			</link>
+		</group>
+	</extensionContent>
+
+	<extensionContent id="yakindu-sampleExtension" name="YAKINDU Sample Extension"
+		style="css/style.css" alt-style="css/style.properties" path="samples/@">
+		<group style-id="content-group" id="yakindu-introLink-group"
+			label="YAKINDU Statechart Tools">
+			<link label="Example project"
+				url="http://org.eclipse.ui.intro/runAction?pluginId=org.yakindu.sct.ui.intro&amp;class=org.yakindu.sct.ui.intro.OpenExampleIntroAction"
+				id="yakindu-examples-link" style-id="content-link">
+				<text>Create the traffic light example …</text>
+			</link>
+		</group>
+	</extensionContent>
+
+	<extensionContent id="yakindu-tutorialsExtension"
+		style="css/style.css" alt-style="css/style.properties" name="YAKINDU Tutorials Extension" path="tutorials/@">
+		<group style-id="content-group" id="yakindu-introLink-group"
+			label="YAKINDU Statechart Tools">
+			<link label="Tutorials" url="http://statecharts.org/documentation/tutorials/"
+				id="yakindu-tutorials-link" style-id="content-link">
+				<text>Read the tutorials …</text>
+			</link>
+			<link label="User Group" url="https://groups.google.com/forum/embed/?place=forum/yakindu-user#!forum/yakindu-user"
+				id="yakindu-user-forum-link" style-id="content-link">
+				<text>Visit the SCT user group …</text>
+			</link>
+		</group>
+	</extensionContent>
+</introContent>

@@ -1,0 +1,8 @@
+([c,c],C)
+([c,a],true)
+([a,a,c],C)
+([a,a,a],A)
+([a,b,b,b],(and A C))
+([a,b,b,a],(and A C))
+([a,b,c,c],(and A C))
+([a,b,c,b],(and A C))

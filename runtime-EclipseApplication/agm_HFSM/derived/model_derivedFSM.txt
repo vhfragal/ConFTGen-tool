@@ -1,0 +1,9 @@
+StartGame@true -- Start@true/_1() -> Bowling@W
+StartGame@true -- Exit@(and W (not S))/_1() -> StartGame@true
+StartGame@true -- Pause@W/_1() -> PauseGame@true
+PauseGame@true -- Start@true/_1() -> Bowling@W
+PauseGame@true -- Pause@true/_0() -> PauseGame@true
+PauseGame@true -- Exit@true/_1() -> StartGame@true
+Bowling@W -- Start@true/_0() -> Bowling@W
+Bowling@W -- Pause@true/_1() -> PauseGame@true
+Bowling@W -- Exit@(not S)/_0() -> Bowling@W

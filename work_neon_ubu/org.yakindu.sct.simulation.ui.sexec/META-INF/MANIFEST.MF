@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: YAKINDU Simulation Execution UI
+Bundle-SymbolicName: org.yakindu.sct.simulation.ui.sexec;singleton:=true
+Bundle-Version: 2.9.0.qualifier
+Bundle-Activator: org.yakindu.sct.simulation.ui.sexec.SExecUiActivator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.debug.core,
+ org.eclipse.debug.ui,
+ org.yakindu.sct.simulation.ui,
+ org.yakindu.sct.simulation.core.sexec,
+ org.eclipse.ui,
+ org.yakindu.sct.commons,
+ org.eclipse.ui.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: org.yakindu.sct.simulation.ui.sexec.launch,
+ org.yakindu.sct.simulation.ui.sexec.launch.tabs
+Bundle-Vendor: statecharts.org

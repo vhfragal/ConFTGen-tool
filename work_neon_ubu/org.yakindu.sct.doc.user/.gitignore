@@ -1,0 +1,11 @@
+.ant-targets-build.xml
+bin/
+examples/
+help/
+html/
+lib/
+pdf/
+src-gen/
+target/
+website/
+*~

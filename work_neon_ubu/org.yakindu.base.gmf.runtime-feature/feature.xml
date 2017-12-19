@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.yakindu.base.gmf.runtime"
+      label="GMF Runtime"
+      version="2.9.0.qualifier"
+      provider-name="itemis AG">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+   
+	<url>
+      <discovery label="YAKINDU SCT Repository" url="http://updates.yakindu.org/sct/neon/releases/"/>
+   </url>
+   
+   <plugin
+         id="org.yakindu.base.gmf.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

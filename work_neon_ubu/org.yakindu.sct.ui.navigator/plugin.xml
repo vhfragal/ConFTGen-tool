@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="org.yakindu.sct.ui.navigator.resourceContent"/>
+                <contentExtension pattern="org.yakindu.sct.ui.navigator.navigatorLinkHelper"/>
+                <contentExtension
+                      pattern="org.yakindu.sct.ui.navigator.statechartObjectFilter">
+                </contentExtension>
+         </includes>
+      </viewerContentBinding>
+   </extension>
+ <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <navigatorContent
+            id="org.yakindu.sct.ui.navigator.resourceContent" 
+            name="%navigatorContent.name" 
+            priority="normal" 
+            contentProvider="org.yakindu.sct.ui.navigator.StatechartNavigatorContentProvider" 
+            labelProvider="org.yakindu.sct.ui.navigator.StatechartNavigatorLabelProvider"
+            activeByDefault="true">
+         <triggerPoints>
+               <or>
+                  <and>
+                     <instanceof
+                           value="org.eclipse.core.resources.IFile">
+                     </instanceof>
+                     <test
+                           forcePluginActivation="true"
+                           property="org.eclipse.core.resources.extension"
+                           value="ffsm">
+                     </test>
+                  </and>
+               </or>
+         </triggerPoints>
+         <commonWizard
+               type="new"
+               wizardId="org.yakindu.sct.ui.editor.StatechartDiagramWizard">
+          <enablement>
+ 		   <with
+  		    variable="activeWorkbenchWindow.activePerspective">
+    		 <or>
+    		  <equals
+     		   value="org.yakindu.sct.ui.ModelingPerspective">
+   		   </equals>
+   		   <equals
+     		   value="org.yakindu.sct.ui.SimulationPerspective">
+   		   </equals>
+   		   </or>
+ 		   </with>
+  		</enablement>
+         </commonWizard>
+         <commonWizard
+               type="new"
+               wizardId="org.yakindu.sct.generator.genmodel.ui.SGenNewFileWizard">
+            <enablement>
+ 		   <with
+  		    variable="activeWorkbenchWindow.activePerspective">
+    		  <or>
+    		  <equals
+     		   value="org.yakindu.sct.ui.ModelingPerspective">
+   		   </equals>
+   		   <equals
+     		   value="org.yakindu.sct.ui.SimulationPerspective">
+   		   </equals>
+   		   </or>
+ 		   </with>
+  		</enablement>
+         </commonWizard>
+      </navigatorContent>
+       <actionProvider
+            id="org.eclipse.ui.navigator.navigatorActionProvider"
+            class="org.yakindu.sct.ui.navigator.NavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof
+                     value="org.yakindu.sct.ui.navigator.DomainNavigatorItem">
+               </instanceof>
+            </or>
+         </enablement>
+      </actionProvider>
+       <commonFilter
+             activeByDefault="true"
+             class="org.yakindu.sct.ui.navigator.StatechartObjectViewerFilter"
+             id="org.yakindu.sct.ui.navigator.statechartObjectFilter"
+             name="%commonFilter.name">
+       </commonFilter>
+   </extension>
+     <extension point="org.eclipse.ui.navigator.linkHelper" id="org.yakindu.sct.ui.navigator.navigatorLinkHelper">
+      <linkHelper
+            id="org.yakindu.sct.ui.navigator.navigatorLinkHelper"
+            class="org.yakindu.sct.ui.navigator.NavigatorLinkHelper">
+         <selectionEnablement>
+            <instanceof
+                  value="org.yakindu.sct.ui.navigator.DomainNavigatorItem">
+            </instanceof>
+         </selectionEnablement>
+         <editorInputEnablement>
+            <instanceof
+                  value="org.eclipse.ui.IFileEditorInput">
+            </instanceof>
+         </editorInputEnablement>
+      </linkHelper>
+   </extension>
+</plugin>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>231</y>
+      <w>231</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Arcade Game Maker-AGM[G]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>297</y>
+      <w>143</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Configuration[C]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>88</x>
+      <y>363</y>
+      <w>77</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Pause[P]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>363</y>
+      <w>66</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Save[S]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>242</y>
+      <w>286</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+bg=gray
+</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>308</y>
+      <w>33</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>583</x>
+      <y>308</y>
+      <w>88</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+
+bg=gray</panel_attributes>
+    <additional_attributes>60.0;10.0;12.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>308</y>
+      <w>121</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>363</y>
+      <w>66</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Pong[N]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>308</y>
+      <w>99</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+
+bg=gray</panel_attributes>
+    <additional_attributes>10.0;10.0;62.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>341</x>
+      <y>297</y>
+      <w>88</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Rules[R]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>605</x>
+      <y>297</y>
+      <w>88</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Action[A]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>242</y>
+      <w>154</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+bg=gray
+</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>242</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+bg=gray
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>319</y>
+      <w>77</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>88</x>
+      <y>297</y>
+      <w>99</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Services[V]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>242</y>
+      <w>297</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+bg=gray
+</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>11</x>
+      <y>363</y>
+      <w>66</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Play[Y]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>429</x>
+      <y>363</y>
+      <w>99</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Bowling[W]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>363</y>
+      <w>121</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Movement[M]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>671</x>
+      <y>363</y>
+      <w>99</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Collision[L]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>286</x>
+      <y>308</y>
+      <w>121</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>33</x>
+      <y>308</y>
+      <w>121</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+
+bg=gray</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>308</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+
+bg=gray</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Systemborder</type>
+    <coordinates>
+      <x>55</x>
+      <y>176</y>
+      <w>209</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Legend
+        Mandatory Feature        
+        Optional Feature
+        Alternative Feature</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>66</x>
+      <y>198</y>
+      <w>23</w>
+      <h>23</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+autoresize=false
+bg=black</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//This is a tutorial for a self resizing component 
+//In addition you are able to resize at manually
+//As soon as it is resized manually a new text is
+//added to the property panel
+
+setAutoresize(30,40,10);
+
+drawCircle(width/2,10,5);
+
+int y=45;
+for(String textline : textlines) {
+	y += printCenter(textline,y);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>66</x>
+      <y>198</y>
+      <w>23</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+Hello, World! 
+Enjoy UMLet!</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//This is a tutorial for a self resizing component 
+//In addition you are able to resize at manually
+//As soon as it is resized manually a new text is
+//added to the property panel
+
+drawCircle(10,26,5);
+//Circle c = new Circle(10,25,5);
+//drawCircle(c);
+
+drawLine(5,43,13,38);
+drawLine(5,43,13,48);
+drawLine(10,46,10,40);</custom_code>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>253</x>
+      <y>363</y>
+      <w>88</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>valign=bottom
+halign=center
+Brickles[B]</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

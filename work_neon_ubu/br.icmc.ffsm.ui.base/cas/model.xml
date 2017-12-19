@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="CAS_A">
+				<description>
+					
+				</description>
+				<and mandatory="true" name="Playback_B">
+					<description>
+						
+					</description>
+					<feature name="USB_U">
+						<description>
+							
+						</description>
+					</feature>
+					<alt mandatory="true" name="Player_Y">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="CD_C">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Cassette_T">
+							<description>
+								
+							</description>
+						</feature>
+					</alt>
+				</and>
+				<and mandatory="true" name="Control_L">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Channel_N">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Switch_W">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

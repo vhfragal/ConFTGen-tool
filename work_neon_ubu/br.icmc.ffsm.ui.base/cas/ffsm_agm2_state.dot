@@ -1,0 +1,16 @@
+digraph MefGraph{
+	node [fontsize="10"]
+
+                  	rankdir=LR
+	_Off_0_1_Off [label="Off"]
+	_Radio_1_1_OffRadio [label="Radio"]
+	_CDCassette_2_1_RadioCDCassette [label="CDCassette(or C T)"]
+	_USB_3_1_CDCassetteUSB [label="USB(U)"]
+	_CDCassette_2_1_RadioCDCassette -> _USB_3_1_CDCassetteUSB [label="switch"]
+	_Radio_1_1_OffRadio -> _CDCassette_2_1_RadioCDCassette [label="switch(C)"]
+	_CDCassette_2_2_RadioCDCassette [label="CDCassette(or C T)"]
+	_USB_3_2_CDCassetteUSB [label="USB(U)"]
+	_CDCassette_2_2_RadioCDCassette -> _USB_3_2_CDCassetteUSB [label="switch"]
+	_Radio_1_1_OffRadio -> _CDCassette_2_2_RadioCDCassette [label="switch(T)"]
+	_Off_0_1_Off -> _Radio_1_1_OffRadio [label="on"]
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<!-- Editor Highlighting Adapter -->
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.gmf.runtime.diagram.ui.resources.editor.parts.DiagramDocumentEditor"
+            class="org.yakindu.sct.simulation.ui.model.presenter.IHighlightingSupportAdapterFactory">
+         <adapter
+               type="org.yakindu.base.gmf.runtime.highlighting.IHighlightingSupport">
+         </adapter>
+      </factory>
+   </extension>
+	
+<!-- Session Listener -->
+ <extension
+       point="org.eclipse.ui.views">
+    <category 
+           id="org.yakindu.sct.category"
+           name="YAKINDU SCT"/>
+    <view
+    	  category="org.yakindu.sct.category"
+          allowMultiple="false"
+          class="org.yakindu.sct.simulation.ui.view.SimulationView"
+          icon="icons/Declarations-View-16.gif"
+          id="org.yakindu.sct.simulation.ui.declarationview"
+          name="Simulation"
+          restorable="true">
+    </view>
+ </extension>
+ <extension
+       point="org.eclipse.debug.core.statusHandlers">
+    <statusHandler
+          class="org.yakindu.sct.simulation.ui.handler.GenericStatusHandler"
+          code="200"
+          id="org.yakindu.sct.simulation.ui.statushandler"
+          plugin="org.yakindu.sct.simulation.core">
+    </statusHandler>
+ </extension>
+  <extension
+       point="org.eclipse.debug.core.statusHandlers">
+    <statusHandler
+          class="org.yakindu.sct.simulation.ui.handler.TerminateLaunchStatusHandler"
+          code="765"
+          id="org.yakindu.sct.simulation.ui.statushandler"
+          plugin="org.yakindu.sct.simulation.core">
+    </statusHandler>
+ </extension>
+ 
+ <!-- Source Display Adapter factory -->
+ <extension
+       point="org.eclipse.core.runtime.adapters">
+    <factory
+          adaptableType="org.yakindu.sct.simulation.core.debugmodel.SCTStackFrame"
+          class="org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayAdapterFactory">
+       <adapter
+             type="org.eclipse.debug.ui.sourcelookup.ISourceDisplay">
+       </adapter>
+    </factory>
+     <factory
+          adaptableType="org.yakindu.sct.simulation.core.debugmodel.SCTDebugThread"
+          class="org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayAdapterFactory">
+       <adapter
+             type="org.eclipse.debug.ui.sourcelookup.ISourceDisplay">
+       </adapter>
+    </factory>
+     <factory
+          adaptableType="org.yakindu.sct.simulation.core.debugmodel.SCTDebugTarget"
+          class="org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayAdapterFactory">
+       <adapter
+             type="org.eclipse.debug.ui.sourcelookup.ISourceDisplay">
+       </adapter>
+    </factory>
+     <factory
+          adaptableType="org.eclipse.debug.core.Launch"
+          class="org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayAdapterFactory">
+       <adapter
+             type="org.eclipse.debug.ui.sourcelookup.ISourceDisplay">
+       </adapter>
+    </factory>
+ </extension>
+ <extension
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="org.yakindu.sct.simulation.ui.preferences.SimulationPreferencePage"
+          id="org.yakindu.sct.simulation.ui.preferences.SimulationPreferencePage"
+          name="Simulation"
+          category="org.yakindu.sct.ui.preferences.root">
+    </page>
+ </extension>
+ <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="org.yakindu.sct.simulation.ui.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>
+ <extension
+       point="org.eclipse.ui.startup">
+    <startup
+          class="org.yakindu.sct.simulation.ui.SimulationActivator"></startup>
+ </extension>
+    <!-- Decoration Providers -->
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders"> 
+		<decoratorProvider class="org.yakindu.sct.simulation.ui.view.decorator.HighlightingSubmachineDecorationProvider"> 
+			<Priority name="Medium" />
+ 		</decoratorProvider> 
+ </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.yakindu.sct.simulation.ui.perspective.SimulationPerspectiveFactory"
+            icon="icons/simulation_perspective.png"
+            id="org.yakindu.sct.ui.SimulationPerspective"
+            name="SC Simulation">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.yakindu.sct.ui.SimulationPerspective">
+         <newWizardShortcut
+               id="org.yakindu.sct.ui.editor.StatechartDiagramWizard">
+         </newWizardShortcut>
+         <newWizardShortcut
+               id="org.yakindu.sct.generator.genmodel.ui.SGenNewFileWizard">
+         </newWizardShortcut>
+      </perspectiveExtension>
+   </extension> 
+</plugin>

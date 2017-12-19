@@ -1,0 +1,39 @@
+SG@G -- SG@N / 1 -> PG@N
+SG@G -- SG@W / 1 -> BW@W
+SG@G -- SG@B / 1 -> SB@B
+SG@G -- PS@W / 1 -> PS@P
+SG@G -- PS@(not W) / 0 -> SG@G
+SG@G -- SV@G / 0 -> SG@G
+SG@G -- EX@(or S (not W)) / 0 -> SG@G
+SG@G -- EX@(and W (not S)) / 1 -> SG@G
+PG@N -- EX@N / 1 -> SG@G
+PG@N -- PS@N / 1 -> PS@P
+PG@N -- SV@S / 1 -> PS@P
+PG@N -- SV@(not S) / 0 -> PG@N
+PG@N -- SG@N / 0 -> PG@N
+BW@W -- EX@S / 1 -> PS@P
+BW@W -- EX@(not S) / 0 -> BW@W
+BW@W -- PS@W / 1 -> PS@P
+BW@W -- SV@S / 1 -> SV@S
+BW@W -- SV@(not S) / 0 -> BW@W
+BW@W -- SG@W / 0 -> BW@W
+SB@B -- PS@B / 1 -> PS@P
+SB@B -- SV@S / 1 -> PS@P
+SB@B -- SV@(not S) / 0 -> SB@B
+SB@B -- EX@B / 0 -> SB@B
+SB@B -- SG@B / 0 -> SB@B
+PS@P -- SV@B / 0 -> SV@S
+PS@P -- SV@N / 1 -> SV@S
+PS@P -- SV@(or W (not S)) / 0 -> PS@P
+PS@P -- PS@P / 0 -> PS@P
+PS@P -- SG@N / 1 -> PG@N
+PS@P -- SG@W / 1 -> BW@W
+PS@P -- SG@B / 1 -> SB@B
+PS@P -- EX@G / 1 -> SG@G
+SV@S -- SG@N / 1 -> PG@N
+SV@S -- SG@W / 1 -> BW@W
+SV@S -- SG@B / 1 -> SB@B
+SV@S -- SV@S / 0 -> SV@S
+SV@S -- PS@W / 0 -> SV@S
+SV@S -- PS@(not W) / 1 -> SV@S
+SV@S -- EX@S / 0 -> SV@S
