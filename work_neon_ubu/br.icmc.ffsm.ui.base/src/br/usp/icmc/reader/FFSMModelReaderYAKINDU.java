@@ -2192,6 +2192,8 @@ public class FFSMModelReaderYAKINDU {
 			for(CState i : invalid){
 				System.out.println("ST "+i+" "+i.getFCondition());
 			}
+			
+			//final link to initial state
 			for(CTransition t : tcomposed){			
 				//System.out.println("TO ADD 1 "+t);
 				String cond = "(and "+t.getSource().getFCondition()+" "+t.getFCondition()
@@ -2234,6 +2236,10 @@ public class FFSMModelReaderYAKINDU {
 			AddReach(cplist,composed1,tcomposed,leaf,leaf.getFCondition());
 			removed.addAll(leaf.getLeave());
 			removed.addAll(leaf.getReach());
+			System.out.println("REMOVED 00");
+			for(CTransition h: removed){
+				System.out.println(h);
+			}
 		}		
 	}
 	
@@ -2251,9 +2257,13 @@ public class FFSMModelReaderYAKINDU {
 					AddReach(cplist,composed,tcomposed,t.getTarget(),cond);
 				}else{
 					//System.out.println("REMOVED "+t);
-					if(!removed.contains(t)) removed.add(t);
+					//if(!removed.contains(t)) removed.add(t);
 				}				
 			}
+		}
+		System.out.println("REMOVED 111");
+		for(CTransition h: removed){
+			System.out.println(h);
 		}
 	}
 	
@@ -2308,7 +2318,15 @@ public class FFSMModelReaderYAKINDU {
 								
 								//add the negation 
 								//String neg = "(and "+comp_cond+" (not "+l2.getTarget().getFCondition()+"))";
-								String neg = "(not "+l2.getTarget().getFCondition()+")";
+								//String neg = "(not "+l2.getTarget().getFCondition()+")";
+								String neg = "(not ";
+								for(CTransition l22 : r2.getLeave()){
+									neg = neg.concat("(and "+ l22.getFCondition()
+										+l22.getTarget().getFCondition()+") ");
+								}
+								neg = neg.concat(")");
+								//String neg = "(not (and "+ l2.getFCondition()+" "+
+								//		l2.getTarget().getFCondition()+"))";
 								mutlist = new ArrayList<CTransition>();
 								mutlist.add(l1);
 								slit = new ArrayList<CState>();
@@ -2319,6 +2337,26 @@ public class FFSMModelReaderYAKINDU {
 								if(!list.contains(target)) list.add(target);
 								System.out.println("COMP NFOUND 1 "+l1);
 								composeMTransition(ctlist, mutlist, source, target, neg);
+								
+								//neg = "(not (and "+ l1.getFCondition()+" "+
+								//		l1.getTarget().getFCondition()+"))";
+								neg = "(not ";
+								for(CTransition l11 : r1.getLeave()){
+									neg = neg.concat("(and "+ l11.getFCondition()
+										+l11.getTarget().getFCondition()+") ");
+								}
+								neg = neg.concat(")");
+								mutlist = new ArrayList<CTransition>();
+								mutlist.add(l2);
+								slit = new ArrayList<CState>();
+								slit.add(l2.getTarget());
+								slit.add(r1);
+								orderComp(slit);
+								target = composeMStates(cplist,slit,comp_cond);
+								if(!list.contains(target)) list.add(target);
+								System.out.println("COMP NFOUND -1 "+l2);
+								composeMTransition(ctlist, mutlist, source, target, neg);
+								
 								//remove invalid transition
 								removed.add(l1);
 								removed.add(l2);
@@ -2416,6 +2454,12 @@ public class FFSMModelReaderYAKINDU {
 			s.setSuperState(region);
 			region.getDescendants().add(s);
 		}		
+		
+		System.out.println("REMOVED 222");
+		for(CTransition h: removed){
+			System.out.println(h);
+		}
+		
 		return list;
 	}
 	
@@ -2468,7 +2512,9 @@ public class FFSMModelReaderYAKINDU {
 								
 								//add the negation 								
 								//String neg = "(and "+comp_cond+" (not "+l2.getSource().getFCondition()+"))";
-								String neg = "(not "+l2.getSource().getFCondition()+")";
+								//String neg = "(not "+l2.getSource().getFCondition()+")";
+								/*String neg = "(not (and "+ l2.getFCondition()+" "+
+										l2.getSource().getFCondition()+"))";
 								mutlist = new ArrayList<CTransition>();
 								mutlist.add(l1);
 								slit = new ArrayList<CState>();
@@ -2479,6 +2525,20 @@ public class FFSMModelReaderYAKINDU {
 								if(!list.contains(source)) list.add(source);
 								System.out.println("COMP NFOUND 11 "+l1);
 								composeMTransition(ctlist, mutlist, source, target, neg);
+								
+								neg = "(not (and "+ l1.getFCondition()+" "+
+										l1.getSource().getFCondition()+"))";
+								mutlist = new ArrayList<CTransition>();
+								mutlist.add(l2);
+								slit = new ArrayList<CState>();
+								slit.add(l2.getSource());
+								slit.add(r1);
+								orderComp(slit);
+								source = composeMStates(cplist,slit,comp_cond);
+								if(!list.contains(source)) list.add(source);
+								System.out.println("COMP NFOUND -11 "+l2);
+								composeMTransition(ctlist, mutlist, source, target, neg);
+								*/
 								//remove invalid transition
 								removed.add(l1);
 								removed.add(l2);
@@ -2546,7 +2606,7 @@ public class FFSMModelReaderYAKINDU {
 							CState source = composeMStates(cplist,slit,comp_cond);
 							if(!list.contains(source)) list.add(source);
 							System.out.println("+COMP NFOUND 1 "+l1);
-							composeMTransition(ctlist, mutlist, source, target, null);
+							//composeMTransition(ctlist, mutlist, source, target, null);
 							removed.add(l1);
 						}else if(type1.equals("out")){
 							slit = new ArrayList<CState>();
@@ -2556,7 +2616,7 @@ public class FFSMModelReaderYAKINDU {
 							CState target2 = composeMStates(cplist,slit,comp_cond);							
 							if(!list.contains(target2)) list.add(target2);
 							System.out.println("+COMP NFOUND 2 "+l1);
-							composeMTransition(ctlist, mutlist, l1.getSource(), target2, null);
+							//composeMTransition(ctlist, mutlist, l1.getSource(), target2, null);
 							removed.add(l1);
 						}						
 					}
@@ -2581,13 +2641,15 @@ public class FFSMModelReaderYAKINDU {
 						ArrayList<CTransition> mutlist = new ArrayList<CTransition>();
 						mutlist.add(l2);
 						if(type2.equals("normal")){
+							//String neg = "(and "+comp_cond+" (not "+l2.getSource().getFCondition()+"))";
+							//String neg = "(not "+l2.getSource().getFCondition()+")";
 							slit.add(r1);
 							slit.add(l2.getSource());							
 							orderComp(slit);
 							CState source = composeMStates(cplist,slit,comp_cond);
 							if(!list.contains(source)) list.add(source);
 							System.out.println("+COMP NFOUND 111 "+l2);
-							composeMTransition(ctlist, mutlist, source, target, null);
+							//composeMTransition(ctlist, mutlist, source, target, null);
 							removed.add(l2);
 						}else if(type2.equals("out")){
 							slit = new ArrayList<CState>();							
@@ -2597,7 +2659,7 @@ public class FFSMModelReaderYAKINDU {
 							CState target2 = composeMStates(cplist,slit,comp_cond);							
 							if(!list.contains(target2)) list.add(target2);
 							System.out.println("+COMP NFOUND 222 "+l2);
-							composeMTransition(ctlist, mutlist, l2.getSource(), target2, null);
+							//composeMTransition(ctlist, mutlist, l2.getSource(), target2, null);
 							removed.add(l2);
 						}
 					}
@@ -2608,6 +2670,11 @@ public class FFSMModelReaderYAKINDU {
 			CState region = rlist11.get(0).getSuperState();
 			s.setSuperState(region);
 			region.getDescendants().add(s);
+		}
+		
+		System.out.println("REMOVED 333");
+		for(CTransition h: removed){
+			System.out.println(h);
 		}
 		return list;
 	}
@@ -3321,7 +3388,12 @@ public class FFSMModelReaderYAKINDU {
 			}		
 			
 			if(!file_log.equals(""))file_log = file_log.substring(0, file_log.length()-1);
-			//System.out.println(file_log);
+			System.out.println("REMOVED");
+			for(CTransition h: removed){
+				System.out.println(h);
+			}			
+			System.out.println("RESULT");
+			System.out.println(file_log);
 			return done;
 			
 		} catch (Exception ex) {
